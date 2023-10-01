@@ -1,0 +1,29 @@
+// light theme
+:root {
+    // colors
+    --text-color: #111517;
+    --body-bg: #fafafa;
+    --element-bg: white;
+    --shadow:#80808025;
+    // icons
+    --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);;
+}
+
+[data-theme="dark"] {
+    // colors 
+    --text-color: white;
+    --body-bg: #202c37;
+    --element-bg: #2b3945;
+    --shadow:#00000025;
+    // icons
+    --icon-color: invert(99%) sepia(4%) saturate(164%) hue-rotate(127deg) brightness(119%) contrast(100%);
+}
+
+/* to understand more about the dynamic icon coloring you can visit the following 
+
+https://stackoverflow.com/a/53336754/15377341
+
+https://codepen.io/sosuke/pen/Pjoqqp
+
+*/ 
+
