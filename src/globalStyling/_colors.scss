@@ -1,20 +1,75 @@
 // light theme
 :root {
     // colors
-    --text-color: #111517;
-    --body-bg: #fafafa;
-    --element-bg: white;
-    --shadow:#80808025;
+    --primary: #0056e0;
+    --dark: #0B212E;
+    --light: #F9F9FC;
+    --secondary: #E2F6FF;
+    --accent: #47B6FE;
+    --positive: #0FDA45;
+    --negative: #F83A53;
+    --warning: #FFD61F;
+    // 70% shade
+    --primary-70: #0056e0b4;
+    --dark-70: #0B212Eb4;
+    --light-70: #F9F9FCb4;
+    --secondary-70: #E2F6FFb4;
+    --accent-70: #47B6FEb4;
+    --positive-70: #0FDA45b4;
+    --negative-70: #F83A53b4;
+    --warning-70: #ffd61fb4;
+    // 40% shade
+    --primary-40: #0056e067;
+    --dark-40: #0B212E67;
+    --light-40: #F9F9FC67;
+    --secondary-40: #E2F6FF67;
+    --accent-40: #47B6FE67;
+    --positive-40: #0FDA4567;
+    --negative-40: #F83A5367;
+    --warning-40: #ffd61f67;
+    // 20% shade
+    --primary-20: #0056e034;
+    --dark-20: #0B212E34;
+    --light-20: #F9F9FC34;
+    --secondary-20: #E2F6FF34;
+    --accent-20: #47B6FE34;
+    --positive-20: #0FDA4534;
+    --negative-20: #F83A5334;
+    --warning-20: #ffd61f34;
+    // 5% shade
+    --primary-5: #0056e00e;
+    --dark-5: #0B212E0e;
+    --light-5: #F9F9FC0e;
+    --secondary-5: #E2F6FF0e;
+    --accent-5: #47B6FE0e;
+    --positive-5: #0FDA450e;
+    --negative-5: #F83A530e;
+    --warning-5: #ffd61f0e;
     // icons
-    --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);;
+    --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);
 }
 
 [data-theme="dark"] {
-    // colors 
-    --text-color: white;
-    --body-bg: #202c37;
-    --element-bg: #2b3945;
-    --shadow:#00000025;
+    // colors
+    --light: #0B212E;
+    --dark: #F9F9FC;
+
+    // 70% shade
+    --light-70: #0B212Eb4;
+    --dark-70: #F9F9FCb4;
+
+    // 40% shade
+    --light-40: #0B212E67;
+    --dark-40: #F9F9FC67;
+
+    // 20% shade
+    --light-20: #0B212E34;
+    --dark-20: #F9F9FC34;
+
+    // 5% shade
+    --light-5: #0B212E0e;
+    --dark-5: #F9F9FC0e;
+
     // icons
     --icon-color: invert(99%) sepia(4%) saturate(164%) hue-rotate(127deg) brightness(119%) contrast(100%);
 }
