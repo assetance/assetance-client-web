@@ -2,3 +2,6 @@
 @import "colors";
 @import "typography";
 @import "global";
+
+$material-symbols-font-path: '~material-symbols/';
+@import 'material-symbols';

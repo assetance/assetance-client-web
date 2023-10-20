@@ -9,6 +9,17 @@
     --positive: #0FDA45;
     --negative: #F83A53;
     --warning: #FFD61F;
+    --primary-accent: linear-gradient(130deg, var(--primary) 0%, var(--accent) 100%);
+    --accent-primary: linear-gradient(130deg, var(--accent) 0%, var(--primary) 100%);
+    // 90% shade
+    --primary-90: #0056e0e6;
+    --dark-90: #0b212ee6;
+    --light-90: #f9f9fce6;
+    --secondary-90: #e2f6ffe6;
+    --accent-90: #47b6fee6;
+    --positive-90: #0fda45e6;
+    --negative-90: #f83a53e6;
+    --warning-90: #ffd61fe6;
     // 70% shade
     --primary-70: #0056e0b4;
     --dark-70: #0B212Eb4;
@@ -45,6 +56,16 @@
     --positive-5: #0FDA450e;
     --negative-5: #F83A530e;
     --warning-5: #ffd61f0e;
+    // shadows
+    --xxsmall-shadow: 0px 1px 2px 0px var(--primary-20);
+    --xsmall-shadow: 0px 1px 2px 0px var(--primary-20), 0px 1px 3px 0px var(--primary-40);
+    --small-shadow: 0px 2px 4px -2px var(--primary-20), 0px 4px 8px -2px var(--primary-5);
+    --medium-shadow: 0px 4px 6px -2px var(--primary-20), 0px 12px 16px -4px var(--primary-5);
+    --larg-shadow: 0px 8px 8px -4px var(--primary-20), 0px 20px 24px -4px var(--primary-5);
+    --xlarg-shadow: 0px 24px 48px -12px var(--primary-20);
+    --xxlarg-shadow: 0px 32px 64px -12px var(--primary-20);
+    --primary-dark-shadow: 4px 10px 15px -5px var(--dark-20), 1px 15px 25px -5px var(--primary);
+    --primary-larg-shadow: 0px 8px 8px -4px var(--primary-5), 0px 20px 24px -4px var(--primary-5);
     // icons
     --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);
 }
