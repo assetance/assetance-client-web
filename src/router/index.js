@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
+import store from '@/store';
+import useCookies from '@/composables/useCookies';
+import usersAPI from '@/services/usersAPI';
 
 const routes = [
   {
@@ -21,6 +24,25 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+});
+
+// eslint-disable-next-line no-unused-vars
+router.beforeEach(async (to, from, next) => {
+  /**
+   * for development we are making the cookie here
+   */
+  useCookies.setCookie('userToken', process.env.VUE_APP_TEST);
+  // useCookies.deleteCookie('userToken');
+
+  // check token cookie
+  let userToken = useCookies.getCookie('userToken');
+  if (userToken) {
+    // get and save user Data for this session
+    let userData = await usersAPI.getUserData();
+    store.dispatch('setUserDataObj', userData);
+  }
+
+  next();
 });
 
 export default router;

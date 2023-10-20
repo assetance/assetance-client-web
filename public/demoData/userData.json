@@ -1,0 +1,9 @@
+{
+    "userName":"User Tage",
+    "firstName": "user first name",
+    "lastName": "user last name",
+    "email": "email@example.com",
+    "token": "token string",
+    "refreshToken": "token refreshment string",
+    "picture": "picture url"
+}
