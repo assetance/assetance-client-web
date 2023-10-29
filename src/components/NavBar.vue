@@ -292,7 +292,7 @@ nav.wl {
     flex-flow: row nowrap;
     align-items: center;
     justify-content: flex-start;
-    box-shadow: var(--medium-shadow);
+    box-shadow: var(--primary-larg-shadow);
     border-radius: 0px 0px 10px 10px;
     border-bottom: 1.5px solid var(--primary-20);
     padding: 0.5rem 0.5rem;

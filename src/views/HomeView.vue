@@ -1,17 +1,25 @@
 <template>
-  <Suspense>
-    <div class="home wl">
-      <h1>Home page here</h1>
-    </div>
-
-    <template #fallback>Loading Home, ........</template>
-  </Suspense>
+  <div class="home">
+    <main id="main">
+      <HeroSection></HeroSection>
+      <section></section>
+      <section></section>
+    </main>
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import HeroSection from '@/components/homePage/HeroSection.vue';
+</script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+// home stlying shold not be scoped
+
 div.home {
-  margin-top: 80px;
+  & > main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
 }
 </style>

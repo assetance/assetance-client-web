@@ -6,9 +6,9 @@
           <Suspense>
             <!-- main content -->
             <template #default>
-              <div class="containter">
-                <NavBar></NavBar>
+              <div class="container">
                 <component :is="Component"></component>
+                <NavBar></NavBar>
               </div>
             </template>
 

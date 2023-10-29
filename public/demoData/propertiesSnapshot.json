@@ -1,0 +1,177 @@
+{
+    "metaData" : "metaData",
+    "data" : [
+        {
+            "propertyId" : "AB01CD2",
+            "RFNX" : "AB01CD",
+            "propertyName" : "1st property name",
+            "fundPrice" : 450000,
+            "status" : "funding",
+            "isRetrade" : false,
+            "isTrending" : true,
+            "isNew" : true,
+            "propertyCategory" : "Single Family",
+            "propertyLocation" : {
+                "region" : "North America",
+                "country" : "United States of America",
+                "state" : {
+                    "code" : "GA",
+                    "name" : "Georgia"
+                },
+                "city" : "Atlanta",
+                "zip" : "AB01CD2",
+                "address" : "property address"
+            },
+            "images" : [
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/d13ce8c7b03b75232410adfb390accb2-cc_ft_1152.webp",
+                    "alt" : "property 1 image 1"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/24bb8510e4e7fec2bf3044bc7e73c371-cc_ft_576.webp",
+                    "alt" : "property 1 image 2"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/909085eb0c78b800383d9869739d071d-cc_ft_1152.webp",
+                    "alt" : "property 1 image 3"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/3b7bc22943af554fc8b1eba08acc2999-cc_ft_1152.webp",
+                    "alt" : "property 1 image 4"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/d6d2b1f9a6c2ed83f6d1461153c5b794-cc_ft_576.webp",
+                    "alt" : "property 1 image 4"
+                }
+            ],
+            "metrics" : {
+                "AROI" : 10.5,
+                "NRY" : 5.3,
+                "ZIP10YAR" : 5.6  
+            },
+            "tags" : [
+                "tag 1", 
+                "tag 2"
+            ],
+            "shares" : {
+                "available" : 123,
+                "taken" : 10000
+            }
+        },
+        {
+            "propertyId" : "AB01CD2",
+            "RFNX" : "EF01GH",
+            "propertyName" : "2nd property name",
+            "fundPrice" : 550000,
+            "availability" : "funding",
+            "isRetrade" : false,
+            "isTrending" : true,
+            "isNew" : true,
+            "propertyCategory" : "Single Family",
+            "propertyLocation" : {
+                "region" : "North America",
+                "country" : "United States of America",
+                "state" : {
+                    "code" : "GA",
+                    "name" : "Georgia"
+                },
+                "city" : "Atlanta",
+                "zip" : "AB01CD2",
+                "address" : "property address"
+            },
+            "images" : [
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/e14dbe0e7a7851b8908a8a69afff02fc-cc_ft_576.webp",
+                    "alt" : "property 2 image 1"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/6c236665721e200e6ba62384ef8a5a28-cc_ft_576.webp",
+                    "alt" : "property 2 image 2"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/68a14bd2a8d368eeb7fa99f2d47d9eb1-cc_ft_576.webp",
+                    "alt" : "property 2 image 3"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/16d91436e22923e7affbb07e49396d48-cc_ft_576.webp",
+                    "alt" : "property 2 image 4"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/27402258fd397f57c9bcd47b43d3d57d-cc_ft_576.webp",
+                    "alt" : "property 2 image 4"
+                }
+            ],
+            "metrics" : {
+                "AROI" : 8.3,
+                "NRY" : 4.3,
+                "ZIP10YAR" : 5.6  
+            },
+            "tags" : [
+                "tag 1", 
+                "tag 2"
+            ],
+            "shares" : {
+                "available" : 123,
+                "taken" : 10000
+            }
+        },
+        {
+            "propertyId" : "AB01CD2",
+            "RFNX" : "IJ01KL",
+            "propertyName" : "3rd property name",
+            "fundPrice" : 1150000,
+            "availability" : "funding",
+            "isRetrade" : false,
+            "isTrending" : true,
+            "isNew" : true,
+            "propertyCategory" : "Single Family",
+            "propertyLocation" : {
+                "region" : "North America",
+                "country" : "United States of America",
+                "state" : {
+                    "code" : "GA",
+                    "name" : "Georgia"
+                },
+                "city" : "Atlanta",
+                "zip" : "AB01CD2",
+                "address" : "property address"
+            },
+            "images" : [
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/aa3ee1298f7c4becfe3c9a83ee615f92-cc_ft_576.webp",
+                    "alt" : "property 3 image 1"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/03284538ecfe908b79ed638c33f82ae6-cc_ft_1152.webp",
+                    "alt" : "property 3 image 2"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/dbaba4df16b50a1f18406fd5f5ab107a-cc_ft_1152.webp",
+                    "alt" : "property 3 image 3"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/bd97951af7c414e98bd35f5837004f7f-cc_ft_576.webp",
+                    "alt" : "property 3 image 4"
+                },
+                {
+                    "url" : "https://photos.zillowstatic.com/fp/8054e1546a7065b96faa60b048090a33-cc_ft_576.webp",
+                    "alt" : "property 3 image 4"
+                }
+            ],
+            "metrics" : {
+                "AROI" : 7.5,
+                "NRY" : 9.3,
+                "ZIP10YAR" : 5.6  
+            },
+            "tags" : [
+                "tag 1", 
+                "tag 2"
+            ],
+            "shares" : {
+                "available" : 123,
+                "taken" : 10000
+            }
+        }
+    ]
+}
+
