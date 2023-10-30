@@ -4,6 +4,16 @@ html {
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
     
+    &[dir="rtl"] {
+        // google symbols styling
+        .material-symbols-rounded {
+            transform: scaleX(-1);
+        }
+    }
+
+    .iconLtr {
+        transform: scaleX(1) !important;
+    }
 }
 
 *, *:before, *:after {

@@ -77,6 +77,7 @@ const emit = defineEmits(['selection']);
     border: 1.5px solid var(--primary-20);
     border-radius: 10px;
     padding: 0.2rem 0.5rem;
+    background-color: var(--primary-5);
 
     &__expand {
       border-radius: 10px 10px 0px 0px;
@@ -95,7 +96,7 @@ const emit = defineEmits(['selection']);
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
-      margin-left: auto;
+      margin-inline-start: auto;
       border-radius: 8px;
       color: var(--primary);
 

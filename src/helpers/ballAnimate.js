@@ -21,13 +21,13 @@ export default {
     }
 
     // Keyframes
-    balls.forEach((el, i, ra) => {
+    balls.forEach((el, i) => {
       let to = {
         x: Math.random() * (i % 2 === 0 ? -12 : 12),
         y: Math.random() * 12,
       };
 
-      let anim = el.animate(
+      el.animate(
         [
           { transform: 'translate(0, 0)' },
           { transform: `translate(${to.x}rem, ${to.y}rem)` },

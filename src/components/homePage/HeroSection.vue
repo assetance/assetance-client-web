@@ -70,7 +70,7 @@ onMounted(async () => {
   flex-flow: column nowrap;
   justify-content: center;
   margin-top: 80px;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   width: 100%;
 
   @media #{$mq-1400-down} {
