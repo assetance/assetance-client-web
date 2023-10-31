@@ -1,6 +1,8 @@
 // light theme
 :root {
     // colors
+    --white: white;
+    --black: black;
     --primary: #0056e0;
     --dark: #0B212E;
     --light: #F9F9FC;
@@ -72,6 +74,8 @@
 
 [data-theme="dark"] {
     // colors
+    --white: black;
+    --black: white;
     --light: #0B212E;
     --dark: #F9F9FC;
 

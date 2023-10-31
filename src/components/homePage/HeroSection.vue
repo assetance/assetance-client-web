@@ -69,13 +69,12 @@ onMounted(async () => {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  box-shadow: var(--primary-larg-shadow);
+  border-radius: 50px;
   margin-top: 80px;
   padding-bottom: 2rem;
   width: 100%;
-
-  @media #{$mq-1400-down} {
-    overflow: hidden;
-  }
+  overflow: hidden;
 
   .banner {
     display: flex;

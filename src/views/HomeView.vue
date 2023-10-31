@@ -2,7 +2,7 @@
   <div class="home">
     <main id="main">
       <HeroSection></HeroSection>
-      <section></section>
+      <FractionalBenefitsSection></FractionalBenefitsSection>
       <section></section>
     </main>
   </div>
@@ -10,6 +10,7 @@
 
 <script setup>
 import HeroSection from '@/components/homePage/HeroSection.vue';
+import FractionalBenefitsSection from '@/components/homePage/FractionalBenefitsSection.vue';
 </script>
 
 <style lang="scss">
