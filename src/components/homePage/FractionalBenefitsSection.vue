@@ -69,6 +69,7 @@ section.fractionalBenefits {
     font-size: 1rem;
     text-transform: capitalize;
     backdrop-filter: blur(5px);
+    background-color: var(--light-70);
   }
 
   & > h2 {
@@ -80,6 +81,7 @@ section.fractionalBenefits {
     font-weight: 700;
     backdrop-filter: blur(5px);
     box-shadow: var(--primary-larg-shadow);
+    background-color: var(--light-70);
   }
 
   & > ul {

@@ -33,7 +33,7 @@
         id="mainImage"
         ref="mainSwiper"
         events-prefix="main-swiper-"
-        loop="ture"
+        loop="true"
         :pagination="{
           clickable: true,
         }"
