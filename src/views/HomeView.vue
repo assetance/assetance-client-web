@@ -4,6 +4,7 @@
       <HeroSection></HeroSection>
       <FractionalBenefitsSection></FractionalBenefitsSection>
       <HowItWorks></HowItWorks>
+      <AssetanceFeatures></AssetanceFeatures>
       <section></section>
     </main>
   </div>
@@ -13,6 +14,7 @@
 import HeroSection from '@/components/homePage/HeroSection.vue';
 import FractionalBenefitsSection from '@/components/homePage/FractionalBenefitsSection.vue';
 import HowItWorks from '@/components/homePage/HowItWorks.vue';
+import AssetanceFeatures from '@/components/homePage/AssetanceFeatures.vue';
 </script>
 
 <style lang="scss">
