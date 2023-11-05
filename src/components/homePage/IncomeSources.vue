@@ -1,0 +1,115 @@
+<template>
+  <section class="wl">
+    <div class="titles">
+      <header>Real Passive Returns, Your Way.</header>
+      <h2>How will you earn?</h2>
+    </div>
+    <div class="incomeSource">
+      <div class="icon">
+        <span class="material-symbols-rounded"> payments </span>
+      </div>
+      <h3>Rental Income</h3>
+      <p>Earn passive rent income from your investments.</p>
+    </div>
+    <div class="incomeSource">
+      <div class="icon">
+        <span class="material-symbols-rounded"> monitoring </span>
+      </div>
+      <h3>Appreciation</h3>
+      <p>
+        Track the growth of your shares’ value overtime, then put for sale
+        whenever you want.
+      </p>
+    </div>
+  </section>
+</template>
+
+<script setup></script>
+
+<style lang="scss" scoped>
+section.wl {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem 0rem;
+  padding: 1rem;
+
+  @media #{$mq-820-down} {
+    flex-flow: column nowrap;
+  }
+
+  .incomeSource {
+    border: 1px solid var(--dark-5);
+    border-radius: 10px;
+    box-shadow: var(--medium-shadow);
+    background-color: var(--light);
+    margin: 1rem 0.5rem;
+    padding: 1rem;
+    width: 100%;
+
+    @media #{$mq-820-down} {
+      max-width: unset;
+    }
+
+    &:nth-child(2) {
+      order: 1;
+
+      @media #{$mq-820-down} {
+        order: 2;
+      }
+    }
+    &:nth-child(3) {
+      order: 3;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      border-radius: 7px;
+      background-color: var(--primary-5);
+      font-size: 0;
+      padding: 0.2rem;
+      color: var(--primary);
+
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+  .titles {
+    order: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    flex-grow: 1;
+    flex-shrink: 0;
+
+    @media #{$mq-820-down} {
+      flex-shrink: 1;
+      order: 1;
+    }
+    & > header {
+      border-radius: 10px;
+      padding: 0.5rem 1rem;
+      color: var(--primary);
+      font-size: 1rem;
+      text-transform: capitalize;
+      backdrop-filter: blur(5px);
+      background-color: var(--light-70);
+    }
+
+    & > h2 {
+      border-radius: 10px;
+      box-shadow: var(--primary-larg-shadow);
+      margin-top: 0.5rem;
+      padding: 1rem 1.5rem;
+      text-transform: capitalize;
+      font-size: 2rem;
+      font-weight: 700;
+      backdrop-filter: blur(5px);
+      background-color: var(--light-70);
+    }
+  }
+}
+</style>

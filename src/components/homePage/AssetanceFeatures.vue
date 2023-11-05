@@ -47,6 +47,13 @@
     <div class="ctaButton">
       <SecondaryButton>Start Investing</SecondaryButton>
     </div>
+    <div class="visualBoxes">
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+    </div>
   </section>
 </template>
 
@@ -56,10 +63,12 @@ import SecondaryButton from '../microComponents/SecondaryButton.vue';
 
 <style lang="scss" scoped>
 section.wl {
+  position: relative;
   display: flex;
   flex-flow: column nowrap;
   align-items: flex-start;
-  margin: 3rem 0rem;
+  margin: 0.5rem 0rem;
+  padding: 1rem;
   overflow: hidden;
 
   @media #{$mq-820-down} {
@@ -67,7 +76,6 @@ section.wl {
   }
 
   & > header {
-    margin-inline-start: 2rem;
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--primary);
@@ -75,14 +83,9 @@ section.wl {
     text-transform: capitalize;
     backdrop-filter: blur(5px);
     background-color: var(--light-70);
-
-    @media #{$mq-820-down} {
-      margin-inline-start: unset;
-    }
   }
 
   & > h2 {
-    margin-inline-start: 2rem;
     border-radius: 10px;
     box-shadow: var(--primary-larg-shadow);
     margin-top: 0.5rem;
@@ -92,10 +95,6 @@ section.wl {
     font-weight: 700;
     backdrop-filter: blur(5px);
     background-color: var(--light-70);
-
-    @media #{$mq-820-down} {
-      margin-inline-start: unset;
-    }
   }
 
   ul.features {
@@ -180,6 +179,57 @@ section.wl {
     max-width: 200px;
     width: 100%;
     padding-bottom: 1rem;
+  }
+
+  & > .visualBoxes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .emptyBox {
+      position: absolute;
+      box-shadow: var(--larg-shadow);
+      border-radius: 10px;
+      border: 1px solid var(--primary-5);
+      backdrop-filter: blur(2px);
+      background-color: var(--light);
+      opacity: 0.8;
+      background-image: radial-gradient(var(--primary) 0.1px, transparent 1.2px),
+        radial-gradient(var(--primary) 0.5px, var(--light) 0.5px);
+      background-size: 18px 17px;
+      background-position: 0 0, 10px 10px;
+      z-index: -10;
+
+      &:nth-child(1) {
+        width: 50px;
+        height: 40px;
+        top: 30%;
+        left: 3%;
+      }
+      &:nth-child(2) {
+        width: 80px;
+        height: 40px;
+        top: 50%;
+        left: 40%;
+      }
+      &:nth-child(3) {
+        width: 70px;
+        height: 40px;
+        top: 16%;
+        left: 85%;
+      }
+      &:nth-child(4) {
+        width: 50px;
+        height: 80px;
+        top: 80%;
+        left: 30%;
+      }
+      &:nth-child(5) {
+        width: 50px;
+        height: 100px;
+        top: 40%;
+        left: 85%;
+      }
+    }
   }
 }
 </style>
