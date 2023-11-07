@@ -13,7 +13,7 @@ export default {
         apiClient.get().then((res) => {
           resolve(res.data.data);
         });
-      }, 4000);
+      }, 1000);
     });
   },
 };

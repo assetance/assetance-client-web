@@ -18,7 +18,7 @@ export default {
         apiClient.get().then((res) => {
           resolve(res.data);
         });
-      }, 2000);
+      }, 1000);
     });
   },
 };

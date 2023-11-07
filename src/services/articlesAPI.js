@@ -13,7 +13,7 @@ export default {
         apiClient.get('randArticles.json').then((res) => {
           resolve(res.data);
         });
-      }, 3000);
+      }, 1000);
     });
   },
 };

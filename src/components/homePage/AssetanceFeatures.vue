@@ -1,5 +1,12 @@
 <template>
   <section class="wl" aria-label="assetance featuers">
+    <div class="visualBoxes">
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+      <div class="emptyBox"></div>
+    </div>
     <header>Investing Simplified With Assetance</header>
     <h2>Why Assetance ?</h2>
     <ul class="features">
@@ -47,13 +54,6 @@
     <div class="ctaButton">
       <SecondaryButton>Start Investing</SecondaryButton>
     </div>
-    <div class="visualBoxes">
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-    </div>
   </section>
 </template>
 
@@ -95,6 +95,10 @@ section.wl {
     font-weight: 700;
     backdrop-filter: blur(5px);
     background-color: var(--light-70);
+
+    @media #{$mq-820-down} {
+      font-size: 1.5rem;
+    }
   }
 
   ul.features {
@@ -185,6 +189,8 @@ section.wl {
     position: absolute;
     width: 100%;
     height: 100%;
+    z-index: -1000;
+
     .emptyBox {
       position: absolute;
       box-shadow: var(--larg-shadow);

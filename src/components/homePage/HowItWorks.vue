@@ -38,27 +38,27 @@
           ref="imagesEl">
           <swiper-slide
             ><img
-              src="https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33be8cf4ba7565123c8bc_YPD3ulQQAGQpOcnqIm3QzSTRgzmr1SexpW9ZjMpJ1mAnUxx4iF05XOTu44sk0qQG-8XgBcYmGZGAD-5SAZvJl3TjtmhgWnn-w0C2XKwhBscV78RVvhwZfyp0v_Pa6sNj5zxpOvRW.png"
+              src="https://placehold.co/250"
               alt="a GIF to visualize the step using the website"
           /></swiper-slide>
           <swiper-slide
             ><img
-              src="https://uploads-ssl.webflow.com/5f3c19f18169b62a0d0bf387/60d33be7eedf8e1f31aabcec_BwENfmI0CU5dZGYlSyo142mpfG08-rYgTS-Qm47uMUXN6JXtmdZvtzVzTooUQdXTWmTD8uzF9N6XQJA2vUIMi53tunFyVtvOBJTNfOjHit2P_JkTmFzFsK7ep6Vb9781XZnRAryH.png"
+              src="https://placehold.co/250"
               alt="a GIF to visualize the step using the website"
           /></swiper-slide>
           <swiper-slide
             ><img
-              src="https://global.discourse-cdn.com/business7/uploads/replitteams/optimized/2X/d/dcc4f788a832aab8587c61191871347e2ac6c7de_2_479x500.png"
+              src="https://placehold.co/250"
               alt="a GIF to visualize the step using the website"
           /></swiper-slide>
           <swiper-slide
             ><img
-              src="https://programmerhumor.io/wp-content/uploads/2022/10/programmerhumor-io-programming-memes-01ecccc67aa45f4-758x1015.jpg"
+              src="https://placehold.co/250"
               alt="a GIF to visualize the step using the website"
           /></swiper-slide>
         </swiper-container>
       </div>
-      <div class="info" aria-label="steps information">
+      <div class="infoMobile" aria-label="steps information">
         <ol class="stages" aria-label="steps names">
           <li v-for="(stage, index) in stages" :key="index">
             <button
@@ -103,22 +103,22 @@ const steps = ref([
   {
     title: 'Explore our listed properties',
     description:
-      'Discover a diverse range of investment opportunities in our carefully curated selection of properties. Take your time to explore and find the right investment for you.',
+      'Discover a diverse range of investment opportunities in our carefully curated selection of properties.',
   },
   {
     title: 'Select a property you want to invest in',
     description:
-      "Once you've found a property that aligns with your investment goals, select it to begin your journey. We offer detailed information and tools to help you make an informed decision.",
+      "Once you've found a property that aligns with your investment goals, select it to begin your journey.",
   },
   {
     title: 'Hold and collect returns while monitoring its status',
     description:
-      'Sit back and relax while your investment works for you. Your chosen property will generate returns, and you can easily monitor its performance through your dedicated dashboard.',
+      'Sit back and relax while your investment generate returns, and you can easily monitor its performance through your dedicated dashboard.',
   },
   {
     title: 'Put it for sale or wait until property exit',
     description:
-      'Enjoy flexibility. You can choose to put your shares for sale on our integrated market whenever you wish, or wait until the property reaches its exit point, at which time you can reap your returns. Your investment, your choice.',
+      'Enjoy flexibility. You can choose to put your shares for sale on our integrated market whenever you wish, Your investment, your choice.',
   },
 ]);
 const stepsEl = ref(null);
@@ -205,6 +205,10 @@ section.howItWorks {
     backdrop-filter: blur(5px);
     box-shadow: var(--primary-larg-shadow);
     background-color: var(--light-70);
+
+    @media #{$mq-820-down} {
+      font-size: 1.5rem;
+    }
   }
 
   .slideShow {
@@ -222,12 +226,21 @@ section.howItWorks {
 
     @media #{$mq-820-down} {
       flex-flow: column nowrap;
+      border: unset;
+      box-shadow: unset;
+      background-color: unset;
     }
     .imagesContainer {
       border-radius: 10px;
       box-shadow: var(--larg-shadow);
+      max-width: 400px;
       width: 100%;
       overflow: hidden;
+
+      @media #{$mq-820-down} {
+        max-width: unset;
+      }
+
       swiper-container.images {
         margin: 0;
         z-index: 0;
@@ -235,25 +248,14 @@ section.howItWorks {
         swiper-slide {
           img {
             width: 100%;
-            height: 560px;
             object-fit: cover;
             margin-bottom: -10px;
-
-            @media #{$mq-1400-up} {
-              height: 560px;
-            }
-            @media #{$mq-1400-down} {
-              height: 520px;
-            }
-            @media #{$mq-820-down} {
-              height: unset;
-            }
           }
         }
       }
     }
 
-    .info {
+    .infoMobile {
       display: flex;
       flex-flow: column nowrap;
       margin-inline-start: 0.5rem;
@@ -261,6 +263,7 @@ section.howItWorks {
 
       @media #{$mq-820-down} {
         margin-inline-start: unset;
+        height: 17rem;
       }
       .stages {
         display: flex;
@@ -293,6 +296,9 @@ section.howItWorks {
             font-weight: 600;
             transition-duration: 0.2s;
 
+            @media #{$mq-820-down} {
+              background-color: var(--secondary);
+            }
             @media #{$mq-365-down} {
               margin: 0.2rem 0rem;
             }
@@ -322,7 +328,11 @@ section.howItWorks {
               background: var(--accent-primary);
               color: var(--light);
               box-shadow: var(--medium-shadow);
-              scale: 1.01;
+              scale: 1.05;
+
+              @media #{$mq-820-down} {
+                border: 1px solid var(--secondary);
+              }
             }
             &.active span {
               color: var(--dark);
@@ -344,7 +354,7 @@ section.howItWorks {
           padding: 0.2rem 0.5rem;
           margin: 0.5rem 0.2rem;
           opacity: 0.5;
-          transition-duration: 0.3s;
+          transition-duration: 0.5s;
 
           @media #{$mq-820-down} {
             max-height: 0px;
@@ -362,7 +372,7 @@ section.howItWorks {
           p {
             margin-bottom: 0px;
             margin-top: 0px;
-            max-height: 0px;
+            max-height: 500px;
             overflow: hidden;
             transition-duration: 0.3s;
 
@@ -374,20 +384,19 @@ section.howItWorks {
 
           &.active {
             border: 1px solid var(--primary-20);
-            box-shadow: var(--xsmal-shadow);
+            box-shadow: var(--medium-shadow);
             padding: 1rem;
             opacity: 1;
             background-color: var(--white);
 
             @media #{$mq-820-down} {
-              max-height: 300px;
-              height: 250px;
+              max-height: 20rem;
               margin: 0.5rem 0.2rem;
             }
 
-            p {
-              max-height: 500px;
-            }
+            // p {
+            //   max-height: 500px;
+            // }
           }
         }
       }

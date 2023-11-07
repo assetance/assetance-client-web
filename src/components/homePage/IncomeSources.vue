@@ -29,27 +29,25 @@
 <style lang="scss" scoped>
 section.wl {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  margin: 1rem 0rem;
+  margin: 3rem 0rem;
   padding: 1rem;
 
-  @media #{$mq-820-down} {
-    flex-flow: column nowrap;
-  }
-
   .incomeSource {
+    align-self: flex-start;
     border: 1px solid var(--dark-5);
     border-radius: 10px;
     box-shadow: var(--medium-shadow);
     background-color: var(--light);
     margin: 1rem 0.5rem;
     padding: 1rem;
-    width: 100%;
+    width: 46%;
 
     @media #{$mq-820-down} {
       max-width: unset;
+      width: 100%;
     }
 
     &:nth-child(2) {
@@ -78,17 +76,14 @@ section.wl {
     }
   }
   .titles {
-    order: 2;
+    order: 1;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     flex-grow: 1;
     flex-shrink: 0;
+    width: 100%;
 
-    @media #{$mq-820-down} {
-      flex-shrink: 1;
-      order: 1;
-    }
     & > header {
       border-radius: 10px;
       padding: 0.5rem 1rem;
@@ -109,6 +104,10 @@ section.wl {
       font-weight: 700;
       backdrop-filter: blur(5px);
       background-color: var(--light-70);
+
+      @media #{$mq-820-down} {
+        font-size: 1.5rem;
+      }
     }
   }
 }

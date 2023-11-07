@@ -82,6 +82,10 @@ section.fractionalBenefits {
     backdrop-filter: blur(5px);
     box-shadow: var(--primary-larg-shadow);
     background-color: var(--light-70);
+
+    @media #{$mq-820-down} {
+      font-size: 1.5rem;
+    }
   }
 
   & > ul {
