@@ -12,7 +12,7 @@
     <ul class="features">
       <li>
         <div class="icon" aria-label="check mark">
-          <span class="material-symbols-rounded"> check </span>
+          <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
           <h3>Shares on your terms</h3>
@@ -21,7 +21,7 @@
       </li>
       <li>
         <div class="icon" aria-label="check mark">
-          <span class="material-symbols-rounded"> check </span>
+          <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
           <h3>Expert Property Management</h3>
@@ -32,7 +32,7 @@
       </li>
       <li>
         <div class="icon" aria-label="check mark">
-          <span class="material-symbols-rounded"> check </span>
+          <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
           <h3>No boundaries</h3>
@@ -41,7 +41,7 @@
       </li>
       <li>
         <div class="icon" aria-label="check mark">
-          <span class="material-symbols-rounded"> check </span>
+          <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
           <h3>Easy diversification</h3>

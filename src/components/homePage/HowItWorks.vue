@@ -215,25 +215,17 @@ section.howItWorks {
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-start;
-    border: 1px solid var(--dark-5);
-    border-radius: 10px;
-    box-shadow: var(--xlarg-shadow);
     margin: 1rem;
     padding: 1rem;
     width: 100%;
-    background-color: var(--light-70);
-    backdrop-filter: blur(3px);
 
     @media #{$mq-820-down} {
       flex-flow: column nowrap;
-      border: unset;
-      box-shadow: unset;
-      background-color: unset;
     }
     .imagesContainer {
       border-radius: 10px;
       box-shadow: var(--larg-shadow);
-      max-width: 400px;
+      max-width: 450px;
       width: 100%;
       overflow: hidden;
 

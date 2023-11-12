@@ -4,6 +4,7 @@ import App from './App.vue';
 import router from './router';
 import store from './store';
 import 'clickout-event';
+import VueApexCharts from 'vue3-apexcharts';
 
 /**
  * Swiper Installation steps
@@ -20,4 +21,4 @@ register();
 await store.dispatch('fetchLocale');
 
 // app start mounting
-createApp(App).use(store).use(router).mount('#app');
+createApp(App).use(store).use(router).use(VueApexCharts).mount('#app');

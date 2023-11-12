@@ -6,6 +6,7 @@
       <HowItWorks></HowItWorks>
       <IncomeSources></IncomeSources>
       <AssetanceFeatures></AssetanceFeatures>
+      <ReturnsSnippet></ReturnsSnippet>
       <section></section>
     </main>
   </div>
@@ -17,6 +18,7 @@ import FractionalBenefitsSection from '@/components/homePage/FractionalBenefitsS
 import HowItWorks from '@/components/homePage/HowItWorks.vue';
 import AssetanceFeatures from '@/components/homePage/AssetanceFeatures.vue';
 import IncomeSources from '@/components/homePage/IncomeSources.vue';
+import ReturnsSnippet from '@/components/homePage/ReturnsSnippet.vue';
 </script>
 
 <style lang="scss">

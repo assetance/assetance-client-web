@@ -22,6 +22,10 @@
                 "zip" : "AB01CD2",
                 "address" : "property address"
             },
+            "blueprint" : {
+                "rooms" : 2,
+                "baths" : 1
+            },
             "images" : [
                 {
                     "url" : "https://photos.zillowstatic.com/fp/d13ce8c7b03b75232410adfb390accb2-cc_ft_1152.webp",
@@ -46,8 +50,8 @@
             ],
             "metrics" : {
                 "AROI" : 10.5,
-                "NRY" : 5.3,
-                "ZIP10YAR" : 5.6  
+                "NRY" : 7,
+                "ZIP10YAR" : 14  
             },
             "tags" : [
                 "tag 1", 
@@ -67,17 +71,21 @@
             "isRetrade" : false,
             "isTrending" : true,
             "isNew" : true,
-            "propertyCategory" : "Single Family",
+            "propertyCategory" : "Apartment",
             "propertyLocation" : {
                 "region" : "North America",
                 "country" : "United States of America",
                 "state" : {
-                    "code" : "GA",
-                    "name" : "Georgia"
+                    "code" : "NY",
+                    "name" : "New York"
                 },
-                "city" : "Atlanta",
+                "city" : "New York",
                 "zip" : "AB01CD2",
                 "address" : "property address"
+            },
+            "blueprint" : {
+                "rooms" : 2,
+                "baths" : 1
             },
             "images" : [
                 {
@@ -102,9 +110,9 @@
                 }
             ],
             "metrics" : {
-                "AROI" : 8.3,
-                "NRY" : 4.3,
-                "ZIP10YAR" : 5.6  
+                "AROI" : 11.2,
+                "NRY" : 6.2,
+                "ZIP10YAR" : 10.6  
             },
             "tags" : [
                 "tag 1", 
@@ -124,7 +132,7 @@
             "isRetrade" : false,
             "isTrending" : true,
             "isNew" : true,
-            "propertyCategory" : "Single Family",
+            "propertyCategory" : "Office",
             "propertyLocation" : {
                 "region" : "North America",
                 "country" : "United States of America",
@@ -135,6 +143,10 @@
                 "city" : "Atlanta",
                 "zip" : "AB01CD2",
                 "address" : "property address"
+            },
+            "blueprint" : {
+                "rooms" : 2,
+                "baths" : 1
             },
             "images" : [
                 {
@@ -159,8 +171,8 @@
                 }
             ],
             "metrics" : {
-                "AROI" : 7.5,
-                "NRY" : 9.3,
+                "AROI" : 12,
+                "NRY" : 8.9,
                 "ZIP10YAR" : 5.6  
             },
             "tags" : [
