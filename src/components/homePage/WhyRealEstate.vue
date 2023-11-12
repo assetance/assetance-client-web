@@ -111,6 +111,7 @@ section.wl {
     justify-content: center;
     align-items: center;
     width: 100%;
+    z-index: 0;
 
     @media #{$mq-820-down} {
       flex-flow: column nowrap;
@@ -129,10 +130,12 @@ section.wl {
         order: 1;
         margin-top: 1rem;
         transform: translateX(30px);
+        z-index: 1;
 
         @media #{$mq-820-down} {
           order: unset;
           transform: unset;
+          z-index: unset;
         }
       }
       &:nth-child(3) {

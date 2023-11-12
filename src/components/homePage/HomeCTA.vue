@@ -18,6 +18,7 @@ function onClick() {
 
 <style lang="scss" scoped>
 section.wl {
+  position: relative;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
