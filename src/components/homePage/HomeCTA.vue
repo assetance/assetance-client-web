@@ -42,7 +42,7 @@ section.wl {
     right: -1px;
     width: 10%;
     height: 100%;
-    background: linear-gradient(265deg, var(--light) 5%, transparent 65%);
+    background: linear-gradient(280deg, var(--light) 5%, transparent 65%);
   }
 
   .box {

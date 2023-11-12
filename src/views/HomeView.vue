@@ -9,6 +9,7 @@
       <ReturnsSnippet></ReturnsSnippet>
       <WhyRealEstate></WhyRealEstate>
       <HomeCTA></HomeCTA>
+      <KnowledgeArticles></KnowledgeArticles>
     </main>
   </div>
 </template>
@@ -22,6 +23,7 @@ import IncomeSources from '@/components/homePage/IncomeSources.vue';
 import ReturnsSnippet from '@/components/homePage/ReturnsSnippet.vue';
 import WhyRealEstate from '@/components/homePage/WhyRealEstate.vue';
 import HomeCTA from '@/components/homePage/HomeCTA.vue';
+import KnowledgeArticles from '@/components/homePage/KnowledgeArticles.vue';
 </script>
 
 <style lang="scss">
