@@ -4,9 +4,8 @@
       <header>Smarty Pants Zone, Explore Our Blogs!</header>
       <h2>Learn More From Our Knowledge Center</h2>
       <p>
-        Take a look at our step by step guides on how to start with Assetance,
-        also learn more about how this process works, what is fractional real
-        estate investing and more.
+        Take a look at our step by step guides on how to start with Assetance, also learn more about
+        how this process works, what is fractional real estate investing and more.
       </p>
       <div class="ctaButton">
         <SecondaryButton @click="viewAll">View all</SecondaryButton>
@@ -22,8 +21,7 @@
           </div>
           <h3>article title</h3>
           <p>
-            article body Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Temporibus, eum.
+            article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
           <LinkButton @click="viewArticle('article id')">Read more</LinkButton>
@@ -38,8 +36,7 @@
           </div>
           <h3>article title</h3>
           <p>
-            article body Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Temporibus, eum.
+            article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
           <LinkButton @click="viewArticle('article id')">Read more</LinkButton>
@@ -54,8 +51,7 @@
           </div>
           <h3>article title</h3>
           <p>
-            article body Lorem ipsum dolor sit amet consectetur adipisicing
-            elit. Temporibus, eum.
+            article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
           <LinkButton @click="viewArticle('article id')">Read more</LinkButton>

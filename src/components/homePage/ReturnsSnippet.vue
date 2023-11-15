@@ -20,9 +20,7 @@
           }"
           ref="selectorSwiper"
           events-prefix="selector-swiper-">
-          <swiper-slide
-            v-for="property in properties"
-            :key="property.propertyId">
+          <swiper-slide v-for="property in properties" :key="property.propertyId">
             <div class="propertyProfiler">
               <img :src="property.images[0].url" alt="property image" />
               <div class="idens">
@@ -30,19 +28,10 @@
                   <TackTag>{{ property.propertyCategory }}</TackTag>
                 </div>
                 <address class="location">
-                  {{
-                    property.propertyLocation.city +
-                    ' ' +
-                    property.propertyLocation.state.code
-                  }}
+                  {{ property.propertyLocation.city + ' ' + property.propertyLocation.state.code }}
                 </address>
                 <p class="rooms">
-                  {{
-                    property.blueprint.rooms +
-                    ' BEDS | ' +
-                    property.blueprint.baths +
-                    ' BATHS'
-                  }}
+                  {{ property.blueprint.rooms + ' BEDS | ' + property.blueprint.baths + ' BATHS' }}
                 </p>
                 <div class="RFNX">
                   #<span>{{ property.RFNX }}</span>
@@ -66,10 +55,7 @@
       <div class="calculator">
         <div class="informatives">
           <div class="displayers">
-            <apexchart
-              type="bar"
-              :options="options"
-              :series="series"></apexchart>
+            <apexchart type="bar" :options="options" :series="series"></apexchart>
           </div>
           <div class="selectors">
             <div class="investmentMetrics">
@@ -88,9 +74,7 @@
                   Investment Amount
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">
-                  <span>$</span> {{ investmentAmountFormatted }}
-                </p>
+                <p class="selectorValue"><span>$</span> {{ investmentAmountFormatted }}</p>
               </div>
               <input
                 type="range"
@@ -108,9 +92,7 @@
                   Annual Appreciation Rate
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">
-                  {{ appreciationRate }}<span> %</span>
-                </p>
+                <p class="selectorValue">{{ appreciationRate }}<span> %</span></p>
               </div>
               <input
                 type="range"
@@ -142,10 +124,9 @@
         <details class="notice">
           <summary><strong>Important Notice</strong></summary>
           <p>
-            Important Notice Text, Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Laboriosam nulla unde praesentium mollitia itaque
-            at facere totam. Officia ad obcaecati minima at, dolores dolorum
-            perspiciatis amet optio dolorem. Dignissimos, saepe.
+            Important Notice Text, Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Laboriosam nulla unde praesentium mollitia itaque at facere totam. Officia ad obcaecati
+            minima at, dolores dolorum perspiciatis amet optio dolorem. Dignissimos, saepe.
           </p>
         </details>
       </div>
@@ -190,16 +171,11 @@ const investmentAmountFormatted = computed(() => {
 });
 const holdPeriod = ref(3);
 const appreciationRateInput = ref(null);
-const appreciationRate = ref(
-  properties.value[currentIndex.value].metrics.ZIP10YAR
-);
+const appreciationRate = ref(properties.value[currentIndex.value].metrics.ZIP10YAR);
 // displayers
 const yearlyIncome = computed(() => {
   return localizeNum(
-    calculate.yearlyIncome(
-      investmentAmount.value,
-      properties.value[currentIndex.value].metrics.NRY
-    )
+    calculate.yearlyIncome(investmentAmount.value, properties.value[currentIndex.value].metrics.NRY)
   );
 });
 const totalReturns = computed(() => {
@@ -312,8 +288,7 @@ const series = ref([
 onMounted(async () => {
   selectorSwiper.value.addEventListener('selector-swiper-slidechange', () => {
     currentIndex.value = selectorSwiper.value.swiper.realIndex;
-    appreciationRate.value =
-      properties.value[currentIndex.value].metrics.ZIP10YAR;
+    appreciationRate.value = properties.value[currentIndex.value].metrics.ZIP10YAR;
 
     updateGraph();
   });
@@ -332,9 +307,7 @@ onMounted(async () => {
 });
 
 // helpers
-function updateGraph(
-  ZIP10YAR = properties.value[currentIndex.value].metrics.ZIP10YAR
-) {
+function updateGraph(ZIP10YAR = properties.value[currentIndex.value].metrics.ZIP10YAR) {
   series.value = [
     {
       name: 'income',
@@ -444,11 +417,7 @@ section.wl {
           top: 0;
           width: 15%;
           height: 100%;
-          background: linear-gradient(
-            270deg,
-            var(--dark-5) 0%,
-            transparent 90%
-          );
+          background: linear-gradient(270deg, var(--dark-5) 0%, transparent 90%);
         }
         &::after {
           content: '';

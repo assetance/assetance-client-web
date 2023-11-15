@@ -1,15 +1,13 @@
 <template>
   <button>
-    <span
-      :class="['material-symbols-rounded', dir == 'rtl' ? 'rtl' : '']"
-      v-if="icon"
-      >{{ icon }}</span
-    >
+    <span :class="['material-symbols-rounded', dir == 'rtl' ? 'rtl' : '']" v-if="icon">{{
+      icon
+    }}</span>
   </button>
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const dir = ref('');
 

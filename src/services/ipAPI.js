@@ -1,8 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL:
-    'https://ipapi.co/json/?key=lArtPAkCTi77UIMwIPA6pTbGZqzJYpK9LEsiZZHcUKmxIszlu8',
+  baseURL: 'https://ipapi.co/json/?key=lArtPAkCTi77UIMwIPA6pTbGZqzJYpK9LEsiZZHcUKmxIszlu8',
   withCredentials: false,
   headers: {
     Accept: 'application/json',

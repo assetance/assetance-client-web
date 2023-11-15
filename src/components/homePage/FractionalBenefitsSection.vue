@@ -1,9 +1,6 @@
 <template>
   <section class="fractionalBenefits wl">
-    <img
-      src="@/assets/theme/vector_arrow.png"
-      alt="background img"
-      class="background" />
+    <img src="@/assets/theme/vector_arrow.png" alt="background img" class="background" />
     <header>the power of fractional investing</header>
     <h2>Benefit From Fractional Real Estate Investing</h2>
     <ul>
@@ -18,9 +15,7 @@
       </li>
       <li>
         <figure>
-          <span class="material-symbols-rounded iconLtr">
-            holiday_village
-          </span>
+          <span class="material-symbols-rounded iconLtr"> holiday_village </span>
         </figure>
         <article>
           <h3>Diversification</h3>
@@ -29,9 +24,7 @@
       </li>
       <li>
         <figure>
-          <span class="material-symbols-rounded iconLtr">
-            sync_saved_locally
-          </span>
+          <span class="material-symbols-rounded iconLtr"> sync_saved_locally </span>
         </figure>
         <article>
           <h3>Effortless</h3>

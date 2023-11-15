@@ -25,9 +25,7 @@
         </div>
         <div class="info">
           <h3>Expert Property Management</h3>
-          <p>
-            Enjoy the benefits of ownership & leave management on our experts
-          </p>
+          <p>Enjoy the benefits of ownership & leave management on our experts</p>
         </div>
       </li>
       <li>
@@ -45,9 +43,7 @@
         </div>
         <div class="info">
           <h3>Easy diversification</h3>
-          <p>
-            Easley diversify your portfolio with our multi market properties.
-          </p>
+          <p>Easley diversify your portfolio with our multi market properties.</p>
         </div>
       </li>
     </ul>
@@ -202,7 +198,9 @@ section.wl {
       background-image: radial-gradient(var(--primary) 0.1px, transparent 1.2px),
         radial-gradient(var(--primary) 0.5px, var(--light) 0.5px);
       background-size: 18px 17px;
-      background-position: 0 0, 10px 10px;
+      background-position:
+        0 0,
+        10px 10px;
       z-index: -10;
 
       &:nth-child(1) {

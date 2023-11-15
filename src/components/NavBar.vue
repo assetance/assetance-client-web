@@ -1,9 +1,5 @@
 <template>
-  <div
-    :class="[
-      'navContainer',
-      isExpanded || localizer || burgerOn ? 'navContainer__expand' : '',
-    ]">
+  <div :class="['navContainer', isExpanded || localizer || burgerOn ? 'navContainer__expand' : '']">
     <nav class="wl">
       <div
         :class="[
@@ -51,15 +47,9 @@
             ">
             <span class="material-symbols-rounded"> language </span>
           </button>
-          <secondary-button icon="login" class="button" v-if="!userData"
-            >Login</secondary-button
-          >
-          <primary-button icon="person_add" class="button" v-if="!userData"
-            >Sign Up</primary-button
-          >
-          <primary-button icon="dashboard" class="button" v-if="userData"
-            >Dashboard</primary-button
-          >
+          <secondary-button icon="login" class="button" v-if="!userData">Login</secondary-button>
+          <primary-button icon="person_add" class="button" v-if="!userData">Sign Up</primary-button>
+          <primary-button icon="dashboard" class="button" v-if="userData">Dashboard</primary-button>
         </div>
       </div>
       <!-- More Links dropdown-->
@@ -73,53 +63,35 @@
           <div class="linksGroup">
             <router-link to="#"
               >Knowledge Center
-              <span class="material-symbols-rounded">
-                open_in_new
-              </span></router-link
+              <span class="material-symbols-rounded"> open_in_new </span></router-link
             >
             <menu>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">عنوان اللينك</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
             </menu>
@@ -127,53 +99,35 @@
           <div class="linksGroup">
             <router-link to="#"
               >Knowledge Center
-              <span class="material-symbols-rounded">
-                open_in_new
-              </span></router-link
+              <span class="material-symbols-rounded"> open_in_new </span></router-link
             >
             <menu>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
               <li>
-                <span class="material-symbols-rounded">
-                  radio_button_checked
-                </span>
+                <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
                   <router-link to="#">Link Title</router-link>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
               </li>
             </menu>
@@ -182,19 +136,14 @@
         <div class="featuredArticles">
           <p>Featured from Knowledge center</p>
           <ul>
-            <li
-              class="article"
-              v-for="(article, index) in articles"
-              :key="article.id">
+            <li class="article" v-for="(article, index) in articles" :key="article.id">
               <img :src="article.image" :alt="'article ' + index + 'image'" />
               <article class="articleInfo">
                 <p class="articleTitle">{{ article.title }}</p>
                 <p class="artivleText">
                   {{ article.summary }}
                 </p>
-                <router-link :to="'article/' + article.id"
-                  >Read more</router-link
-                >
+                <router-link :to="'article/' + article.id">Read more</router-link>
               </article>
             </li>
           </ul>
@@ -235,9 +184,7 @@
             }
           "
           ><bdi>
-            <span class="material-symbols-rounded selectIcon iconLtr">
-              attach_money
-            </span>
+            <span class="material-symbols-rounded selectIcon iconLtr"> attach_money </span>
           </bdi>
           Currency
         </select-element>

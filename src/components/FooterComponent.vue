@@ -9,22 +9,15 @@
             </router-link>
             <h1>assetance</h1>
           </div>
-          <p>
-            Join our newsletter to stay up to date on features and releases.
-          </p>
+          <p>Join our newsletter to stay up to date on features and releases.</p>
           <label for="subscribe" class="subscribe">
-            <input
-              type="email"
-              name="subscribe"
-              id="subscribe"
-              placeholder="Email" />
+            <input type="email" name="subscribe" id="subscribe" placeholder="Email" />
             <PrimaryButton @click="addSubscriber" :is-loading="loader">{{
               subButtonText
             }}</PrimaryButton>
           </label>
-          <sub
-            >By subscribing you agree to our Privacy Policy and provide consent
-            to receive updates from our company.
+          <sub>By subscribing you agree to our Privacy Policy and provide consent to receive updates
+            from our company.
           </sub>
         </div>
         <div class="col">
@@ -46,41 +39,25 @@
           </ul>
         </div>
         <div class="col">
-          <h2>
-            <span class="material-symbols-rounded"> share </span>Follow Us
-          </h2>
+          <h2><span class="material-symbols-rounded"> share </span>Follow Us</h2>
           <ul>
             <li>
-              <router-link to="/"
-                ><img src="@/assets/social/facebook-white.png" alt="facebook" />
-                Facebook</router-link
-              >
+              <router-link to="/"><img src="@/assets/social/facebook-white.png" alt="facebook" />
+                Facebook</router-link>
             </li>
             <li>
-              <router-link to="/"
-                ><img src="@/assets/social/twitterx-holow-white.png" alt="x" />
-                X</router-link
-              >
+              <router-link to="/"><img src="@/assets/social/twitterx-holow-white.png" alt="x" /> X</router-link>
             </li>
             <li>
-              <router-link to="/"
-                ><img
-                  src="@/assets/social/instagram-white.png"
-                  alt="instagram" />
-                Instagram</router-link
-              >
+              <router-link to="/"><img src="@/assets/social/instagram-white.png" alt="instagram" />
+                Instagram</router-link>
             </li>
             <li>
-              <router-link to="/"
-                ><img src="@/assets/social/linkedin-white.png" alt="linkedin" />
-                LinkedIn</router-link
-              >
+              <router-link to="/"><img src="@/assets/social/linkedin-white.png" alt="linkedin" />
+                LinkedIn</router-link>
             </li>
             <li>
-              <router-link to="/"
-                ><img src="@/assets/social/tiktok-white.png" alt="tiktok" />
-                TikTok</router-link
-              >
+              <router-link to="/"><img src="@/assets/social/tiktok-white.png" alt="tiktok" /> TikTok</router-link>
             </li>
           </ul>
         </div>
@@ -121,7 +98,7 @@ footer.wl {
 
   .container {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     border-radius: 10px;
@@ -148,6 +125,7 @@ footer.wl {
       .col {
         display: flex;
         flex-flow: column nowrap;
+        width: 30%;
         padding: 1rem;
 
         @media #{$mq-820-down} {
@@ -222,6 +200,7 @@ footer.wl {
               @media #{$mq-820-down} {
                 width: 100%;
               }
+
               &::placeholder {
                 color: var(--dark-40);
                 font-weight: 500;
@@ -236,6 +215,12 @@ footer.wl {
         }
 
         &:nth-child(2) {
+          margin-inline-start: 2rem;
+
+          @media #{$mq-820-down} {
+            margin-inline-start: unset;
+          }
+
           h2 {
             margin: 0.5rem 0rem;
             font-size: 1rem;
@@ -262,6 +247,7 @@ footer.wl {
             }
           }
         }
+
         &:nth-child(3) {
           h2 {
             display: flex;
@@ -318,7 +304,7 @@ footer.wl {
         }
       }
 
-      & > a {
+      &>a {
         color: var(--light);
         font-size: 0.7rem;
         margin: 0 0.5rem;
@@ -335,7 +321,8 @@ footer.wl {
           }
         }
       }
-      & > span {
+
+      &>span {
         font-size: 0.7rem;
 
         @media #{$mq-820-down} {

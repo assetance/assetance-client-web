@@ -4,15 +4,13 @@
       <slot></slot>
     </p>
     <span class="material-symbols-rounded" v-if="icon">{{ icon }}</span>
-    <span class="material-symbols-rounded" v-else-if="dir == 'rtl'"
-      >arrow_back</span
-    >
+    <span class="material-symbols-rounded" v-else-if="dir == 'rtl'">arrow_back</span>
     <span class="material-symbols-rounded" v-else>arrow_forward</span>
   </button>
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const dir = ref('');
 

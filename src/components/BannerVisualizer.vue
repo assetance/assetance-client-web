@@ -42,10 +42,7 @@
           disableOnInteraction: false,
         }"
         allow-touch-move="true">
-        <swiper-slide
-          v-for="image in imageLinkers[0]"
-          :key="image.alt"
-          ref="mainSwiperSlides">
+        <swiper-slide v-for="image in imageLinkers[0]" :key="image.alt" ref="mainSwiperSlides">
           <img :src="image.url" :alt="image.alt" />
         </swiper-slide>
       </swiper-container>

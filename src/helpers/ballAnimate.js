@@ -28,10 +28,7 @@ export default {
       };
 
       el.animate(
-        [
-          { transform: 'translate(0, 0)' },
-          { transform: `translate(${to.x}rem, ${to.y}rem)` },
-        ],
+        [{ transform: 'translate(0, 0)' }, { transform: `translate(${to.x}rem, ${to.y}rem)` }],
         {
           duration: (Math.random() + 1) * 5000, // random duration
           direction: 'alternate',

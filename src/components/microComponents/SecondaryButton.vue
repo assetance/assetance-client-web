@@ -6,9 +6,7 @@
       <div></div>
       <div></div>
     </div>
-    <span class="material-symbols-rounded" v-if="icon && !isLoading">{{
-      icon
-    }}</span>
+    <span class="material-symbols-rounded" v-if="icon && !isLoading">{{ icon }}</span>
     <p
       v-if="$slots.default && !isLoading"
       :class="[
@@ -21,7 +19,7 @@
 </template>
 
 <script setup>
-import { defineProps, onMounted, ref } from 'vue';
+import { onMounted, ref } from 'vue';
 
 const dir = ref('');
 
