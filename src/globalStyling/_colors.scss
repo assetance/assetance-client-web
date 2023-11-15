@@ -1,102 +1,103 @@
 // light theme
 :root {
-    // colors
-    --white: white;
-    --black: black;
-    --primary: #0056e0;
-    --dark: #0B212E;
-    --light: #F9F9FC;
-    --secondary: #E2F6FF;
-    --accent: #47B6FE;
-    --positive: #0FDA45;
-    --negative: #F83A53;
-    --warning: #FFD61F;
-    --primary-accent: linear-gradient(130deg, var(--primary) 0%, var(--accent) 100%);
-    --accent-primary: linear-gradient(130deg, var(--accent) 0%, var(--primary) 100%);
-    // 90% shade
-    --primary-90: #0056e0e6;
-    --dark-90: #0b212ee6;
-    --light-90: #f9f9fce6;
-    --secondary-90: #e2f6ffe6;
-    --accent-90: #47b6fee6;
-    --positive-90: #0fda45e6;
-    --negative-90: #f83a53e6;
-    --warning-90: #ffd61fe6;
-    // 70% shade
-    --primary-70: #0056e0b4;
-    --dark-70: #0B212Eb4;
-    --light-70: #F9F9FCb4;
-    --secondary-70: #E2F6FFb4;
-    --accent-70: #47B6FEb4;
-    --positive-70: #0FDA45b4;
-    --negative-70: #F83A53b4;
-    --warning-70: #ffd61fb4;
-    // 40% shade
-    --primary-40: #0056e067;
-    --dark-40: #0B212E67;
-    --light-40: #F9F9FC67;
-    --secondary-40: #E2F6FF67;
-    --accent-40: #47B6FE67;
-    --positive-40: #0FDA4567;
-    --negative-40: #F83A5367;
-    --warning-40: #ffd61f67;
-    // 20% shade
-    --primary-20: #0056e034;
-    --dark-20: #0B212E34;
-    --light-20: #F9F9FC34;
-    --secondary-20: #E2F6FF34;
-    --accent-20: #47B6FE34;
-    --positive-20: #0FDA4534;
-    --negative-20: #F83A5334;
-    --warning-20: #ffd61f34;
-    // 5% shade
-    --primary-5: #0056e00e;
-    --dark-5: #0B212E0e;
-    --light-5: #F9F9FC0e;
-    --secondary-5: #E2F6FF0e;
-    --accent-5: #47B6FE0e;
-    --positive-5: #0FDA450e;
-    --negative-5: #F83A530e;
-    --warning-5: #ffd61f0e;
-    // shadows
-    --xxsmall-shadow: 0px 1px 2px 0px var(--primary-20);
-    --xsmall-shadow: 0px 1px 2px 0px var(--primary-20), 0px 1px 3px 0px var(--primary-40);
-    --small-shadow: 0px 2px 4px -2px var(--primary-20), 0px 4px 8px -2px var(--primary-5);
-    --medium-shadow: 0px 4px 6px -2px var(--primary-20), 0px 12px 16px -4px var(--primary-5);
-    --larg-shadow: 0px 8px 8px -4px var(--primary-20), 0px 20px 24px -4px var(--primary-5);
-    --xlarg-shadow: 0px 24px 48px -12px var(--primary-20);
-    --xxlarg-shadow: 0px 32px 64px -12px var(--primary-20);
-    --primary-dark-shadow: 4px 10px 15px -5px var(--dark-5), 1px 15px 25px -5px var(--primary-40);
-    --primary-larg-shadow: 0px 8px 8px -4px var(--primary-5), 0px 20px 24px -4px var(--primary-5);
-    // icons
-    --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);
+  // colors
+  --white: white;
+  --black: black;
+  --primary: #0056e0;
+  --dark: #0b212e;
+  --light: #f9f9fc;
+  --secondary: #e2f6ff;
+  --accent: #47b6fe;
+  --positive: #0fda45;
+  --negative: #f83a53;
+  --warning: #ffd61f;
+  --primary-accent: linear-gradient(130deg, var(--primary) 0%, var(--accent) 100%);
+  --accent-primary: linear-gradient(130deg, var(--accent) 0%, var(--primary) 100%);
+  // 90% shade
+  --primary-90: #0056e0e6;
+  --dark-90: #0b212ee6;
+  --light-90: #f9f9fce6;
+  --secondary-90: #e2f6ffe6;
+  --accent-90: #47b6fee6;
+  --positive-90: #0fda45e6;
+  --negative-90: #f83a53e6;
+  --warning-90: #ffd61fe6;
+  // 70% shade
+  --primary-70: #0056e0b4;
+  --dark-70: #0b212eb4;
+  --light-70: #f9f9fcb4;
+  --secondary-70: #e2f6ffb4;
+  --accent-70: #47b6feb4;
+  --positive-70: #0fda45b4;
+  --negative-70: #f83a53b4;
+  --warning-70: #ffd61fb4;
+  // 40% shade
+  --primary-40: #0056e067;
+  --dark-40: #0b212e67;
+  --light-40: #f9f9fc67;
+  --secondary-40: #e2f6ff67;
+  --accent-40: #47b6fe67;
+  --positive-40: #0fda4567;
+  --negative-40: #f83a5367;
+  --warning-40: #ffd61f67;
+  // 20% shade
+  --primary-20: #0056e034;
+  --dark-20: #0b212e34;
+  --light-20: #f9f9fc34;
+  --secondary-20: #e2f6ff34;
+  --accent-20: #47b6fe34;
+  --positive-20: #0fda4534;
+  --negative-20: #f83a5334;
+  --warning-20: #ffd61f34;
+  // 5% shade
+  --primary-5: #0056e00e;
+  --dark-5: #0b212e0e;
+  --light-5: #f9f9fc0e;
+  --secondary-5: #e2f6ff0e;
+  --accent-5: #47b6fe0e;
+  --positive-5: #0fda450e;
+  --negative-5: #f83a530e;
+  --warning-5: #ffd61f0e;
+  // shadows
+  --xxsmall-shadow: 0px 1px 2px 0px var(--primary-20);
+  --xsmall-shadow: 0px 1px 2px 0px var(--primary-20), 0px 1px 3px 0px var(--primary-40);
+  --small-shadow: 0px 2px 4px -2px var(--primary-20), 0px 4px 8px -2px var(--primary-5);
+  --medium-shadow: 0px 4px 6px -2px var(--primary-20), 0px 12px 16px -4px var(--primary-5);
+  --larg-shadow: 0px 8px 8px -4px var(--primary-20), 0px 20px 24px -4px var(--primary-5);
+  --xlarg-shadow: 0px 24px 48px -12px var(--primary-20);
+  --xxlarg-shadow: 0px 32px 64px -12px var(--primary-20);
+  --primary-dark-shadow: 4px 10px 15px -5px var(--dark-5), 1px 15px 25px -5px var(--primary-40);
+  --primary-larg-shadow: 0px 8px 8px -4px var(--primary-5), 0px 20px 24px -4px var(--primary-5);
+  // icons
+  --icon-color: invert(0%) sepia(2%) saturate(0%) hue-rotate(239deg) brightness(104%) contrast(100%);
 }
 
-[data-theme="dark"] {
-    // colors
-    --white: black;
-    --black: white;
-    --light: #0B212E;
-    --dark: #F9F9FC;
+[data-theme='dark'] {
+  // colors
+  --white: black;
+  --black: white;
+  --light: #0b212e;
+  --dark: #f9f9fc;
 
-    // 70% shade
-    --light-70: #0B212Eb4;
-    --dark-70: #F9F9FCb4;
+  // 70% shade
+  --light-70: #0b212eb4;
+  --dark-70: #f9f9fcb4;
 
-    // 40% shade
-    --light-40: #0B212E67;
-    --dark-40: #F9F9FC67;
+  // 40% shade
+  --light-40: #0b212e67;
+  --dark-40: #f9f9fc67;
 
-    // 20% shade
-    --light-20: #0B212E34;
-    --dark-20: #F9F9FC34;
+  // 20% shade
+  --light-20: #0b212e34;
+  --dark-20: #f9f9fc34;
 
-    // 5% shade
-    --light-5: #0B212E0e;
-    --dark-5: #F9F9FC0e;
+  // 5% shade
+  --light-5: #0b212e0e;
+  --dark-5: #f9f9fc0e;
 
-    // icons
-    --icon-color: invert(99%) sepia(4%) saturate(164%) hue-rotate(127deg) brightness(119%) contrast(100%);
+  // icons
+  --icon-color: invert(99%) sepia(4%) saturate(164%) hue-rotate(127deg) brightness(119%)
+    contrast(100%);
 }
 
 /* to understand more about the dynamic icon coloring you can visit the following 
@@ -105,5 +106,4 @@ https://stackoverflow.com/a/53336754/15377341
 
 https://codepen.io/sosuke/pen/Pjoqqp
 
-*/ 
-
+*/

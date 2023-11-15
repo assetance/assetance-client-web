@@ -163,11 +163,7 @@ function changeStep(index) {
   currentActiveIndex.value = index;
 }
 // checking what the next index number should be
-function indexInc(
-  index = currentActiveIndex.value,
-  upperLimit = 3,
-  lowerLimit = 0
-) {
+function indexInc(index = currentActiveIndex.value, upperLimit = 3, lowerLimit = 0) {
   if (index >= upperLimit) {
     return lowerLimit;
   } else if (index < lowerLimit) {

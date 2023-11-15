@@ -10,9 +10,7 @@
             <span class="material-symbols-rounded"> monitoring </span>
           </div>
           <h3>capital appreciation</h3>
-          <p>
-            Appreciating over time, providing potential for substantial returns.
-          </p>
+          <p>Appreciating over time, providing potential for substantial returns.</p>
         </div>
         <div class="reasonCard">
           <div class="icon">
@@ -28,18 +26,14 @@
             <span class="material-symbols-rounded"> house_with_shield </span>
           </div>
           <h3>Inflation hedge</h3>
-          <p>
-            Acts like a hedge against inflation, preserving purchasing power.
-          </p>
+          <p>Acts like a hedge against inflation, preserving purchasing power.</p>
         </div>
         <div class="reasonCard">
           <div class="icon">
             <span class="material-symbols-rounded"> query_stats </span>
           </div>
           <h3>Low market volatility</h3>
-          <p>
-            historically shows less volatility compared to other investments.
-          </p>
+          <p>historically shows less volatility compared to other investments.</p>
         </div>
       </div>
     </div>

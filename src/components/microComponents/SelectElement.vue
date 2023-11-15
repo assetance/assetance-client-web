@@ -33,7 +33,7 @@
 </template>
 
 <script setup>
-import { ref, defineProps, defineEmits } from 'vue';
+import { ref } from 'vue';
 
 const isExpanded = ref(false);
 const selection = ref('');

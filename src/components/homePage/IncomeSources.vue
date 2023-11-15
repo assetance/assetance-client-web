@@ -16,10 +16,7 @@
         <span class="material-symbols-rounded"> monitoring </span>
       </div>
       <h3>Appreciation</h3>
-      <p>
-        Track the growth of your shares’ value overtime, then put for sale
-        whenever you want.
-      </p>
+      <p>Track the growth of your shares’ value overtime, then put for sale whenever you want.</p>
     </div>
   </section>
 </template>

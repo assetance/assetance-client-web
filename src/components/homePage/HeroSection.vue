@@ -2,12 +2,10 @@
   <section class="hero wl" aria-label="Hero Section">
     <div class="banner">
       <div class="info fade-in-left" aria-label="Hero Info">
-        <h1 class="fade-in-300">
-          unlocking real estate investing for everyone
-        </h1>
+        <h1 class="fade-in-300">unlocking real estate investing for everyone</h1>
         <p class="fade-in-up">
-          Investing Made Accessible With Low-Cost Shares, Hassle-Free
-          Management, and Freedom to Buy and Sell on Your Terms.
+          Investing Made Accessible With Low-Cost Shares, Hassle-Free Management, and Freedom to Buy
+          and Sell on Your Terms.
         </p>
         <div class="ctaButtons fade-in-up-300">
           <PrimaryButton icon="start">Start Investing</PrimaryButton>
@@ -15,14 +13,10 @@
         </div>
         <div class="mobileAppCta fade-in-up-500">
           <a href="#"
-            ><img
-              src="@/assets/Google-Play/EN/light-badge.png"
-              alt="get it on Google Play"
+            ><img src="@/assets/Google-Play/EN/light-badge.png" alt="get it on Google Play"
           /></a>
           <a href="#"
-            ><img
-              src="@/assets/App-Store/EN/light-badge.png"
-              alt="download on App Store"
+            ><img src="@/assets/App-Store/EN/light-badge.png" alt="download on App Store"
           /></a>
         </div>
       </div>
@@ -32,9 +26,7 @@
             <BannerVisualizer></BannerVisualizer>
           </div>
           <template #fallback>
-            <div
-              class="visualizerFallbackSkeleton"
-              aria-label="Hero Image Loading">
+            <div class="visualizerFallbackSkeleton" aria-label="Hero Image Loading">
               <div class="loadingShader fade-in-right"></div>
               <div class="loadingShader fade-in-right"></div>
               <div class="loadingShader fade-in-500"></div>

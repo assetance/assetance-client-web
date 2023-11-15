@@ -27,7 +27,7 @@ import NavBar from './components/NavBar.vue';
 import FooterComponent from './components/FooterComponent.vue';
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
