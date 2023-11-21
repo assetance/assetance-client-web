@@ -1,14 +1,11 @@
 <template>
   <section class="wl">
     <div class="informatives">
-      <header>Smarty Pants Zone, Explore Our Blogs!</header>
-      <h2>Learn More From Our Knowledge Center</h2>
-      <p>
-        Take a look at our step by step guides on how to start with Assetance, also learn more about
-        how this process works, what is fractional real estate investing and more.
-      </p>
+      <header>{{ $t('home.knowledge-articles.tagline') }}</header>
+      <h2>{{ $t('home.knowledge-articles.title') }}</h2>
+      <p>{{ $t('home.knowledge-articles.description') }}</p>
       <div class="ctaButton">
-        <SecondaryButton @click="viewAll">View all</SecondaryButton>
+        <SecondaryButton @click="viewAll">{{ $t('global.view-all') }}</SecondaryButton>
       </div>
     </div>
     <div class="articles">
@@ -17,14 +14,14 @@
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
-            <span>5 min read</span>
+            <span>{{ $t('home.knowledge-articles.read-time', 5, { n: 5 }) }}</span>
           </div>
           <h3>article title</h3>
           <p>
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">Read more</LinkButton>
+          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
         </article>
       </div>
       <div class="articleCard">
@@ -32,14 +29,14 @@
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
-            <span>5 min read</span>
+            <span>{{ $t('home.knowledge-articles.read-time', 1, { n: 1 }) }}</span>
           </div>
           <h3>article title</h3>
           <p>
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">Read more</LinkButton>
+          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
         </article>
       </div>
       <div class="articleCard">
@@ -47,14 +44,14 @@
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
-            <span>5 min read</span>
+            <span>{{ $t('home.knowledge-articles.read-time', 1, { n: 1 }) }}</span>
           </div>
           <h3>article title</h3>
           <p>
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">Read more</LinkButton>
+          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
         </article>
       </div>
     </div>
@@ -82,13 +79,15 @@ section.wl {
   flex-flow: row nowrap;
   align-items: flex-start;
   padding-top: 2rem;
-  background: url('@/assets/theme/bbburst.png'), var(--light-70);
-  background-repeat: none;
+  background: url("/src/assets/theme/sssurface-blue.png") 151% 10%, url("/src/assets/theme/sssurface-dark.png") 40% -50%;
+  background-repeat: no-repeat;
+  background-size: 70%, 50%;
 
   @media #{$mq-820-down} {
     flex-flow: column nowrap;
   }
-  & > .informatives {
+
+  &>.informatives {
     display: flex;
     flex-flow: column nowrap;
     border-radius: 10px;
@@ -103,7 +102,7 @@ section.wl {
       margin-bottom: 0.5rem;
     }
 
-    & > header {
+    &>header {
       border-radius: 10px;
       color: var(--primary);
       font-size: 1rem;
@@ -114,7 +113,7 @@ section.wl {
       }
     }
 
-    & > h2 {
+    &>h2 {
       margin: 0.5rem 0rem;
       border-radius: 10px;
       text-transform: capitalize;
@@ -127,7 +126,7 @@ section.wl {
       }
     }
 
-    & > p {
+    &>p {
       margin: 2rem 0;
     }
 
@@ -156,7 +155,7 @@ section.wl {
         border-radius: 10px;
       }
 
-      & > .informatives {
+      &>.informatives {
         display: flex;
         flex-flow: column nowrap;
         margin-inline-start: 1rem;
@@ -177,6 +176,7 @@ section.wl {
         h3 {
           margin: 0.5rem 0;
         }
+
         p {
           margin: 0.5rem 0;
           max-height: 2.5rem;

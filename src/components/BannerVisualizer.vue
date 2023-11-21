@@ -1,13 +1,9 @@
 <template>
   <div class="VisualizerContainer">
     <div class="complementaryImage fade-in">
-      <swiper-container
-        loop="true"
-        allow-touch-move="false"
-        :ref="
-          (el) => {
-            swipers.push(el);
-          }
+      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
+          swipers.push(el);
+        }
         ">
         <swiper-slide v-for="image in imageLinkers[1]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -15,13 +11,9 @@
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in">
-      <swiper-container
-        loop="true"
-        allow-touch-move="false"
-        :ref="
-          (el) => {
-            swipers.push(el);
-          }
+      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
+          swipers.push(el);
+        }
         ">
         <swiper-slide v-for="image in imageLinkers[2]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -29,43 +21,32 @@
       </swiper-container>
     </div>
     <div class="mainImage fade-in-300">
-      <swiper-container
-        id="mainImage"
-        ref="mainSwiper"
-        events-prefix="main-swiper-"
-        loop="true"
-        :pagination="{
-          clickable: true,
-        }"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        allow-touch-move="true">
+      <swiper-container id="mainImage" ref="mainSwiper" events-prefix="main-swiper-" loop="true" :pagination="{
+        clickable: true,
+      }" :autoplay="{
+  delay: 3000,
+  disableOnInteraction: false,
+}" allow-touch-move="true">
         <swiper-slide v-for="image in imageLinkers[0]" :key="image.alt" ref="mainSwiperSlides">
           <img :src="image.url" :alt="image.alt" />
         </swiper-slide>
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in-500">
-      <swiper-container
-        loop="true"
-        allow-touch-move="false"
-        :ref="
-          (el) => {
-            swipers.push(el);
-          }
+      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
+          swipers.push(el);
+        }
         ">
         <swiper-slide v-for="image in imageLinkers[3]" :key="image.alt">
           <div class="metrics">
             <div class="metric">
-              <span>AROI</span>
+              <span>{{ $t('metrics.aroi') }}</span>
               <p>
                 {{ image.AROI }}
               </p>
             </div>
             <div class="metric">
-              <span>NRY</span>
+              <span>{{ $t('metrics.nry') }}</span>
               <p>
                 {{ image.NRY }}
               </p>
@@ -75,13 +56,9 @@
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in-500">
-      <swiper-container
-        loop="true"
-        allow-touch-move="false"
-        :ref="
-          (el) => {
-            swipers.push(el);
-          }
+      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
+          swipers.push(el);
+        }
         ">
         <swiper-slide v-for="image in imageLinkers[4]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -175,6 +152,7 @@ div.VisualizerContainer {
   swiper-container {
     height: 100%;
   }
+
   swiper-slide {
     height: 100%;
   }
@@ -208,6 +186,7 @@ div.VisualizerContainer {
       opacity: 1;
       transition-duration: 0.3s;
     }
+
     swiper-container::part(bullet-active) {
       border-radius: 5px;
       border: 1px solid var(--primary);
@@ -216,6 +195,7 @@ div.VisualizerContainer {
       transition-duration: 0.3s;
     }
   }
+
   .complementaryImage {
     box-shadow: var(--primary-dark-shadow);
     overflow: hidden;
@@ -238,6 +218,7 @@ div.VisualizerContainer {
         z-index: 0;
       }
     }
+
     &:nth-child(5) {
       position: absolute;
       border-radius: 10px;
@@ -258,6 +239,7 @@ div.VisualizerContainer {
         z-index: 0;
       }
     }
+
     &:nth-child(2) {
       position: absolute;
       border-radius: 10px;
@@ -272,6 +254,7 @@ div.VisualizerContainer {
         z-index: 0;
       }
     }
+
     &:nth-child(4) {
       position: absolute;
       border-radius: 10px;
@@ -310,7 +293,7 @@ div.VisualizerContainer {
               font-size: 14px;
               background-color: var(--primary-5);
 
-              & > span {
+              &>span {
                 position: absolute;
                 padding: 0rem 0.5rem;
                 border-radius: 5px;

@@ -7,16 +7,16 @@
       <div class="emptyBox"></div>
       <div class="emptyBox"></div>
     </div>
-    <header>Investing Simplified With Assetance</header>
-    <h2>Why Assetance ?</h2>
+    <header>{{ $t('home.assetance-features.tagline') }}</header>
+    <h2>{{ $t('home.assetance-features.title') }}</h2>
     <ul class="features">
       <li>
         <div class="icon" aria-label="check mark">
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
-          <h3>Shares on your terms</h3>
-          <p>Put your property shares for sale anytime you want.</p>
+          <h3>{{ $t('home.assetance-features.feat1.title') }}</h3>
+          <p>{{ $t('home.assetance-features.feat1.description') }}</p>
         </div>
       </li>
       <li>
@@ -24,8 +24,8 @@
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
-          <h3>Expert Property Management</h3>
-          <p>Enjoy the benefits of ownership & leave management on our experts</p>
+          <h3>{{ $t('home.assetance-features.feat2.title') }}</h3>
+          <p>{{ $t('home.assetance-features.feat2.description') }}</p>
         </div>
       </li>
       <li>
@@ -33,8 +33,8 @@
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
-          <h3>No boundaries</h3>
-          <p>Invest from anywhere in the world, we support +150 countries.</p>
+          <h3>{{ $t('home.assetance-features.feat3.title') }}</h3>
+          <p>{{ $t('home.assetance-features.feat3.description') }}</p>
         </div>
       </li>
       <li>
@@ -42,13 +42,13 @@
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
-          <h3>Easy diversification</h3>
-          <p>Easley diversify your portfolio with our multi market properties.</p>
+          <h3>{{ $t('home.assetance-features.feat4.title') }}</h3>
+          <p>{{ $t('home.assetance-features.feat4.description') }}</p>
         </div>
       </li>
     </ul>
     <div class="ctaButton">
-      <SecondaryButton>Start Investing</SecondaryButton>
+      <SecondaryButton>{{ $t('global.browes-properties') }}</SecondaryButton>
     </div>
   </section>
 </template>
@@ -71,7 +71,7 @@ section.wl {
     align-items: center;
   }
 
-  & > header {
+  &>header {
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--primary);
@@ -81,7 +81,7 @@ section.wl {
     background-color: var(--light-70);
   }
 
-  & > h2 {
+  &>h2 {
     border-radius: 10px;
     box-shadow: var(--primary-larg-shadow);
     margin-top: 0.5rem;
@@ -124,6 +124,7 @@ section.wl {
         transform: rotate(0deg);
       }
     }
+
     li {
       position: relative;
       display: flex;
@@ -156,6 +157,7 @@ section.wl {
           font-size: 2rem;
         }
       }
+
       .info {
         display: flex;
         flex-flow: column nowrap;
@@ -167,6 +169,7 @@ section.wl {
         h3 {
           margin: 0.3rem 0;
         }
+
         p {
           margin: 0.2rem;
         }
@@ -174,14 +177,14 @@ section.wl {
     }
   }
 
-  & > .ctaButton {
+  &>.ctaButton {
     align-self: center;
     max-width: 200px;
     width: 100%;
     padding-bottom: 1rem;
   }
 
-  & > .visualBoxes {
+  &>.visualBoxes {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -209,24 +212,28 @@ section.wl {
         top: 30%;
         left: 3%;
       }
+
       &:nth-child(2) {
         width: 80px;
         height: 40px;
         top: 50%;
         left: 40%;
       }
+
       &:nth-child(3) {
         width: 70px;
         height: 40px;
         top: 16%;
         left: 85%;
       }
+
       &:nth-child(4) {
         width: 50px;
         height: 80px;
         top: 80%;
         left: 30%;
       }
+
       &:nth-child(5) {
         width: 50px;
         height: 100px;

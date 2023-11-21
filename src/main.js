@@ -1,6 +1,7 @@
-import { createApp } from 'vue';
+import { createApp } from 'vue/dist/vue.esm-bundler';
 import App from './App.vue';
 import router from './router';
+import localizer from './localizer';
 import store from './store';
 import VueApexCharts from 'vue3-apexcharts';
 import 'clickout-event';
@@ -19,5 +20,6 @@ const app = createApp(App);
 app.use(router);
 app.use(store);
 app.use(VueApexCharts);
+app.use(localizer);
 
 app.mount('#app');

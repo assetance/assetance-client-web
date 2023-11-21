@@ -1,16 +1,16 @@
 <template>
   <section class="fractionalBenefits wl">
     <img src="@/assets/theme/vector_arrow.png" alt="background img" class="background" />
-    <header>the power of fractional investing</header>
-    <h2>Benefit From Fractional Real Estate Investing</h2>
+    <header>{{ $t('home.fractional-investing.tagline') }}</header>
+    <h2>{{ $t('home.fractional-investing.title') }}</h2>
     <ul>
       <li>
         <figure>
           <span class="material-symbols-rounded iconLtr"> price_check </span>
         </figure>
         <article>
-          <h3>Lower Entry Costs</h3>
-          <p>Begin with a fraction of the full property cost.</p>
+          <h3>{{ $t('home.fractional-investing.benefit1.title') }}</h3>
+          <p>{{ $t('home.fractional-investing.benefit1.description') }}</p>
         </article>
       </li>
       <li>
@@ -18,8 +18,8 @@
           <span class="material-symbols-rounded iconLtr"> holiday_village </span>
         </figure>
         <article>
-          <h3>Diversification</h3>
-          <p>Spread risk across multiple properties.</p>
+          <h3>{{ $t('home.fractional-investing.benefit2.title') }}</h3>
+          <p>{{ $t('home.fractional-investing.benefit2.description') }}</p>
         </article>
       </li>
       <li>
@@ -27,8 +27,8 @@
           <span class="material-symbols-rounded iconLtr"> sync_saved_locally </span>
         </figure>
         <article>
-          <h3>Effortless</h3>
-          <p>No involvement in property management.</p>
+          <h3>{{ $t('home.fractional-investing.benefit3.title') }}</h3>
+          <p>{{ $t('home.fractional-investing.benefit3.description') }}</p>
         </article>
       </li>
       <li>
@@ -36,8 +36,8 @@
           <span class="material-symbols-rounded iconLtr"> diversity_3 </span>
         </figure>
         <article>
-          <h3>Investing For All Levels</h3>
-          <p>Open to all investors, newcomers and experts.</p>
+          <h3>{{ $t('home.fractional-investing.benefit4.title') }}</h3>
+          <p>{{ $t('home.fractional-investing.benefit4.description') }}</p>
         </article>
       </li>
     </ul>
@@ -55,7 +55,7 @@ section.fractionalBenefits {
   padding-top: 3rem;
   text-align: center;
 
-  & > header {
+  &>header {
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--primary);
@@ -65,7 +65,7 @@ section.fractionalBenefits {
     background-color: var(--light-70);
   }
 
-  & > h2 {
+  &>h2 {
     border-radius: 10px;
     margin-top: 0.5rem;
     padding: 1rem 1.5rem;
@@ -81,7 +81,7 @@ section.fractionalBenefits {
     }
   }
 
-  & > ul {
+  &>ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
@@ -104,7 +104,8 @@ section.fractionalBenefits {
       @media #{$mq-480-down} {
         max-width: unset;
       }
-      & > * {
+
+      &>* {
         margin: 0;
       }
 
@@ -129,7 +130,7 @@ section.fractionalBenefits {
           right: -10px;
         }
 
-        & > span.material-symbols-rounded {
+        &>span.material-symbols-rounded {
           font-size: 2rem;
         }
       }
@@ -139,7 +140,7 @@ section.fractionalBenefits {
         padding: 0.5rem;
         text-align: start;
 
-        & > * {
+        &>* {
           margin: 0.2rem 0rem;
         }
 
@@ -150,7 +151,7 @@ section.fractionalBenefits {
     }
   }
 
-  & > img.background {
+  &>img.background {
     position: absolute;
     width: 90%;
     top: 20%;
@@ -161,6 +162,7 @@ section.fractionalBenefits {
       content: url('@/assets/theme/vector_arrow_tablet.png');
       object-fit: scale-down;
     }
+
     @media #{$mq-480-down} {
       top: 0%;
       content: url('@/assets/theme/vector_arrow_mobile.png');

@@ -4,11 +4,7 @@
 # adding the date variable
 now=`date`
 
-echo " -- Requested At $now -- "
-
-echo "-- BUILDING APP FOR PRODUCTION --"
-npm run lint
-npm run build
+echo " -- Hositnger Files Requested At $now -- "
 
 echo "-- ARRANGING FILES --"
 

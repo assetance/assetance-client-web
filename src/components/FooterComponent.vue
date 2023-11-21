@@ -9,64 +9,65 @@
             </router-link>
             <h1>assetance</h1>
           </div>
-          <p>Join our newsletter to stay up to date on features and releases.</p>
+          <p>{{ $t('global.footer.join-newsletter') }}</p>
           <label for="subscribe" class="subscribe">
             <input type="email" name="subscribe" id="subscribe" placeholder="Email" />
             <PrimaryButton @click="addSubscriber" :is-loading="loader">{{
               subButtonText
             }}</PrimaryButton>
           </label>
-          <sub>By subscribing you agree to our Privacy Policy and provide consent to receive updates
-            from our company.
+          <sub>{{ $t('global.footer.newsletter-agreement') }}
           </sub>
         </div>
         <div class="col">
-          <h2>Quick Links</h2>
+          <h2>{{ $t('global.footer.quick-links') }}</h2>
           <ul>
             <li>
-              <router-link to="/">Properties</router-link>
+              <router-link to="/">{{ $t('global.footer.properties') }}</router-link>
             </li>
-            <li><router-link to="/">Knowledge Base</router-link></li>
+            <li><router-link to="/">{{ $t('global.footer.knowledge-base') }}</router-link></li>
             <li>
-              <router-link to="/">Help Center</router-link>
-            </li>
-            <li>
-              <router-link to="/">About Us</router-link>
+              <router-link to="/">{{ $t('global.footer.help-center') }}</router-link>
             </li>
             <li>
-              <router-link to="/">Sign Up / Login</router-link>
+              <router-link to="/">{{ $t('global.footer.about-us') }}</router-link>
+            </li>
+            <li>
+              <router-link to="/">{{ $t('global.footer.sing-up-or-login') }}</router-link>
             </li>
           </ul>
         </div>
         <div class="col">
-          <h2><span class="material-symbols-rounded"> share </span>Follow Us</h2>
+          <h2><span class="material-symbols-rounded"> share </span>{{ $t('global.footer.follow-us') }}</h2>
           <ul>
             <li>
               <router-link to="/"><img src="@/assets/social/facebook-white.png" alt="facebook" />
-                Facebook</router-link>
+                {{ $t('global.footer.facebook') }}</router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/twitterx-holow-white.png" alt="x" /> X</router-link>
+              <router-link to="/"><img src="@/assets/social/twitterx-holow-white.png" alt="x" /> {{ $t('global.footer.x')
+              }}</router-link>
             </li>
             <li>
               <router-link to="/"><img src="@/assets/social/instagram-white.png" alt="instagram" />
-                Instagram</router-link>
+                {{ $t('global.footer.instagram') }}</router-link>
             </li>
             <li>
               <router-link to="/"><img src="@/assets/social/linkedin-white.png" alt="linkedin" />
-                LinkedIn</router-link>
+                {{ $t('global.footer.linkedin') }}</router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/tiktok-white.png" alt="tiktok" /> TikTok</router-link>
+              <router-link to="/"><img src="@/assets/social/tiktok-white.png" alt="tiktok" /> {{
+                $t('global.footer.tiktok') }}</router-link>
             </li>
           </ul>
         </div>
       </div>
       <div class="row">
-        <span>&copy; 2023 Assetance. All rights reserved.</span>
-        <router-link to="/">Privacy Policy</router-link>
-        <router-link to="/">Terms of Service</router-link>
-        <router-link to="/">Cookies Settings</router-link>
+        <span>&copy; {{ $t('global.footer.assetance-rights-reserved') }}</span>
+        <router-link to="/">{{ $t('global.footer.privacy-policy') }}</router-link>
+        <router-link to="/">{{ $t('global.footer.terms-of-service') }}</router-link>
+        <router-link to="/">{{ $t('global.footer.cookies-policy') }}</router-link>
       </div>
     </div>
   </footer>
@@ -75,15 +76,17 @@
 <script setup>
 import { ref } from 'vue';
 import PrimaryButton from './microComponents/PrimaryButton.vue';
+import { useI18n } from 'vue-i18n';
 
+const { t } = useI18n();
 const loader = ref(false);
-const subButtonText = ref('Subscribe');
+const subButtonText = ref(t('global.subscribe'));
 function addSubscriber() {
   // call the add subscriper api
   loader.value = true;
   setTimeout(() => {
     loader.value = false;
-    subButtonText.value = 'DONE';
+    subButtonText.value = t('global.done');
   }, 1000);
 }
 </script>
@@ -262,7 +265,7 @@ footer.wl {
             }
 
             span {
-              margin-inline-end: 0.3rem;
+              margin: 0rem 0.5rem;
               font-size: 1rem;
             }
           }
@@ -296,7 +299,7 @@ footer.wl {
                 img {
                   width: 20px;
                   object-fit: cover;
-                  margin-inline-end: 0.2rem;
+                  margin: 0rem 0.5rem;
                 }
               }
             }

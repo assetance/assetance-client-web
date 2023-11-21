@@ -1,25 +1,16 @@
 <template>
   <section class="wl">
-    <header>Returns at a Glance</header>
-    <h2>Projected Returns Calculator</h2>
-    <p>Swipe to show potential returns for each property</p>
+    <header>{{ $t('home.projected-returns.tagline') }}</header>
+    <h2>{{ $t('home.projected-returns.title') }}</h2>
+    <p>{{ $t('home.projected-returns.description') }}</p>
     <div class="snippet">
       <div class="propertiesSelector" v-if="properties">
-        <swiper-container
-          :space-between="10"
-          :mousewheel="true"
-          :keyboard="true"
-          :centered-slides="true"
-          :navigation="true"
-          :pagination="{
+        <swiper-container :space-between="10" :mousewheel="true" :keyboard="true" :centered-slides="true"
+          :navigation="true" :pagination="{
             clickable: true,
-          }"
-          slides-per-view="auto"
-          :autoplay="{
-            delay: 5000,
-          }"
-          ref="selectorSwiper"
-          events-prefix="selector-swiper-">
+          }" slides-per-view="auto" :autoplay="{
+  delay: 5000,
+}" ref="selectorSwiper" events-prefix="selector-swiper-">
           <swiper-slide v-for="property in properties" :key="property.propertyId">
             <div class="propertyProfiler">
               <img :src="property.images[0].url" alt="property image" />
@@ -31,24 +22,28 @@
                   {{ property.propertyLocation.city + ' ' + property.propertyLocation.state.code }}
                 </address>
                 <p class="rooms">
-                  {{ property.blueprint.rooms + ' BEDS | ' + property.blueprint.baths + ' BATHS' }}
+                  {{ $t('global.bedrooms', property.blueprint.rooms, { n: property.blueprint.rooms }) + ' | ' +
+                    $t('global.bathrooms',
+                      property.blueprint.baths, { n: property.blueprint.baths }) }}
                 </p>
                 <div class="RFNX">
-                  #<span>{{ property.RFNX }}</span>
+                  # <span>{{ property.RFNX }}</span>
                 </div>
               </div>
             </div>
             <div class="propertyMetrics">
               <div class="metric">
-                <span class="metricName">AROI</span>
-                <span class="metricValue">{{ property.metrics.AROI }}%</span>
+                <span class="metricName">{{ $t('metrics.aroi') }}</span>
+                <span class="metricValue">{{ $n(property.metrics.AROI / 100, 'percent',
+                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
               <div class="metric">
-                <span class="metricName">NRY</span>
-                <span class="metricValue">{{ property.metrics.NRY }}%</span>
+                <span class="metricName">{{ $t('metrics.nry') }}</span>
+                <span class="metricValue">{{ $n(property.metrics.NRY / 100, 'percent',
+                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
             </div>
-            <button>View Property</button>
+            <button>{{ $t('global.view-property') }}</button>
           </swiper-slide>
         </swiper-container>
       </div>
@@ -60,74 +55,58 @@
           <div class="selectors">
             <div class="investmentMetrics">
               <div class="metric">
-                <span class="metricName">Yearly Income</span>
-                <span class="metricValue">$ {{ yearlyIncome }}</span>
+                <span class="metricName">{{ $t('home.projected-returns.yearly-income') }}</span>
+                <!-- <span class="metricValue">$ {{ yearlyIncome }}</span> -->
+                <span class="metricValue">{{ $n(yearlyIncome * store.getters.getExchangeRate(), "currency",
+                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
               <div class="metric">
-                <span class="metricName">Total Returns</span>
-                <span class="metricValue">$ {{ totalReturns }}</span>
+                <span class="metricName">{{ $t('home.projected-returns.total-returns') }}</span>
+                <!-- <span class="metricValue">$ {{ totalReturns }}</span> -->
+                <span class="metricValue">{{ $n(totalReturns * store.getters.getExchangeRate(), "currency",
+                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
             </div>
             <div class="selector">
               <div class="selectorInformatives">
                 <label for="investment" class="selectorMetric">
-                  Investment Amount
+                  {{ $t('home.projected-returns.investment-amount') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue"><span>$</span> {{ investmentAmountFormatted }}</p>
+                <p class="selectorValue">{{ $n(investmentAmount, 'currency', store.getters.getUserLocaleCurrency(),
+                  { minimumFractionDigits: 0 }) }}</p>
               </div>
-              <input
-                type="range"
-                name="investment"
-                id="investment"
-                min="10"
-                max="10000"
-                step="10"
-                v-model.number="investmentAmount"
-                ref="investmentInput" />
+              <input type="range" name="investment" id="investment" min="10" max="10000" step="10"
+                v-model.number="investmentAmount" ref="investmentInput" />
             </div>
             <div class="selector">
               <div class="selectorInformatives">
                 <label for="appreciation" class="selectorMetric">
-                  Annual Appreciation Rate
+                  {{ $t('home.projected-returns.annual-appreciation-rate') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">{{ appreciationRate }}<span> %</span></p>
+                <p class="selectorValue">{{ $n(appreciationRate / 100, 'percent', store.getters.getUserLocaleCurrency())
+                }}
+                </p>
               </div>
-              <input
-                type="range"
-                name="appreciation"
-                id="appreciation"
-                min="0"
-                max="50"
-                v-model.number="appreciationRate"
+              <input type="range" name="appreciation" id="appreciation" min="0" max="50" v-model.number="appreciationRate"
                 ref="appreciationRateInput" />
             </div>
             <div class="selector">
               <div class="selectorInformatives">
                 <label for="holding" class="selectorMetric">
-                  Hold Period
+                  {{ $t('home.projected-returns.hold-period') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">{{ holdPeriod }}<span> yrs</span></p>
+                <p class="selectorValue">{{ holdPeriod }}<span> {{ $t('home.projected-returns.years') }}</span></p>
               </div>
-              <input
-                type="range"
-                name="holding"
-                id="holding"
-                min="3"
-                max="15"
-                v-model.number="holdPeriod" />
+              <input type="range" name="holding" id="holding" min="3" max="15" v-model.number="holdPeriod" />
             </div>
           </div>
         </div>
         <details class="notice">
-          <summary><strong>Important Notice</strong></summary>
-          <p>
-            Important Notice Text, Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Laboriosam nulla unde praesentium mollitia itaque at facere totam. Officia ad obcaecati
-            minima at, dolores dolorum perspiciatis amet optio dolorem. Dignissimos, saepe.
-          </p>
+          <summary><strong>{{ $t('home.projected-returns.important-notice') }}</strong></summary>
+          <p>{{ $t('home.projected-returns.notice-message') }}</p>
         </details>
       </div>
     </div>
@@ -138,6 +117,10 @@
 import TackTag from '@/components/microComponents/TackTag.vue';
 import { computed, ref, onMounted } from 'vue';
 import getPropertySnapshot from '@/services/getPropertySnapshot.js';
+import store from '../../store';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n();
 
 // calculations helper
 const calculate = {
@@ -166,27 +149,20 @@ const properties = ref(await getPropertySnapshot.getAll());
 // inputs
 const investmentInput = ref(null);
 const investmentAmount = ref(1000);
-const investmentAmountFormatted = computed(() => {
-  return localizeNum(investmentAmount.value);
-});
 const holdPeriod = ref(3);
 const appreciationRateInput = ref(null);
 const appreciationRate = ref(properties.value[currentIndex.value].metrics.ZIP10YAR);
 // displayers
 const yearlyIncome = computed(() => {
-  return localizeNum(
-    calculate.yearlyIncome(investmentAmount.value, properties.value[currentIndex.value].metrics.NRY)
-  );
+  return calculate.yearlyIncome(investmentAmount.value, properties.value[currentIndex.value].metrics.NRY);
 });
 const totalReturns = computed(() => {
-  return localizeNum(
-    calculate.totalReturns(
-      investmentAmount.value,
-      properties.value[currentIndex.value].metrics.NRY,
-      appreciationRate.value,
-      holdPeriod.value
-    )[0]
-  );
+  return calculate.totalReturns(
+    investmentAmount.value,
+    properties.value[currentIndex.value].metrics.NRY,
+    appreciationRate.value,
+    holdPeriod.value
+  )[0];
 });
 // apexCharts data
 const options = ref({
@@ -227,7 +203,7 @@ const options = ref({
   },
   xaxis: {
     type: 'category',
-    categories: ['3 yrs', '6 yrs', '9 yrs', '12 yrs'],
+    categories: [`3 ${t('home.projected-returns.years')}`, `6 ${t('home.projected-returns.years')}`, `9 ${t('home.projected-returns.years')}`, `12 ${t('home.projected-returns.years')}`],
   },
   legend: {
     offsetY: 5,
@@ -238,7 +214,7 @@ const options = ref({
 });
 const series = ref([
   {
-    name: 'income',
+    name: t('home.projected-returns.yearly-income'),
     data: [
       calculate.yearlyIncome(
         investmentAmount.value,
@@ -259,7 +235,7 @@ const series = ref([
     ],
   },
   {
-    name: 'appreciation',
+    name: t('home.projected-returns.value'),
     data: [
       calculate.appreciation(
         investmentAmount.value,
@@ -310,7 +286,7 @@ onMounted(async () => {
 function updateGraph(ZIP10YAR = properties.value[currentIndex.value].metrics.ZIP10YAR) {
   series.value = [
     {
-      name: 'income',
+      name: t('home.projected-returns.yearly-income'),
       data: [
         calculate.yearlyIncome(
           investmentAmount.value,
@@ -331,7 +307,7 @@ function updateGraph(ZIP10YAR = properties.value[currentIndex.value].metrics.ZIP
       ],
     },
     {
-      name: 'appreciation',
+      name: t('home.projected-returns.value'),
       data: [
         calculate.appreciation(investmentAmount.value, ZIP10YAR, 3),
         calculate.appreciation(investmentAmount.value, ZIP10YAR, 6),
@@ -340,12 +316,6 @@ function updateGraph(ZIP10YAR = properties.value[currentIndex.value].metrics.ZIP
       ],
     },
   ];
-}
-function localizeNum(number) {
-  return number.toLocaleString(undefined, {
-    maximumFractionDigits: 0,
-    maximumSignificantDigits: 5,
-  });
 }
 function toFixedNumber(num, digits = 2, base = 10) {
   const pow = Math.pow(base ?? 10, digits);
@@ -359,7 +329,7 @@ section.wl {
   flex-flow: column nowrap;
   align-items: center;
 
-  & > header {
+  &>header {
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--primary);
@@ -369,7 +339,7 @@ section.wl {
     background-color: var(--light-70);
   }
 
-  & > h2 {
+  &>h2 {
     margin-top: 0.5rem;
     border-radius: 10px;
     box-shadow: var(--primary-larg-shadow);
@@ -397,6 +367,7 @@ section.wl {
       flex-flow: column nowrap;
       align-items: center;
     }
+
     .propertiesSelector {
       border: 1px solid var(--dark-5);
       border-radius: 10px;
@@ -419,6 +390,7 @@ section.wl {
           height: 100%;
           background: linear-gradient(270deg, var(--dark-5) 0%, transparent 90%);
         }
+
         &::after {
           content: '';
           position: absolute;
@@ -428,6 +400,7 @@ section.wl {
           height: 100%;
           background: linear-gradient(90deg, var(--dark-5) 0%, transparent 90%);
         }
+
         swiper-slide {
           display: flex;
           flex-flow: column nowrap;
@@ -531,6 +504,7 @@ section.wl {
                 color: var(--dark-70);
                 font-weight: 500;
               }
+
               .metricValue {
                 margin-inline-start: auto;
                 font-weight: 500;
@@ -538,7 +512,7 @@ section.wl {
             }
           }
 
-          & > button {
+          &>button {
             border: none;
             border-radius: 7px;
             width: 100%;
@@ -553,6 +527,7 @@ section.wl {
               scale: 1.02;
               box-shadow: var(--small-shadow);
             }
+
             &:active {
               scale: 0.99;
             }
@@ -562,24 +537,29 @@ section.wl {
         &::part(container) {
           overflow: unset;
         }
+
         &::part(pagination) {
           bottom: -2rem;
         }
+
         &::part(bullet) {
           border-radius: 7px;
           width: 15px;
           height: 8px;
           transition-duration: 0.5s;
         }
+
         &::part(bullet-active) {
           border-radius: 7px;
           width: 25px;
           height: 8px;
           transition-duration: 0.5s;
         }
+
         &::part(button-prev) {
           z-index: 5;
         }
+
         &::part(button-next) {
           z-index: 5;
         }
@@ -649,6 +629,7 @@ section.wl {
             @media #{$mq-480-down} {
               flex-flow: column nowrap;
             }
+
             .metric {
               position: relative;
               display: flex;
@@ -669,6 +650,7 @@ section.wl {
                   margin-bottom: 0.5rem;
                 }
               }
+
               /**
                 metricName style 1
               */
@@ -687,6 +669,7 @@ section.wl {
                 color: var(--dark-70);
                 font-weight: 500;
               }
+
               .metricValue {
                 margin-inline-start: auto;
                 font-weight: 500;
@@ -760,9 +743,11 @@ section.wl {
                 height: 1.5rem;
                 background: var(--primary);
               }
+
               &:hover::-webkit-slider-thumb {
                 background: var(--accent-primary);
               }
+
               &:active::-webkit-slider-thumb {
                 cursor: grabbing;
               }
@@ -776,9 +761,11 @@ section.wl {
                 height: 1.5rem;
                 background: var(--primary);
               }
+
               &:hover::-moz-range-thumb {
                 background: var(--accent-primary);
               }
+
               &:active::-moz-range-thumb {
                 cursor: grabbing;
               }
@@ -822,9 +809,10 @@ section.wl {
           font-size: 0.85rem;
         }
 
-        &[open] > summary::before {
+        &[open]>summary::before {
           transform: rotate(90deg);
         }
+
         &[open] {
           max-height: 20rem;
           transition-duration: 0.5s;

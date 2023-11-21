@@ -2,22 +2,17 @@
   <section class="hero wl" aria-label="Hero Section">
     <div class="banner">
       <div class="info fade-in-left" aria-label="Hero Info">
-        <h1 class="fade-in-300">unlocking real estate investing for everyone</h1>
+        <h1 class="fade-in-300">{{ $t('home.hero.title') }}</h1>
         <p class="fade-in-up">
-          Investing Made Accessible With Low-Cost Shares, Hassle-Free Management, and Freedom to Buy
-          and Sell on Your Terms.
+          {{ $t('home.hero.description') }}
         </p>
         <div class="ctaButtons fade-in-up-300">
-          <PrimaryButton icon="start">Start Investing</PrimaryButton>
-          <SecondaryButton icon="explore">Browes Properties</SecondaryButton>
+          <PrimaryButton icon="start">{{ $t('global.start-investing') }}</PrimaryButton>
+          <SecondaryButton icon="explore">{{ $t('global.browes-properties') }}</SecondaryButton>
         </div>
         <div class="mobileAppCta fade-in-up-500">
-          <a href="#"
-            ><img src="@/assets/Google-Play/EN/light-badge.png" alt="get it on Google Play"
-          /></a>
-          <a href="#"
-            ><img src="@/assets/App-Store/EN/light-badge.png" alt="download on App Store"
-          /></a>
+          <a href="#"><img :src="GooglePlayBadge" alt="get it on Google Play" /></a>
+          <a href="#"><img :src="AppStoreBadge" alt="download on App Store" /></a>
         </div>
       </div>
       <Transition>
@@ -37,7 +32,7 @@
         </Suspense>
       </Transition>
     </div>
-    <!-- value Index (to show index by city) is redacted for this build -->
+    <!-- value Index (to show index by city) is redacted untill v1 -->
     <!-- <div class="valueIndex"></div> -->
   </section>
 </template>
@@ -48,6 +43,17 @@ import SecondaryButton from '@/components/microComponents/SecondaryButton.vue';
 import BannerVisualizer from '@/components/BannerVisualizer.vue';
 import ballAnimate from '@/helpers/ballAnimate.js';
 import { onMounted } from 'vue';
+import { useStore } from 'vuex';
+import { computed } from 'vue';
+
+const Store = useStore()
+const GooglePlayBadge = computed(() => {
+  let src = '/src/assets/Google-Play/' + Store.getters.getUserLocaleLanguage() + '/light-badge.png';
+  return src;
+});
+const AppStoreBadge = computed(() => {
+  return '/src/assets/App-Store/' + Store.getters.getUserLocaleLanguage() + '/light-badge.png';
+});
 
 onMounted(async () => {
   // background animation
@@ -67,6 +73,10 @@ onMounted(async () => {
   padding-bottom: 2rem;
   width: 100%;
   overflow: hidden;
+
+  html[dir='rtl'] & {
+    padding-bottom: 4rem;
+  }
 
   .banner {
     display: flex;
@@ -92,7 +102,7 @@ onMounted(async () => {
         text-align: center;
       }
 
-      & > h1 {
+      &>h1 {
         margin-bottom: 0.5rem;
         font-size: 3rem;
         font-weight: bolder;
@@ -103,7 +113,7 @@ onMounted(async () => {
         }
       }
 
-      & > p {
+      &>p {
         margin: 2rem 0rem;
         line-height: 1.5rem;
 
@@ -111,6 +121,7 @@ onMounted(async () => {
           margin: 0.8rem 0rem;
         }
       }
+
       .ctaButtons {
         display: flex;
         flex-flow: row nowrap;
@@ -119,7 +130,7 @@ onMounted(async () => {
           flex-flow: column nowrap;
         }
 
-        & > *:nth-child(1) {
+        &>*:nth-child(1) {
           flex: 1 2 2;
           margin-inline-end: 0.5rem;
           margin-block-end: 0.5rem;
@@ -141,6 +152,7 @@ onMounted(async () => {
               height: 57px;
             }
           }
+
           &:nth-child(2) {
             padding: 0.5rem;
 
@@ -175,6 +187,7 @@ onMounted(async () => {
       @media #{$mq-820-down} {
         height: 200px;
       }
+
       div {
         &:nth-child(1) {
           position: absolute;
@@ -190,6 +203,7 @@ onMounted(async () => {
             top: 0%;
           }
         }
+
         &:nth-child(2) {
           position: absolute;
           top: 45%;
@@ -200,6 +214,7 @@ onMounted(async () => {
           max-height: 100px;
           height: 100%;
         }
+
         &:nth-child(3) {
           position: absolute;
           top: 60%;
@@ -217,6 +232,7 @@ onMounted(async () => {
             max-width: 320px;
           }
         }
+
         &:nth-child(4) {
           position: absolute;
           top: 2%;
@@ -227,6 +243,7 @@ onMounted(async () => {
           max-height: 85px;
           height: 100%;
         }
+
         &:nth-child(5) {
           position: absolute;
           border-radius: 10px;
@@ -263,13 +280,11 @@ onMounted(async () => {
           bottom: 0;
           left: 0;
           transform: translateX(-100%);
-          background-image: linear-gradient(
-            80deg,
-            rgba(#fff, 0) 0,
-            rgba(#fff, 0.2) 30%,
-            rgba(#fff, 0.5) 50%,
-            rgba(#fff, 0)
-          );
+          background-image: linear-gradient(80deg,
+              rgba(#fff, 0) 0,
+              rgba(#fff, 0.2) 30%,
+              rgba(#fff, 0.5) 50%,
+              rgba(#fff, 0));
           animation: shimmer 1s infinite;
           content: '';
         }
@@ -292,6 +307,7 @@ onMounted(async () => {
 .v-enter-active {
   transition: opacity 0s ease;
 }
+
 .v-leave-active {
   transition: opacity 0.2s ease;
 }

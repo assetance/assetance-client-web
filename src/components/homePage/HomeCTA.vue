@@ -1,10 +1,10 @@
 <template>
   <section class="wl">
     <div class="box">
-      <h2>ready to setup your real estate legacy?</h2>
-      <p>start investing in 5 minuets</p>
+      <h2>{{ $t('home.home-cta.ready') }}</h2>
+      <p>{{ $t('home.home-cta.start-in-minutes') }}</p>
       <button @click="onClick">
-        get started <span class="material-symbols-rounded"> in_home_mode </span>
+        {{ $t('global.get-started') }} <span class="material-symbols-rounded"> in_home_mode </span>
       </button>
     </div>
   </section>
@@ -35,11 +35,12 @@ section.wl {
     height: 100%;
     background: linear-gradient(92deg, var(--light) 5%, transparent 65%);
   }
+
   &::after {
     content: '';
     position: absolute;
     top: 0;
-    right: -1px;
+    right: 0px;
     width: 10%;
     height: 100%;
     background: linear-gradient(280deg, var(--light) 5%, transparent 65%);
@@ -65,6 +66,7 @@ section.wl {
         font-size: 1.5rem;
       }
     }
+
     p {
       text-transform: capitalize;
     }
@@ -88,12 +90,13 @@ section.wl {
         scale: 1.02;
         box-shadow: var(--meduim-shadow);
       }
+
       &:active {
         scale: 0.98;
       }
 
       span {
-        margin-inline-start: 0.5rem;
+        margin: 0rem 0.5rem;
       }
     }
   }

@@ -1,0 +1,128 @@
+{
+    "hero": {
+        "title": "unlocking real estate investing for everyone",
+        "description": "Investing Made Accessible With Low-Cost Shares, Hassle-Free  Management, and Freedom to Buy and Sell on Your Terms."
+    },
+    "fractional-investing": {
+        "tagline": "The Power Of Fractional Investing",
+        "title": "Benefit From Fractional Real Estate Investing",
+        "benefit1": {
+            "title": "Lower Entry Costs",
+            "description": "Begin with a fraction of the full property cost."
+        },
+        "benefit2": {
+            "title": "Diversification",
+            "description": "Spread risk across multiple properties."
+        },
+        "benefit3": {
+            "title": "Effortless",
+            "description": "No involvement in property management."
+        },
+        "benefit4": {
+            "title": "Investing For All Levels",
+            "description": "Open to all investors, newcomers and experts."
+        }
+    },
+    "how-it-works": {
+        "tagline": "Making Real Estate Real Simple",
+        "title": "Here Is How It Works",
+        "step-cards": {
+            "step1": {
+                "slug": "Explore",
+                "title": "Explore our listed properties",
+                "description": "Discover a diverse range of investment opportunities in our carefully curated selection of properties."
+            },
+            "step2": {
+                "slug": "Invest",
+                "title": "Select a property you want to invest in",
+                "description": "Once you've found a property that aligns with your investment goals, select it to begin your journey."
+            },
+            "step3": {
+                "slug": "Hold",
+                "title": "Hold and collect returns while monitoring its status",
+                "description": "Sit back and relax while your investment generate returns, and you can easily monitor its performance through your dedicated dashboard."
+            },
+            "step4": {
+                "slug": "Sell",
+                "title": "Put it for sale or wait until property exit",
+                "description": "Enjoy flexibility. You can choose to put your shares for sale on our integrated market whenever you wish, Your investment, your choice."
+            }
+        }
+    },
+    "income-sources": {
+        "tagline": "Real Passive Returns, Your Way.",
+        "title": "How Will You Earn?",
+        "source1": {
+            "title": "Rental Income",
+            "description": "Earn passive rent income from your investments."
+        },
+        "source2": {
+            "title": "Appreciation",
+            "description": "Track the growth of your shares’ value overtime, then put for sale whenever you want."
+        }
+    },
+    "assetance-features": {
+        "tagline": "Investing Simplified With Assetance",
+        "title": "Why Assetance ?",
+        "feat1": {
+            "title": "Shares on your terms",
+            "description": "Put your property shares for sale anytime you want."
+        },
+        "feat2": {
+            "title": "Expert Property Management",
+            "description": "Enjoy the benefits of ownership & leave management on our experts"
+        },
+        "feat3": {
+            "title": "No boundaries",
+            "description": "Invest from anywhere in the world, we support +150 countries."
+        },
+        "feat4": {
+            "title": "Easy diversification",
+            "description": "Easley diversify your portfolio with our multi market properties."
+        }
+    },
+    "projected-returns": {
+        "tagline": "Returns at a Glance",
+        "title": "Projected Returns Calculator",
+        "description": "Swipe to show potential returns for each property",
+        "yearly-income": "Yearly Income",
+        "total-returns": "Total Returns",
+        "investment-amount": "Investment Amount",
+        "annual-appreciation-rate": "Annual-Appreciation-Rate",
+        "hold-period": "Hold Period",
+        "important-notice": "Important Notice",
+        "notice-message": "Important Notice Text, Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nulla unde praesentium mollitia itaque at facere totam. Officia ad obcaecati minima at, dolores dolorum perspiciatis amet optio dolorem. Dignissimos, saepe.",
+        "years": "yrs",
+        "value": "value"
+    },
+    "why-real-estate": {
+        "tagline": "The Supreme Investment Choice",
+        "title": "Why Real Estate Is King",
+        "reason1": {
+            "title": "capital appreciation",
+            "description": "Appreciating over time, providing potential for substantial returns."
+        },
+        "reason2": {
+            "title": "Passive income",
+            "description": "Ongoing income, creating a source of financial stability."
+        },
+        "reason3": {
+            "title": "Inflation hedge",
+            "description": "Acts like a hedge against inflation, preserving purchasing power."
+        },
+        "reason4": {
+            "title": "Low market volatility",
+            "description": "historically shows less volatility compared to other investments."
+        }
+    },
+    "home-cta": {
+        "ready": "ready to setup your real estate legacy?",
+        "start-in-minutes": "start investing in 5 minutes"
+    },
+    "knowledge-articles": {
+        "tagline": "Smarty Pants Zone, Explore Our Blogs!",
+        "title": "Learn More From Our Knowledge Center",
+        "description": "Take a look at our step by step guides on how to start with Assetance, also learn more about how this process works, what is fractional real estate investing and more.",
+        "read-time": "few moments read | { n } minute read | { n } minutes read"
+    }
+}

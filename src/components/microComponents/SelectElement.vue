@@ -1,9 +1,9 @@
 <template>
   <div class="selectElement">
-    <p><slot></slot></p>
-    <button
-      :class="['selectView', isExpanded ? 'selectView__expand' : '']"
-      @click="isExpanded = !isExpanded"
+    <p>
+      <slot></slot>
+    </p>
+    <button :class="['selectView', isExpanded ? 'selectView__expand' : '']" @click="isExpanded = !isExpanded"
       @clickout="isExpanded = false">
       <p v-if="defaultSelection">{{ defaultSelection }}</p>
       <p v-else>select</p>
@@ -15,20 +15,28 @@
     </button>
     <div :class="['selectMenu', isExpanded ? 'selectMenu__expand' : '']">
       <p v-if="notice">{{ notice }}</p>
-      <button
-        class="selectOption"
-        v-for="listElement in list"
-        :key="listElement.option"
-        @click="
-          emit('selection', listElement.option);
-          selection = listElement.option;
-        ">
+      <button class="selectOption" v-for="listElement in list" :key="listElement" @click="
+        emit('selection', listElement);
+      selection = listElement;
+      ">
+        <div class="icon" v-if="listElement.symbol">
+          <span> {{ listElement.symbol }} </span>
+        </div>
+        <p>{{ listElement }}</p>
+      </button>
+    </div>
+    <!-- <div :class="['selectMenu', isExpanded ? 'selectMenu__expand' : '']">
+      <p v-if="notice">{{ notice }}</p>
+      <button class="selectOption" v-for="listElement in list" :key="listElement.option" @click="
+        emit('selection', listElement.option);
+      selection = listElement.option;
+      ">
         <div class="icon" v-if="listElement.symbol">
           <span> {{ listElement.symbol }} </span>
         </div>
         <p>{{ listElement.option }}</p>
       </button>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -64,7 +72,7 @@ const emit = defineEmits(['selection']);
   flex-flow: column nowrap;
   width: 100%;
 
-  & > p {
+  &>p {
     margin: 0;
     margin-bottom: 0.2rem;
     font-size: 0.9rem;
@@ -82,11 +90,12 @@ const emit = defineEmits(['selection']);
     &__expand {
       border-radius: 10px 10px 0px 0px;
     }
+
     &:hover {
       cursor: pointer;
     }
 
-    & > p {
+    &>p {
       margin: 0;
       color: var(--dark-40);
     }
@@ -138,6 +147,7 @@ const emit = defineEmits(['selection']);
       border-radius: 4px;
       background-color: var(--dark-70);
     }
+
     &__expand {
       max-height: 200px;
       border: 1.5px solid var(--dark-20);
@@ -145,7 +155,7 @@ const emit = defineEmits(['selection']);
       z-index: 5;
     }
 
-    & > p {
+    &>p {
       margin: 0;
       padding: 0.5rem 0.5rem;
       border-bottom: 1.5px solid var(--dark-20);
@@ -153,6 +163,7 @@ const emit = defineEmits(['selection']);
       text-align: center;
       font-size: 0.9rem;
     }
+
     .selectOption {
       display: flex;
       flex-flow: row nowrap;
@@ -168,11 +179,13 @@ const emit = defineEmits(['selection']);
         cursor: pointer;
         background-color: var(--dark-5);
       }
+
       .icon {
         display: flex;
         flex-flow: column nowrap;
         align-items: center;
       }
+
       p {
         margin: 0;
       }

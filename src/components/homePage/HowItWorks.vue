@@ -1,8 +1,6 @@
 <template>
   <section class="howItWorks wl" aria-label="how it works section">
-    <img
-      aria-label="background visualizer"
-      src='data:image/svg+xml,<svg
+    <img aria-label="background visualizer" src='data:image/svg+xml,<svg
       version="1.1"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 500 500"
@@ -24,60 +22,35 @@
           <stop offset="100%" style="stop-color: rgb(71, 182, 254)"></stop>
         </linearGradient>
       </defs></svg
-    >'
-      alt="image" />
-    <header aria-label="tag line">Making Real Estate Real Simple</header>
-    <h2>here is how it works</h2>
+    >' alt="image" />
+    <header aria-label="tag line">{{ $t('home.how-it-works.tagline') }}</header>
+    <h2>{{ $t('home.how-it-works.title') }}</h2>
     <div class="slideShow" aria-label="steps slide show">
       <div class="imagesContainer">
-        <swiper-container
-          class="images"
-          allow-touch-move="false"
-          crossfade="false"
-          effect="fade"
-          ref="imagesEl">
-          <swiper-slide
-            ><img
-              src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website"
-          /></swiper-slide>
-          <swiper-slide
-            ><img
-              src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website"
-          /></swiper-slide>
-          <swiper-slide
-            ><img
-              src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website"
-          /></swiper-slide>
-          <swiper-slide
-            ><img
-              src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website"
-          /></swiper-slide>
+        <swiper-container class="images" allow-touch-move="false" crossfade="false" effect="fade" ref="imagesEl">
+          <swiper-slide><img src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website" /></swiper-slide>
+          <swiper-slide><img src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website" /></swiper-slide>
+          <swiper-slide><img src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website" /></swiper-slide>
+          <swiper-slide><img src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website" /></swiper-slide>
         </swiper-container>
       </div>
       <div class="infoMobile" aria-label="steps information">
         <ol class="stages" aria-label="steps names">
           <li v-for="(stage, index) in stages" :key="index">
-            <button
-              @click="
-                autoplay.pause(10);
-                changeStep(index);
-              "
-              ref="stagesEl"
-              :class="[index == 0 ? 'active' : '']">
+            <button @click="
+              autoplay.pause(10);
+            changeStep(index);
+            " ref="stagesEl" :class="[index == 0 ? 'active' : '']">
               <span>{{ index + 1 }}</span> {{ stage }}
             </button>
           </li>
         </ol>
         <ol class="steps" aria-label="steps explanation">
-          <li
-            v-for="(step, index) in steps"
-            :key="step.title"
-            ref="stepsEl"
-            :class="[index == 0 ? 'active' : '']">
+          <li v-for="(step, index) in steps" :key="step.title" ref="stepsEl" :class="[index == 0 ? 'active' : '']">
             <h3>{{ step.title }}</h3>
             <p>
               {{ step.description }}
@@ -87,38 +60,40 @@
       </div>
     </div>
     <div class="ctaButtons">
-      <LinkButton>Explore Properties</LinkButton>
+      <LinkButton>{{ $t('global.browes-properties') }}</LinkButton>
     </div>
   </section>
 </template>
 
 <script setup>
 import { onMounted, ref } from 'vue';
-
+import { useI18n } from 'vue-i18n';
 import LinkButton from '../microComponents/LinkButton.vue';
 
-const stages = ref(['Explore', 'Invest', 'Hold', 'Sell']);
+const { t } = useI18n();
+const stages = ref([
+  t('home.how-it-works.step-cards.step1.slug'),
+  t('home.how-it-works.step-cards.step2.slug'),
+  t('home.how-it-works.step-cards.step3.slug'),
+  t('home.how-it-works.step-cards.step4.slug'),
+]);
 const stagesEl = ref(null);
 const steps = ref([
   {
-    title: 'Explore our listed properties',
-    description:
-      'Discover a diverse range of investment opportunities in our carefully curated selection of properties.',
+    title: t('home.how-it-works.step-cards.step1.title'),
+    description: t('home.how-it-works.step-cards.step1.description'),
   },
   {
-    title: 'Select a property you want to invest in',
-    description:
-      "Once you've found a property that aligns with your investment goals, select it to begin your journey.",
+    title: t('home.how-it-works.step-cards.step2.title'),
+    description: t('home.how-it-works.step-cards.step2.description'),
   },
   {
-    title: 'Hold and collect returns while monitoring its status',
-    description:
-      'Sit back and relax while your investment generate returns, and you can easily monitor its performance through your dedicated dashboard.',
+    title: t('home.how-it-works.step-cards.step3.title'),
+    description: t('home.how-it-works.step-cards.step3.description'),
   },
   {
-    title: 'Put it for sale or wait until property exit',
-    description:
-      'Enjoy flexibility. You can choose to put your shares for sale on our integrated market whenever you wish, Your investment, your choice.',
+    title: t('home.how-it-works.step-cards.step4.title'),
+    description: t('home.how-it-works.step-cards.step4.description'),
   },
 ]);
 const stepsEl = ref(null);
@@ -181,7 +156,7 @@ section.howItWorks {
   align-items: center;
   padding-top: 3rem;
 
-  & > header {
+  &>header {
     border-radius: 10px;
     padding: 0.5rem 1rem;
     color: var(--primary);
@@ -191,7 +166,7 @@ section.howItWorks {
     background-color: var(--light-70);
   }
 
-  & > h2 {
+  &>h2 {
     border-radius: 10px;
     margin-top: 0.5rem;
     padding: 1rem 1.5rem;
@@ -218,6 +193,7 @@ section.howItWorks {
     @media #{$mq-820-down} {
       flex-flow: column nowrap;
     }
+
     .imagesContainer {
       border-radius: 10px;
       box-shadow: var(--larg-shadow);
@@ -253,6 +229,7 @@ section.howItWorks {
         margin-inline-start: unset;
         height: 17rem;
       }
+
       .stages {
         display: flex;
         flex-flow: row nowrap;
@@ -265,9 +242,11 @@ section.howItWorks {
         @media #{$mq-820-down} {
           margin-top: 2rem;
         }
+
         @media #{$mq-365-down} {
           flex-flow: row wrap;
         }
+
         li {
           margin: 0rem 0.3rem;
           width: 100%;
@@ -287,9 +266,11 @@ section.howItWorks {
             @media #{$mq-820-down} {
               background-color: var(--secondary);
             }
+
             @media #{$mq-365-down} {
               margin: 0.2rem 0rem;
             }
+
             &:hover {
               cursor: pointer;
               border: 1px solid var(--primary);
@@ -297,6 +278,7 @@ section.howItWorks {
               color: var(--primary);
               box-shadow: var(--small-shadow);
             }
+
             &:active {
               scale: 0.99;
             }
@@ -322,6 +304,7 @@ section.howItWorks {
                 border: 1px solid var(--secondary);
               }
             }
+
             &.active span {
               color: var(--dark);
               background-color: var(--secondary);
@@ -391,7 +374,7 @@ section.howItWorks {
     }
   }
 
-  & > img {
+  &>img {
     position: absolute;
     width: 50%;
     margin-inline-start: 50%;
@@ -402,12 +385,14 @@ section.howItWorks {
       top: 90%;
     }
   }
-  & > .ctaButtons {
+
+  &>.ctaButtons {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
     width: 50%;
-    & > * {
+
+    &>* {
       margin: 0.2rem;
     }
   }

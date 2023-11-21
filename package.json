@@ -1,22 +1,27 @@
 {
   "name": "assetance-client-web",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "clean": "vite --force",
     "dev": "vite --host",
+    "mi18n": "node merge-i18n.mjs",
+    "prebuild": "npm run mi18n",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@intlify/unplugin-vue-i18n": "^1.5.0",
     "apexcharts": "^3.44.0",
     "axios": "^1.6.2",
+    "axios-retry": "^3.9.1",
     "clickout-event": "^1.1.2",
     "material-symbols": "^0.14.0",
     "swiper": "^11.0.4",
     "vue": "^3.3.4",
+    "vue-i18n": "^9.6.5",
     "vue-router": "^4.2.5",
     "vue3-apexcharts": "^1.4.4",
     "vuex": "^4.0.2"

@@ -7,12 +7,10 @@
       <div></div>
     </div>
     <span class="material-symbols-rounded" v-if="icon && !isLoading">{{ icon }}</span>
-    <p
-      v-if="$slots.default && !isLoading"
-      :class="[
-        icon ? 'text' : 'text_only',
-        dir === 'rtl' ? 'text__right_padding' : 'text__left_padding',
-      ]">
+    <p v-if="$slots.default && !isLoading" :class="[
+      icon ? 'text' : 'text_only',
+      dir === 'rtl' ? 'text__right_padding' : 'text__left_padding',
+    ]">
       <slot></slot>
     </p>
   </button>
@@ -49,7 +47,7 @@ button {
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 0rem;
+  padding: 0.5rem 0.5rem;
   box-shadow: var(--small-shadow);
   max-width: 100%;
   width: 100%;
@@ -66,6 +64,7 @@ button {
     box-shadow: var(--medium-shadow);
     scale: 1.02;
   }
+
   &:active {
     box-shadow: var(--small-shadow);
     scale: 1;
@@ -85,11 +84,13 @@ button {
       padding: 0;
       padding-left: 1rem;
     }
+
     &__right_padding {
       padding: 0;
       padding-right: 1rem;
     }
   }
+
   &:hover .text {
     padding: 0;
     animation: fadeOut 0.1s linear forwards;
@@ -155,8 +156,8 @@ button {
 }
 
 @keyframes fadeOut {
-  0% {
-  }
+  0% {}
+
   100% {
     max-width: 0;
     opacity: 0;

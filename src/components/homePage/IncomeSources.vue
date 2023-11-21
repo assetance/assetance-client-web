@@ -1,22 +1,22 @@
 <template>
   <section class="wl">
     <div class="titles">
-      <header>Real Passive Returns, Your Way.</header>
-      <h2>How will you earn?</h2>
+      <header>{{ $t('home.income-sources.tagline') }}</header>
+      <h2>{{ $t('home.income-sources.title') }}</h2>
     </div>
     <div class="incomeSource">
       <div class="icon">
         <span class="material-symbols-rounded"> payments </span>
       </div>
-      <h3>Rental Income</h3>
-      <p>Earn passive rent income from your investments.</p>
+      <h3>{{ $t('home.income-sources.source1.title') }}</h3>
+      <p>{{ $t('home.income-sources.source1.description') }}</p>
     </div>
     <div class="incomeSource">
       <div class="icon">
         <span class="material-symbols-rounded"> monitoring </span>
       </div>
-      <h3>Appreciation</h3>
-      <p>Track the growth of your shares’ value overtime, then put for sale whenever you want.</p>
+      <h3>{{ $t('home.income-sources.source2.title') }}</h3>
+      <p>{{ $t('home.income-sources.source2.description') }}</p>
     </div>
   </section>
 </template>
@@ -54,6 +54,7 @@ section.wl {
         order: 2;
       }
     }
+
     &:nth-child(3) {
       order: 3;
     }
@@ -72,6 +73,7 @@ section.wl {
       }
     }
   }
+
   .titles {
     order: 1;
     display: flex;
@@ -81,7 +83,7 @@ section.wl {
     flex-shrink: 0;
     width: 100%;
 
-    & > header {
+    &>header {
       border-radius: 10px;
       padding: 0.5rem 1rem;
       color: var(--primary);
@@ -91,7 +93,7 @@ section.wl {
       background-color: var(--light-70);
     }
 
-    & > h2 {
+    &>h2 {
       border-radius: 10px;
       box-shadow: var(--primary-larg-shadow);
       margin-top: 0.5rem;

@@ -1,11 +1,19 @@
 import axios from 'axios';
+import axiosRetry from 'axios-retry';
 
 const apiClient = axios.create({
   baseURL: 'https://ipapi.co/json/?key=lArtPAkCTi77UIMwIPA6pTbGZqzJYpK9LEsiZZHcUKmxIszlu8',
   withCredentials: false,
+  timeout: 1500,
   headers: {
     Accept: 'application/json',
   },
+});
+
+// axiosRetry logic
+axiosRetry(apiClient, {
+  retries: 2,
+  retryDelay: 0
 });
 
 export default {
@@ -15,15 +23,11 @@ export default {
       .then((res) => {
         return res.data;
       })
+
       .catch((error) => {
+        // TODO:: triggering server webhook alarm with the error message
         console.log(error);
-        // TODO:: setting a default a dynamic fallback value
-        return {
-          languages: 'US',
-          currency: 'USD',
-          country_name: 'United States',
-          currency_name: 'Dollare',
-        };
+        return false;
       });
   },
 };

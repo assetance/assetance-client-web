@@ -1,17 +1,14 @@
 <template>
   <div :class="['navContainer', isExpanded || localizer || burgerOn ? 'navContainer__expand' : '']">
     <nav class="wl">
-      <div
-        :class="[
-          'topBar',
-          isExpanded ? 'topBar__expand' : '',
-          localizer ? 'topBar__expand' : '',
-          burgerOn ? 'topBar__burgerOn' : '',
-        ]">
+      <div :class="[
+        'topBar',
+        isExpanded ? 'topBar__expand' : '',
+        localizer ? 'topBar__expand' : '',
+        burgerOn ? 'topBar__burgerOn' : '',
+      ]">
         <div class="brand">
-          <router-link to="/"
-            ><img src="@/assets/brand/DarkBlue.png" alt="Welcome to Assetance"
-          /></router-link>
+          <router-link to="/"><img src="@/assets/brand/DarkBlue.png" alt="Welcome to Assetance" /></router-link>
           <h1>ASSETANCE</h1>
           <!-- mobile burger menu -->
           <label class="bar" for="burgerCheck" @clickout="burgerOn = false">
@@ -24,117 +21,107 @@
         </div>
 
         <menu :class="[burgerOn ? 'burgerOn' : '']">
-          <li><router-link to="#">Properties</router-link></li>
-          <li><router-link to="/about">About us</router-link></li>
+          <li><router-link to="#">{{ $t('global.nav.properties') }}</router-link></li>
+          <li><router-link to="/about">{{ $t('global.nav.about') }}</router-link></li>
           <li>
-            <button
-              class="expandMoreOption"
-              @click="
-                isExpanded = !isExpanded;
-                localizer = false;
-              ">
-              More
+            <button class="expandMoreOption" @click="
+              isExpanded = !isExpanded;
+            localizer = false;
+            ">
+              {{ $t('global.nav.more') }}
             </button>
           </li>
         </menu>
 
         <div :class="['buttons', burgerOn ? 'buttons__burgerOn' : '']">
-          <button
-            :class="['localizerButton', localizer ? 'localizerOn' : '']"
-            @click="
-              localizer = !localizer;
-              isExpanded = false;
-            ">
+          <button :class="['localizerButton', localizer ? 'localizerOn' : '']" @click="
+            localizer = !localizer;
+          isExpanded = false;
+          ">
             <span class="material-symbols-rounded"> language </span>
           </button>
-          <secondary-button icon="login" class="button" v-if="!userData">Login</secondary-button>
-          <primary-button icon="person_add" class="button" v-if="!userData">Sign Up</primary-button>
-          <primary-button icon="dashboard" class="button" v-if="userData">Dashboard</primary-button>
+          <secondary-button icon="login" class="button" v-if="!userData">{{ $t('global.login') }}</secondary-button>
+          <primary-button icon="person_add" class="button" v-if="!userData">{{ $t('global.sign-up') }}</primary-button>
+          <primary-button icon="dashboard" class="button" v-if="userData">{{ $t('global.dashboard') }}</primary-button>
         </div>
       </div>
       <!-- More Links dropdown-->
-      <div
-        :class="['expandedView', isExpanded ? 'expandedView__expand' : '']"
-        @clickout="isExpanded = false">
+      <div :class="['expandedView', isExpanded ? 'expandedView__expand' : '']" @clickout="isExpanded = false">
         <button @click="isExpanded = false">
           <span class="material-symbols-rounded"> close </span>
         </button>
         <div class="links">
           <div class="linksGroup">
-            <router-link to="#"
-              >Knowledge Center
-              <span class="material-symbols-rounded"> open_in_new </span></router-link
-            >
+            <router-link to="#">{{ $t('global.nav.knowledge-center') }}
+              <span class="material-symbols-rounded"> open_in_new </span></router-link>
             <menu>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">عنوان اللينك</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.how-it-works') }}</router-link>
+                  <p>{{ $t('global.nav.how-it-works-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.investments-options') }}</router-link>
+                  <p>{{ $t('global.nav.investments-options-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.risk-management') }}</router-link>
+                  <p>{{ $t('global.nav.risk-management-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.referral-program') }}</router-link>
+                  <p>{{ $t('global.nav.referral-program-description') }}</p>
                 </div>
               </li>
             </menu>
           </div>
           <div class="linksGroup">
-            <router-link to="#"
-              >Knowledge Center
-              <span class="material-symbols-rounded"> open_in_new </span></router-link
-            >
+            <router-link to="#">{{ $t('global.nav.help-center') }}
+              <span class="material-symbols-rounded"> open_in_new </span></router-link>
             <menu>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.faq') }}</router-link>
+                  <p>{{ $t('global.nav.faq-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.feedback') }}</router-link>
+                  <p>{{ $t('global.nav.feedback-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.partnerships') }}</router-link>
+                  <p>{{ $t('global.nav.partnerships-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">Link Title</router-link>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                  <router-link to="#">{{ $t('global.nav.support') }}</router-link>
+                  <p>{{ $t('global.nav.support-description') }}</p>
                 </div>
               </li>
             </menu>
           </div>
         </div>
         <div class="featuredArticles">
-          <p>Featured from Knowledge center</p>
+          <p>{{ $t('global.nav.knowledge-center-plugin') }}</p>
           <ul>
             <li class="article" v-for="(article, index) in articles" :key="article.id">
               <img :src="article.image" :alt="'article ' + index + 'image'" />
@@ -143,50 +130,32 @@
                 <p class="artivleText">
                   {{ article.summary }}
                 </p>
-                <router-link :to="'article/' + article.id">Read more</router-link>
+                <router-link :to="'article/' + article.id">{{ $t('global.read-more') }}</router-link>
               </article>
             </li>
           </ul>
-          <router-link to="articles"
-            >See all articles
+          <router-link to="articles">{{ $t('global.view-all') }}
             <span class="material-symbols-rounded"> chevron_right </span>
           </router-link>
         </div>
       </div>
       <!-- locales preferences dropdown-->
-      <div
-        :class="['localizer', localizer ? 'localizer__expand' : '']"
-        @clickout="localizer = false">
+      <div :class="['localizer', localizer ? 'localizer__expand' : '']" @clickout="localizer = false">
         <button @click="localizer = false">
           <span class="material-symbols-rounded"> close </span>
         </button>
-        <select-element
-          :defaultSelection="selectedLanguage"
-          notice="Language"
-          :list="supportedLanguages"
-          @selection="
-            (pref) => {
-              selectedLanguage = pref;
-              savePreferences();
-            }
-          "
-          ><span class="material-symbols-rounded selectIcon"> translate </span
-          >Language</select-element
-        >
-        <select-element
-          :defaultSelection="selectedCurrency"
-          notice="Currency"
-          :list="supportedCurrencies"
-          @selection="
-            (pref) => {
-              selectedCurrency = pref;
-              savePreferences();
-            }
-          "
-          ><bdi>
-            <span class="material-symbols-rounded selectIcon iconLtr"> attach_money </span>
-          </bdi>
-          Currency
+        <select-element :defaultSelection="selectedLanguage" notice="Language" :list="supportedLanguages.slugs"
+          @selection="(pref) => {
+            updatePrefLang(pref);
+          }
+            ">{{ $t('global.nav.selection-language')
+  }}</select-element>
+        <select-element :defaultSelection="selectedCurrency" notice="Currency" :list="supportedCurrenciesFormatted"
+          @selection="(pref) => {
+            updatePrefCurr(pref);
+          }
+            ">
+          {{ $t('global.nav.selection-currency') }}
         </select-element>
       </div>
     </nav>
@@ -194,21 +163,28 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
 import PrimaryButton from './microComponents/PrimaryButton.vue';
 import SecondaryButton from './microComponents/SecondaryButton.vue';
 import SelectElement from './microComponents/SelectElement.vue';
-import localsRequest from '@/services/localsRequest.js';
 import articlesAPI from '@/services/articlesAPI.js';
 import { useStore } from 'vuex';
+import Tr from '@/localizer/helper.js';
+import { useI18n } from 'vue-i18n';
 
+const { locale } = useI18n();
 const store = useStore();
 const isExpanded = ref(false);
 const localizer = ref(false);
-const selectedLanguage = ref(store.getters.getUserLocaleLanguage());
-const selectedCurrency = ref(store.getters.getUserLocaleCurrency());
-const supportedLanguages = ref(await localsRequest.getSupportedLanguages()); //TODO:: should be dynamically loaded if locales options clicked
-const supportedCurrencies = ref(await localsRequest.getSupportedCurrencies()); //TODO:: should be dynamically loaded if locales options clicked
+const selectedLanguage = computed(() => { return Tr.getLang('id', store.getters.getUserLocaleLanguage()).split('-')[1] });
+const selectedCurrency = computed(() => { return Tr.getCurr('id', store.getters.getUserLocaleCurrency()); });
+const supportedLanguages = ref(Tr.supportedLanguages());
+const supportedCurrencies = ref(Tr.supportedCurrencies());
+const supportedCurrenciesFormatted = computed(() => {
+  return supportedCurrencies.value.ids.map((element, index) => {
+    return element + ' - ' + supportedCurrencies.value.slugs[index];
+  });
+});
 const articles = ref(await articlesAPI.getRand());
 const userData = ref(false); // TODO:: connecting SSO functionality
 const burgerOn = ref(false);
@@ -218,14 +194,27 @@ const burgerOn = ref(false);
 //   ? store.getters.getAllUserData()
 //   : false;
 
-async function savePreferences() {
-  // save preferences and update page
-  console.log('updating preferences to::');
-  console.log('lang: ', selectedLanguage.value);
-  console.log('curr: ', selectedCurrency.value);
+async function updatePrefLang(lang) {
   // saving changes
-  store.dispatch('setUserPrefLanguage', selectedLanguage.value);
-  store.dispatch('setuserPrefCurrency', selectedCurrency.value);
+  let langId = Tr.getLang('slug', lang).split('-')[0];
+
+  if (Tr.needLanguageReload(langId)) {
+    localStorage.setItem('userPrefLanguage', langId);
+    location.reload();
+  } else {
+    await Tr.loadLocale(langId);
+    locale.value = langId;
+
+    document.documentElement.setAttribute('lang', langId);
+    store.dispatch('setUserPrefLanguage', langId);
+  }
+
+}
+async function updatePrefCurr(currency) {
+  // saving changes
+  let currId = currency.slice(0, 3);
+  store.dispatch('setUserPrefCurrency', currId);
+  store.dispatch('updateRates');
 }
 </script>
 
@@ -272,6 +261,7 @@ async function savePreferences() {
         border-radius: 0px;
         border-bottom: 1.5px solid var(--primary-20);
       }
+
       &__burgerOn {
         box-shadow: var(--larg-shadow);
       }
@@ -285,6 +275,7 @@ async function savePreferences() {
         @media #{$mq-820-down} {
           width: 100%;
         }
+
         a {
           display: flex;
 
@@ -332,6 +323,7 @@ async function savePreferences() {
               transition-duration: unset;
             }
           }
+
           span.top {
             top: 0;
           }
@@ -343,21 +335,22 @@ async function savePreferences() {
           span.bottom {
             bottom: 0;
           }
-          input[type]:checked ~ span.top {
+
+          input[type]:checked~span.top {
             transform: rotate(45deg);
             transform-origin: top left;
             width: 30px;
             left: 3px;
           }
 
-          input[type]:checked ~ span.bottom {
+          input[type]:checked~span.bottom {
             transform: rotate(-45deg);
             transform-origin: top left;
             width: 30px;
             bottom: -1px;
           }
 
-          input[type]:checked ~ span.middle {
+          input[type]:checked~span.middle {
             transform: translateX(-20px);
             opacity: 0;
           }
@@ -384,7 +377,7 @@ async function savePreferences() {
           }
         }
 
-        & > * {
+        &>* {
           margin: 0.5rem;
         }
 
@@ -413,6 +406,7 @@ async function savePreferences() {
           }
         }
       }
+
       .buttons {
         display: flex;
         flex-flow: row nowrap;
@@ -434,7 +428,7 @@ async function savePreferences() {
           }
         }
 
-        & > * {
+        &>* {
           margin: 0.25rem 0.25rem;
         }
 
@@ -476,7 +470,7 @@ async function savePreferences() {
         max-height: 375px;
       }
 
-      & > button {
+      &>button {
         position: absolute;
         top: 0.3rem;
         left: 0.3rem;
@@ -493,10 +487,12 @@ async function savePreferences() {
           cursor: pointer;
         }
       }
+
       .links {
         display: flex;
         flex-flow: row nowrap;
         padding: 2rem 1rem 1rem 1rem;
+
         @media #{$mq-820-down} {
           flex-flow: row wrap;
           justify-content: center;
@@ -578,9 +574,11 @@ async function savePreferences() {
             padding: 0.5rem;
             background-color: var(--light-20);
             border-radius: 10px;
+
             @media #{$mq-365-down} {
               flex-flow: column nowrap;
             }
+
             img {
               width: 100px;
               height: 100px;
@@ -591,12 +589,15 @@ async function savePreferences() {
                 height: auto;
               }
             }
+
             .articleInfo {
               margin: 0rem 0.5rem;
               width: 100%;
+
               @media #{$mq-365-down} {
                 margin: 0.5rem 0rem;
               }
+
               p.articleTitle {
                 margin: 0rem;
                 margin-bottom: 0.5rem;
@@ -615,6 +616,7 @@ async function savePreferences() {
             }
           }
         }
+
         a {
           display: flex;
           flex-flow: row nowrap;
@@ -653,8 +655,10 @@ async function savePreferences() {
         max-height: 300px;
         overflow: unset;
       }
-      & > * {
+
+      &>* {
         margin: 0rem 0.5rem;
+
         @media #{$mq-480-down} {
           margin: 0.5rem 0rem;
         }
@@ -664,7 +668,8 @@ async function savePreferences() {
         font-size: 1rem;
         padding: 0 0.5rem;
       }
-      & > button {
+
+      &>button {
         position: absolute;
         top: 0.3rem;
         left: 0.3rem;
@@ -681,6 +686,7 @@ async function savePreferences() {
           cursor: pointer;
         }
       }
+
       .saveButton {
         max-width: 80px;
         width: 100%;
