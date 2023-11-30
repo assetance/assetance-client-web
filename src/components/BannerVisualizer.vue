@@ -2,8 +2,8 @@
   <div class="VisualizerContainer">
     <div class="complementaryImage fade-in">
       <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-          swipers.push(el);
-        }
+        swipers.push(el);
+      }
         ">
         <swiper-slide v-for="image in imageLinkers[1]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -12,8 +12,8 @@
     </div>
     <div class="complementaryImage fade-in">
       <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-          swipers.push(el);
-        }
+        swipers.push(el);
+      }
         ">
         <swiper-slide v-for="image in imageLinkers[2]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -34,8 +34,8 @@
     </div>
     <div class="complementaryImage fade-in-500">
       <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-          swipers.push(el);
-        }
+        swipers.push(el);
+      }
         ">
         <swiper-slide v-for="image in imageLinkers[3]" :key="image.alt">
           <div class="metrics">
@@ -57,8 +57,8 @@
     </div>
     <div class="complementaryImage fade-in-500">
       <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-          swipers.push(el);
-        }
+        swipers.push(el);
+      }
         ">
         <swiper-slide v-for="image in imageLinkers[4]" :key="image.alt">
           <img :src="image.url" :alt="image.alt" />
@@ -114,7 +114,7 @@ onMounted(async () => {
   // setting up eventListeners' elements
   // adding event eventListener to detect slide changes in main swiper
   mainSwiper.value.addEventListener('main-swiper-slidechange', async () => {
-    await changeSlides(mainSwiper.value.swiper.realIndex);
+    if (mainSwiper.value) await changeSlides(mainSwiper.value.swiper.realIndex);
   });
   // adding click eventListener to slides in main swiper's slides
   for (let i = 0; i < mainSwiperSlides.value.length; i++) {

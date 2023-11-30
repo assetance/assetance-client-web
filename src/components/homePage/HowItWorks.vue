@@ -128,14 +128,16 @@ onMounted(async () => {
 
 // function to link changes between elements
 function changeStep(index) {
-  stagesEl.value.forEach((stage) => stage.classList.remove('active'));
-  stagesEl.value[index].classList.add('active');
+  if (stagesEl.value && imagesEl.value) {
+    stagesEl.value.forEach((stage) => stage.classList.remove('active'));
+    stagesEl.value[index].classList.add('active');
 
-  stepsEl.value.forEach((step) => step.classList.remove('active'));
-  stepsEl.value[index].classList.add('active');
+    stepsEl.value.forEach((step) => step.classList.remove('active'));
+    stepsEl.value[index].classList.add('active');
 
-  imagesEl.value.swiper.slideTo(index);
-  currentActiveIndex.value = index;
+    imagesEl.value.swiper.slideTo(index);
+    currentActiveIndex.value = index;
+  }
 }
 // checking what the next index number should be
 function indexInc(index = currentActiveIndex.value, upperLimit = 3, lowerLimit = 0) {

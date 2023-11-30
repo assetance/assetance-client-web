@@ -1,0 +1,52 @@
+{
+    "hero": {
+        "tagline": "مهمتنا",
+        "title": "نحفظ - ننمي - نبسط",
+        "description": "في اسيتانس نعطي الأولوية لثلاث قيم أساسية - الحفظ والنمو والبساطة. نحن ملتزمون بتوفير سوق استثمار أكثر أمانًا لمدخراتك مقارنة بخيارات استثمار الأخرى. تمتد مهمتنا إلى تنمية ازدهارك المالي وتبسيط الطريق إلى النجاح. تقف Assetance في رحلتك المالية، مما يجعل الحفاظ على الثروة والنمو وإمكانية الوصول جزءًا لا يتجزأ من مستقبلك الأكثر إشراقًا وأكثر أمانًا."
+    },
+    "banner": {
+        "tagline": "من نكون",
+        "title": "نبذه عن من نحن",
+        "description": "Cat ipsum dolor sit amet, swat at dog. Only use one corner of the litter box put toy mouse in food bowl run out of litter box at full speed but the best thing in the universe is a cardboard box cuddle no cuddle cuddle love scratch scratch. Adventure always fall asleep on the washing machine litter box is life."
+    },
+    "vision": {
+        "tagline": "رؤيتنا",
+        "description": "Cat ipsum dolor sit amet, relentlessly pursues moth ears back wide eyed so good now the other hand, too yet meowzer. Sweet beast licks paws cats woo or scratch the box. Cat slap dog in face i will ruin the couch with my claws, for eat the rubberband i shall purr myself to sleep pee in the shoe yet cereal boxes make for five star accommodation chase ball of string."
+    },
+    "values": {
+        "tagline": "قيمنا",
+        "description": "في اسيتانس تصيغ قيمنا الأساسية كل جانب من جوانب أعمالنا، حيث تحدد هويتنا وتوجه قراراتنا. هذه القيم هي أساس التزامنا تجاه المستثمرين والشركاء والمجتمع العقاري.",
+        "value1": {
+            "title": "النزاهة",
+            "description": "دائما ما نحث على التمسك بأعلى المعايير الأخلاقية، فإننا نعطي الأولوية للشفافية والصدق في جميع تعاملاتنا."
+        },
+        "value2": {
+            "title": "تسهيل الوصول",
+            "description": "نحن ملتزمون بكسر الحواجز، وجعل الاستثمار العقاري في متناول الجميع ."
+        },
+        "value3": {
+            "title": "التركيز على العميل",
+            "description": "نطمح دائما لتحسين تجربه الجميع لتكون تجربة إيجابية ومجزية ومن خلال وضع عملائنا في المقدمة، فإننا ملتزمون بفهم وتلبية احتياجاتهم الفريدة."
+        }
+    },
+    "cta": {
+        "title": "اشترك في نشرتنا الإخبارية",
+        "description": "احصل على آخر التحديثات حول اسيتانس وسوق العقارات",
+        "privacy-policy-agreament": "بالنقر فوق \"اشترك\"، فإنك تؤكد موافقتك على سياسة الخصوصية الخاصة بنا."
+    },
+    "solutions": {
+        "tagline": "خدماتنا",
+        "solution1": {
+            "title": "خدمة الاستثمارات للأشخاص",
+            "description": "تسهيل عملية الاستثمار للأشخاص بشكل مباشر من خلال بواباتنا الالكترونية, في خلال 10 دقائق نتيح للمستثمرين الجدد الاستثمار في اسهم السوق العقاري من خلال ااستخدام منصتنا بشكل مباشر."
+        },
+        "solution2": {
+            "title": "بوابة مختصة لمديري الاستثمارات و المحاسبين",
+            "description": "اسيتانس توفر حسابات للأخصائيين مثل المحاسبين و مديري الاستثمارات الذي بإمكانهم الاستثمار لموكليهم."
+        },
+        "solution3": {
+            "title": "ترخيص استخدام سوق التداول",
+            "description": "يمكن للشركات و المئسسات استخدام سوق التداول الحديث (REFNAQS) ليمكنو مستخدميهم من التداول في اسهم العقارات."
+        }
+    }
+}

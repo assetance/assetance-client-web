@@ -1,11 +1,11 @@
 import { createApp } from 'vue/dist/vue.esm-bundler';
 import App from './App.vue';
 import router from './router';
+import 'material-symbols/rounded.scss';
 import localizer from './localizer';
 import store from './store';
 import VueApexCharts from 'vue3-apexcharts';
 import 'clickout-event';
-import 'material-symbols/rounded.scss';
 
 /**
  * Swiper install

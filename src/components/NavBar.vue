@@ -130,11 +130,12 @@
                 <p class="artivleText">
                   {{ article.summary }}
                 </p>
-                <router-link :to="'article/' + article.id">{{ $t('global.read-more') }}</router-link>
+                <!-- <router-link :to="'article/' + article.id">{{ $t('global.read-more') }}</router-link> -->
+                <router-link to="#">{{ $t('global.read-more') }}</router-link>
               </article>
             </li>
           </ul>
-          <router-link to="articles">{{ $t('global.view-all') }}
+          <router-link to="#">{{ $t('global.view-all') }}
             <span class="material-symbols-rounded"> chevron_right </span>
           </router-link>
         </div>

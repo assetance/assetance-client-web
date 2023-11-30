@@ -1,0 +1,52 @@
+{
+    "hero": {
+        "tagline": "our mission statement",
+        "title": "Preserving - Growing - Simplifying",
+        "description": "At Assetance, we prioritize three core values — Preservation, Growth, and Simplicity. We're committed to providing a safer investment market for your wealth compared to other investment options. Our mission extends to cultivating your financial prosperity and simplifying the path to success. Assetance stands as a partner in your financial journey, making wealth preservation, growth, and accessibility integral to your brighter, more secure future."
+    },
+    "banner": {
+        "tagline": "what are we?",
+        "title": "about us",
+        "description": "Cat ipsum dolor sit amet, swat at dog. Only use one corner of the litter box put toy mouse in food bowl run out of litter box at full speed but the best thing in the universe is a cardboard box cuddle no cuddle cuddle love scratch scratch. Adventure always fall asleep on the washing machine litter box is life."
+    },
+    "vision": {
+        "tagline": "our vision",
+        "description": "Cat ipsum dolor sit amet, relentlessly pursues moth ears back wide eyed so good now the other hand, too yet meowzer. Sweet beast licks paws cats woo or scratch the box. Cat slap dog in face i will ruin the couch with my claws, for eat the rubberband i shall purr myself to sleep pee in the shoe yet cereal boxes make for five star accommodation chase ball of string."
+    },
+    "values": {
+        "tagline": "committed values",
+        "description": "At Assetance, our core values shape every aspect of our business, defining who we are and guiding our decisions. These values are the foundation of our commitment to investors, partners, and the real estate community.",
+        "value1": {
+            "title": "integrity",
+            "description": "Upholding the highest ethical standards, we prioritize transparency and honesty in all our interactions."
+        },
+        "value2": {
+            "title": "Accessibility",
+            "description": "Committed to breaking down barriers, we make real estate investing accessible to a broader audience, promoting financial inclusivity."
+        },
+        "value3": {
+            "title": "Client-Centric Focus",
+            "description": "Placing our clients at the forefront, we are dedicated to understanding and meeting their unique needs, ensuring a positive and rewarding experience."
+        }
+    },
+    "cta": {
+        "title": "join our newsletter",
+        "description": "get the latest updates about Assetance and the real estate market",
+        "privacy-policy-agreament": "By clicking Sign Up you're confirming that you agree to our privacy policy."
+    },
+    "solutions": {
+        "tagline": "our services",
+        "solution1": {
+            "title": "individuals investments facilitation",
+            "description": "facilitating investments for individuals directly through our easy to use investor portal, in 10 minuets new investors can trade in real estate market from one easy to use web application."
+        },
+        "solution2": {
+            "title": "accountants and investment managers portal",
+            "description": "Assetance provides profisional accounts for capital managers, accountants and other financial profitionals acting on behalf of an investor."
+        },
+        "solution3": {
+            "title": "trading market integration",
+            "description": "businesses can integrate our state of the art trading market system (REFNAQS) to provide their customers with access to the best real estate shares trading system."
+        }
+    }
+}

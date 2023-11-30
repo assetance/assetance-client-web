@@ -8,10 +8,13 @@
   "view-property": "عرض العقار",
   "start-investing": "ابدأ الاستثمار",
   "get-started": "إبدأ",
+  "start-pro-account": "ابدا حساب للمحترفين",
+  "contact-sales": "تواصل معنا",
   "done": "تم",
   "browes-properties": "تصفح العقارات",
   "bedrooms": "غرف نوم {n}",
   "bathrooms": " حمام {n}",
+  "email": "ايميل",
   "nav": {
     "properties": "العقارات",
     "about": "من نحن",

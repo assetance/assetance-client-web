@@ -11,7 +11,7 @@
           </div>
           <p>{{ $t('global.footer.join-newsletter') }}</p>
           <label for="subscribe" class="subscribe">
-            <input type="email" name="subscribe" id="subscribe" placeholder="Email" />
+            <input type="email" name="subscribe" id="subscribe" :placeholder="$t('global.email')" />
             <PrimaryButton @click="addSubscriber" :is-loading="loader">{{
               subButtonText
             }}</PrimaryButton>
