@@ -30,7 +30,7 @@ import KnowledgeArticles from '@/components/homePage/KnowledgeArticles.vue';
 // home stlying shold not be scoped
 
 div.home {
-  & > main {
+  &>main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
