@@ -14,7 +14,9 @@
             </template>
 
             <!-- loading state -->
-            <template #fallback> Loading... </template>
+            <template #fallback>
+              <LoadingSlide></LoadingSlide>
+            </template>
           </Suspense>
         </KeepAlive>
       </Transition>
@@ -25,6 +27,7 @@
 <script setup>
 import NavBar from './components/NavBar.vue';
 import FooterComponent from './components/FooterComponent.vue';
+import LoadingSlide from './components/LoadingSlide.vue';
 </script>
 
 <style lang="scss" scoped>

@@ -65,9 +65,9 @@
       </div>
       <div class="row">
         <span>&copy; {{ $t('global.footer.assetance-rights-reserved') }}</span>
-        <router-link to="/">{{ $t('global.footer.privacy-policy') }}</router-link>
-        <router-link to="/">{{ $t('global.footer.terms-of-service') }}</router-link>
-        <router-link to="/">{{ $t('global.footer.cookies-policy') }}</router-link>
+        <router-link to="/policies/privacy">{{ $t('global.footer.privacy-policy') }}</router-link>
+        <router-link to="/policies/terms-and-conditions">{{ $t('global.footer.terms-of-service') }}</router-link>
+        <router-link to="/policies/cookies">{{ $t('global.footer.cookies-policy') }}</router-link>
       </div>
     </div>
   </footer>

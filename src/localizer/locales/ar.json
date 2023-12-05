@@ -246,5 +246,9 @@
   "metrics": {
     "aroi": "AROI",
     "nry": "NRY"
+  },
+  "policies": {
+    "policies": "السياسات",
+    "last-updated": "آخر تحديث"
   }
 }
