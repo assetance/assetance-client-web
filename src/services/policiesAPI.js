@@ -13,7 +13,7 @@ export default {
                 apiClient.get('policies.json').then((res) => {
                     resolve(res.data);
                 });
-            }, 1000);
+            }, 3000);
         });
     },
 };
