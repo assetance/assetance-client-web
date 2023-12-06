@@ -1,6 +1,7 @@
 @forward 'colors';
 @forward 'typography';
 @import 'variables';
+@import '../../node_modules/nprogress/nprogress.css';
 
 html {
     box-sizing: border-box;
@@ -56,6 +57,18 @@ body {
         white-space: nowrap;
         direction: ltr;
     }
+
+    // nprogress bar styling
+    /* Change the color of the progress bar */
+    #nprogress .bar {
+        background: #0056e0 !important;
+    }
+
+    /* Change the color of the spinner (optional) */
+    // #nprogress .spinner-icon {
+    //     border-top-color: #0056e0 !important;
+    //     border-left-color: #0056e0 !important;
+    // }
 
     // animation classes
     .ball {

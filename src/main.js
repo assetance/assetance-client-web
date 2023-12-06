@@ -1,5 +1,7 @@
 import { createApp } from 'vue/dist/vue.esm-bundler';
 import App from './App.vue';
+import NProgress from 'nprogress';
+// import 'nprogress/nprogress.css';
 import router from './router';
 import 'material-symbols/rounded.scss';
 import localizer from './localizer';
@@ -17,6 +19,10 @@ register();
 
 const app = createApp(App);
 
+app.use((app) => {
+    app.config.globalProperties.$NProgress = NProgress;
+    NProgress.configure({ showSpinner: false });
+});
 app.use(router);
 app.use(store);
 app.use(VueApexCharts);
