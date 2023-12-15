@@ -7,15 +7,15 @@
             <!-- main content -->
             <template #default>
               <div class="container">
-                <component :is="Component"></component>
-                <NavBar></NavBar>
-                <FooterComponent></FooterComponent>
+                <component :is="Component" />
+                <NavBar />
+                <FooterComponent />
               </div>
             </template>
 
             <!-- loading state -->
             <template #fallback>
-              <LoadingSlide></LoadingSlide>
+              <LoadingSlide />
             </template>
           </Suspense>
         </KeepAlive>

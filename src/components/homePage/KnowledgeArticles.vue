@@ -5,12 +5,17 @@
       <h2>{{ $t('home.knowledge-articles.title') }}</h2>
       <p>{{ $t('home.knowledge-articles.description') }}</p>
       <div class="ctaButton">
-        <SecondaryButton @click="viewAll">{{ $t('global.view-all') }}</SecondaryButton>
+        <SecondaryButton @click="viewAll">
+          {{ $t('global.view-all') }}
+        </SecondaryButton>
       </div>
     </div>
     <div class="articles">
       <div class="articleCard">
-        <img src="https://placehold.co/400" alt="article image" />
+        <img
+          src="https://placehold.co/400"
+          alt="article image"
+        >
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
@@ -21,11 +26,16 @@
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
+          <LinkButton @click="viewArticle('article id')">
+            {{ $t('global.read-more') }}
+          </LinkButton>
         </article>
       </div>
       <div class="articleCard">
-        <img src="https://placehold.co/400" alt="article image" />
+        <img
+          src="https://placehold.co/400"
+          alt="article image"
+        >
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
@@ -36,11 +46,16 @@
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
+          <LinkButton @click="viewArticle('article id')">
+            {{ $t('global.read-more') }}
+          </LinkButton>
         </article>
       </div>
       <div class="articleCard">
-        <img src="https://placehold.co/400" alt="article image" />
+        <img
+          src="https://placehold.co/400"
+          alt="article image"
+        >
         <article class="informatives">
           <div class="tags">
             <TackTag>Category</TackTag>
@@ -51,7 +66,9 @@
             article body Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, eum.
           </p>
 
-          <LinkButton @click="viewArticle('article id')">{{ $t('global.read-more') }}</LinkButton>
+          <LinkButton @click="viewArticle('article id')">
+            {{ $t('global.read-more') }}
+          </LinkButton>
         </article>
       </div>
     </div>

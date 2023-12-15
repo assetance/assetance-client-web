@@ -1,11 +1,24 @@
 <template>
-  <button>
-    <p v-if="$slots.default" class="text" :dir="dir">
-      <slot></slot>
+  <button class="linkButton">
+    <p
+      v-if="$slots.default"
+      class="text"
+      :dir="dir"
+    >
+      <slot />
     </p>
-    <span class="material-symbols-rounded" v-if="icon">{{ icon }}</span>
-    <span class="material-symbols-rounded" v-else-if="dir == 'rtl'">arrow_back</span>
-    <span class="material-symbols-rounded" v-else>arrow_forward</span>
+    <span
+      class="material-symbols-rounded"
+      v-if="icon"
+    >{{ icon }}</span>
+    <span
+      class="material-symbols-rounded"
+      v-else-if="dir == 'rtl'"
+    >arrow_back</span>
+    <span
+      class="material-symbols-rounded"
+      v-else
+    >arrow_forward</span>
   </button>
 </template>
 
@@ -67,7 +80,6 @@ button {
     margin: 0;
     position: relative;
     font-size: 1rem;
-    color: var(--dark);
   }
   p.text::before {
     position: absolute;

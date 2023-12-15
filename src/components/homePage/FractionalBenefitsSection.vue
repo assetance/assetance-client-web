@@ -1,6 +1,10 @@
 <template>
   <section class="fractionalBenefits wl">
-    <img src="@/assets/theme/vector_arrow.png" alt="background img" class="background" />
+    <img
+      src="@/assets/theme/vector_arrow.png"
+      alt="background img"
+      class="background"
+    >
     <header>{{ $t('home.fractional-investing.tagline') }}</header>
     <h2>{{ $t('home.fractional-investing.title') }}</h2>
     <ul>

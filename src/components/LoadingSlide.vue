@@ -1,10 +1,10 @@
 <template>
-    <div class="loader">
-        <div class="img">
-            <!-- <img src="@/assets/brand/DarkBlue.png" alt="Assetance Loading Website"> -->
-        </div>
-        <h1>Loading ...</h1>
+  <div class="loader">
+    <div class="img">
+      <!-- <img src="@/assets/brand/DarkBlue.png" alt="Assetance Loading Website"> -->
     </div>
+    <h1>Loading ...</h1>
+  </div>
 </template>
 
 <script setup></script>

@@ -1,43 +1,85 @@
 <template>
   <div class="VisualizerContainer">
     <div class="complementaryImage fade-in">
-      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-        swipers.push(el);
-      }
-        ">
-        <swiper-slide v-for="image in imageLinkers[1]" :key="image.alt">
-          <img :src="image.url" :alt="image.alt" />
+      <swiper-container
+        loop="true"
+        allow-touch-move="false"
+        :ref="(el) => {
+          swipers.push(el);
+        }
+        "
+      >
+        <swiper-slide
+          v-for="image in imageLinkers[1]"
+          :key="image.alt"
+        >
+          <img
+            :src="image.url"
+            :alt="image.alt"
+          >
         </swiper-slide>
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in">
-      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-        swipers.push(el);
-      }
-        ">
-        <swiper-slide v-for="image in imageLinkers[2]" :key="image.alt">
-          <img :src="image.url" :alt="image.alt" />
+      <swiper-container
+        loop="true"
+        allow-touch-move="false"
+        :ref="(el) => {
+          swipers.push(el);
+        }
+        "
+      >
+        <swiper-slide
+          v-for="image in imageLinkers[2]"
+          :key="image.alt"
+        >
+          <img
+            :src="image.url"
+            :alt="image.alt"
+          >
         </swiper-slide>
       </swiper-container>
     </div>
     <div class="mainImage fade-in-300">
-      <swiper-container id="mainImage" ref="mainSwiper" events-prefix="main-swiper-" loop="true" :pagination="{
-        clickable: true,
-      }" :autoplay="{
-  delay: 3000,
-  disableOnInteraction: false,
-}" allow-touch-move="true">
-        <swiper-slide v-for="image in imageLinkers[0]" :key="image.alt" ref="mainSwiperSlides">
-          <img :src="image.url" :alt="image.alt" />
+      <swiper-container
+        id="mainImage"
+        ref="mainSwiper"
+        events-prefix="main-swiper-"
+        loop="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        allow-touch-move="true"
+      >
+        <swiper-slide
+          v-for="image in imageLinkers[0]"
+          :key="image.alt"
+          ref="mainSwiperSlides"
+        >
+          <img
+            :src="image.url"
+            :alt="image.alt"
+          >
         </swiper-slide>
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in-500">
-      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-        swipers.push(el);
-      }
-        ">
-        <swiper-slide v-for="image in imageLinkers[3]" :key="image.alt">
+      <swiper-container
+        loop="true"
+        allow-touch-move="false"
+        :ref="(el) => {
+          swipers.push(el);
+        }
+        "
+      >
+        <swiper-slide
+          v-for="image in imageLinkers[3]"
+          :key="image.alt"
+        >
           <div class="metrics">
             <div class="metric">
               <span>{{ $t('metrics.aroi') }}</span>
@@ -56,12 +98,22 @@
       </swiper-container>
     </div>
     <div class="complementaryImage fade-in-500">
-      <swiper-container loop="true" allow-touch-move="false" :ref="(el) => {
-        swipers.push(el);
-      }
-        ">
-        <swiper-slide v-for="image in imageLinkers[4]" :key="image.alt">
-          <img :src="image.url" :alt="image.alt" />
+      <swiper-container
+        loop="true"
+        allow-touch-move="false"
+        :ref="(el) => {
+          swipers.push(el);
+        }
+        "
+      >
+        <swiper-slide
+          v-for="image in imageLinkers[4]"
+          :key="image.alt"
+        >
+          <img
+            :src="image.url"
+            :alt="image.alt"
+          >
         </swiper-slide>
       </swiper-container>
     </div>

@@ -54,6 +54,7 @@
   "global": {
     "login": "Login",
     "sign-up": "Sign Up",
+    "submit": "submit",
     "dashboard": "Dashboard",
     "subscribe": "subscribe",
     "read-more": "Read More",
@@ -68,6 +69,19 @@
     "bedrooms": "No Bedrooms | { n } Bedroom | { n } Bedrooms",
     "bathrooms": "No Bathrooms | { n } Bathroom | { n } Bathrooms",
     "email": "email",
+    "form": {
+      "name": "name",
+      "name-err-msg": "please enter your name",
+      "email": "email",
+      "email-err-msg": "please enter a vaild email",
+      "subject": "subject",
+      "subject-err-msg": "please enter a subject",
+      "message": "message",
+      "message-err-msg": "please write your message",
+      "no-options-found": "no options found",
+      "select": "select",
+      "search": "search"
+    },
     "nav": {
       "properties": "Properties",
       "about": "About Us",
@@ -113,6 +127,49 @@
       "privacy-policy": "Privacy Policy",
       "terms-of-service": "Terms of Service",
       "cookies-policy": "Cookies Policy"
+    },
+    "pages": {
+      "knowledge-base": "Knowledge Base"
+    }
+  },
+  "help": {
+    "help-center": "help center",
+    "contact": {
+      "live-chat": "live chat",
+      "phone-line": "phone line",
+      "availability": "available Sun-Fri 7Am-7PM ET",
+      "or": "or",
+      "send-mail": "send mail",
+      "avg-reply-time": "average reply time whithin { n } hours | average reply time whithin { n } hour | average reply time whithin { n } hours"
+    },
+    "faqs": {
+      "faq": "FAQs",
+      "faq1": {
+        "question": "question 1",
+        "answer": "answer 1"
+      },
+      "faq2": {
+        "question": "question 2",
+        "answer": "answer 2"
+      },
+      "faq3": {
+        "question": "question 3",
+        "answer": "answer 3"
+      },
+      "faq4": {
+        "question": "question 4",
+        "answer": "answer 4"
+      },
+      "faq5": {
+        "question": "question 5",
+        "answer": "answer 5"
+      }
+    },
+    "articles": {
+      "view-articles": "view articles",
+      "view-articles-from-knowledge-center": "view articles from our Knowledge Center, select a category you want help with",
+      "category": "category",
+      "read-time": "few moments read | { n } minute read | { n } minutes read"
     }
   },
   "home": {

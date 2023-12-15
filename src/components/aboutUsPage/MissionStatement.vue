@@ -1,33 +1,36 @@
 <template>
-    <section class="hero wl">
-        <!-- animator start -->
-        <ul class="circles">
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-        <!-- animator end -->
-        <header>{{ $t('about.hero.tagline') }}</header>
-        <article class="statement">
-            <h1>{{ $t('about.hero.title') }}</h1>
-            <p>{{ $t('about.hero.description') }}</p>
-        </article>
-        <div class="banner">
-            <header>{{ $t('about.banner.tagline') }}</header>
-            <article>
-                <h2>{{ $t('about.banner.title') }}</h2>
-                <p>{{ $t('about.banner.description') }}</p>
-            </article>
-            <img src="@/assets/brand/DarkBlue.png" alt="company logo">
-        </div>
-    </section>
+  <section class="hero wl">
+    <!-- animator start -->
+    <ul class="circles">
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+      <li />
+    </ul>
+    <!-- animator end -->
+    <header>{{ $t('about.hero.tagline') }}</header>
+    <article class="statement">
+      <h1>{{ $t('about.hero.title') }}</h1>
+      <p>{{ $t('about.hero.description') }}</p>
+    </article>
+    <div class="banner">
+      <header>{{ $t('about.banner.tagline') }}</header>
+      <article>
+        <h2>{{ $t('about.banner.title') }}</h2>
+        <p>{{ $t('about.banner.description') }}</p>
+      </article>
+      <img
+        src="@/assets/brand/DarkBlue.png"
+        alt="company logo"
+      >
+    </div>
+  </section>
 </template>
 
 <script setup></script>

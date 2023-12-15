@@ -1,27 +1,38 @@
 <template>
-    <section class="policiesDash">
-        <aside>
-            <h2>{{ $t('policies.policies') }}</h2>
-            <hr>
-            <menu>
-                <li v-for="(policy, index) in policies" :key="policy.id" @click="viewPolicy(index)"
-                    :class="['policy', index == 0 ? 'selected' : '']" ref="policyEls">
-                    {{ policy.title }}</li>
-            </menu>
-        </aside>
-        <article>
-            <header>
-                <h1>{{ currentPolicy.policyTitle }}</h1>
-                <p class="timestamp"><span>{{ $t('policies.last-updated') }}</span> <span>{{
-                    currentPolicy.policyLastUpdated
-                }}</span></p>
-                <span class="material-symbols-rounded" @click="download()">
-                    file_save
-                </span>
-            </header>
-            <p>{{ currentPolicy.policyContent }}</p>
-        </article>
-    </section>
+  <section class="policiesDash">
+    <aside>
+      <h2>{{ $t('policies.policies') }}</h2>
+      <hr>
+      <menu>
+        <li
+          v-for="(policy, index) in policies"
+          :key="policy.id"
+          @click="viewPolicy(index)"
+          :class="['policy', index == 0 ? 'selected' : '']"
+          ref="policyEls"
+        >
+          {{ policy.title }}
+        </li>
+      </menu>
+    </aside>
+    <article>
+      <header>
+        <h1>{{ currentPolicy.policyTitle }}</h1>
+        <p class="timestamp">
+          <span>{{ $t('policies.last-updated') }}</span> <span>{{
+            currentPolicy.policyLastUpdated
+          }}</span>
+        </p>
+        <span
+          class="material-symbols-rounded"
+          @click="download()"
+        >
+          file_save
+        </span>
+      </header>
+      <p>{{ currentPolicy.policyContent }}</p>
+    </article>
+  </section>
 </template>
 
 <script setup>

@@ -1,11 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import NProgress from 'nprogress';
-/**
- * TODO:: fix suspense loaders
- */
-// import LoadingSlide from '../components/LoadingSlide.vue';
-// import { defineAsyncComponent } from 'vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -24,15 +19,11 @@ const router = createRouter({
       path: '/policies/:slug?',
       name: 'policies',
       component: () => import('../views/PoliciesView.vue'),
-      /**
-       * TODO:: fix suspense loaders
-       */
-      // component: defineAsyncComponent({
-      //   loader: () => import('../views/PoliciesView.vue'),
-      //   delay: 1000,
-      //   loadingComponent: LoadingSlide,
-      //   suspensible: false
-      // }),
+    },
+    {
+      path: '/help',
+      name: 'help',
+      component: () => import('../views/HelpCenterView.vue'),
     },
   ],
   scrollBehavior(to, from, savedPosition) {

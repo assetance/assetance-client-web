@@ -55,6 +55,7 @@
     "login": "سجل دخولك",
     "sign-up": "انضم",
     "dashboard": "لوحه المعلومات",
+    "submit": "ارسل",
     "subscribe": "اشترك",
     "read-more": "اقرأ أكثر",
     "view-all": "عرض الكل",
@@ -68,6 +69,19 @@
     "bedrooms": "غرف نوم {n}",
     "bathrooms": " حمام {n}",
     "email": "ايميل",
+    "form": {
+      "name": "الاسم",
+      "name-err-msg": "الرجاء كتابة الاسم",
+      "email": "الايميل",
+      "email-err-msg": "الرجاء ادخال ايميل صحيح",
+      "subject": "الموضوع",
+      "subject-err-msg": "الرجاء كتابة الموضوع",
+      "message": "الرسالة",
+      "message-err-msg": "الرجاء كتابة رسالتك",
+      "no-options-found": "لا يوجد خيار مطابق",
+      "select": "اختر",
+      "search": "ابحث"
+    },
     "nav": {
       "properties": "العقارات",
       "about": "من نحن",
@@ -113,6 +127,49 @@
       "privacy-policy": "سياسة الخصوصية",
       "terms-of-service": "شروط الخدمة",
       "cookies-policy": "(كوكيز) اتفاقية ملفات تعريف الارتباط"
+    },
+    "pages": {
+      "knowledge-base": "قاعدة المعرفة"
+    }
+  },
+  "help": {
+    "help-center": "قاعدة المعرفة",
+    "contact": {
+      "live-chat": "محادثة مباشرة",
+      "phone-line": "اتصال هاتفي",
+      "availability": "من الساعة 8 صباحا الى 5 عصرا بتوقيت مكرة المكرمة",
+      "or": "أو",
+      "send-mail": "ارسل ايميل",
+      "avg-reply-time": "متوسط وقت الرد هو ساعة | متوسط وقت الرد هو { n } ساعات | متوسط وقت الرد هو { n } ساعة"
+    },
+    "faqs": {
+      "faq": "الاسئلة الشائعة",
+      "faq1": {
+        "question": "سؤال 1",
+        "answer": "اجابة 1"
+      },
+      "faq2": {
+        "question": "سؤال 2",
+        "answer": "اجابة 2"
+      },
+      "faq3": {
+        "question": "سؤال 3",
+        "answer": "اجابة 3"
+      },
+      "faq4": {
+        "question": "سؤال 4",
+        "answer": "اجابة 4"
+      },
+      "faq5": {
+        "question": "سؤال 5",
+        "answer": "اجابة 5"
+      }
+    },
+    "articles": {
+      "view-articles": "اطلع على المقالات",
+      "view-articles-from-knowledge-center": "اطلع على مقالاتنا من قاعدة المعرفة, يمكنك اختيار الفئه لعرض مقالات المساعدة لها",
+      "category": "الفئه",
+      "read-time": "قرائة خلال لحظات | قرائه خلال دقيقة | قرائة خلال { n } دقائق"
     }
   },
   "home": {

@@ -1,21 +1,21 @@
 <template>
-    <div class="policies">
-        <main class="wl">
-            <Suspense>
-                <template #default>
-                    <PoliciesDashboard></PoliciesDashboard>
-                </template>
-                <template #fallback>
-                    <PoliciesDashLoader></PoliciesDashLoader>
-                </template>
-            </Suspense>
-        </main>
-    </div>
+  <div class="policies">
+    <main class="wl">
+      <Suspense>
+        <template #default>
+          <PoliciesDashboard />
+        </template>
+        <template #fallback>
+          <PoliciesDashLoader />
+        </template>
+      </Suspense>
+    </main>
+  </div>
 </template>
   
 <script setup>
-import PoliciesDashboard from '../components/policies/PoliciesDashboard.vue';
-import PoliciesDashLoader from '../components/policies/PoliciesDashLoader.vue';
+import PoliciesDashboard from '../components/policiesPage/PoliciesDashboard.vue';
+import PoliciesDashLoader from '../components/policiesPage/PoliciesDashLoader.vue';
 </script>
   
 <style lang="scss">

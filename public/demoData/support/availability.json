@@ -1,0 +1,13 @@
+{
+    "isAvailable": true,
+    "workingHours": {
+        "start": 0,
+        "end": 24
+    },
+    "workingDays": {
+        "start": 7,
+        "end": 4
+    },
+    "avgReplyTime": 14,
+    "phoneNumber": "+5555555555"
+}

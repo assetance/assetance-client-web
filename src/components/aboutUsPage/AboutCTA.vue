@@ -1,21 +1,32 @@
 <template>
-    <section class="cta wl">
-        <div class="container">
-            <div class="informatives">
-                <h2>{{ $t('about.cta.title') }}</h2>
-                <p>{{ $t('about.cta.description') }}</p>
-            </div>
-            <div class="action">
-                <label for="aboutCta" class="subscribe">
-                    <input type="email" name="aboutCta" id="aboutCta" :placeholder="$t('global.email')" />
-                    <PrimaryButton @click="addSubscriber" :is-loading="loader">{{
-                        subButtonText
-                    }}</PrimaryButton>
-                </label>
-                <sub>{{ $t('about.cta.privacy-policy-agreament') }}</sub>
-            </div>
-        </div>
-    </section>
+  <section class="cta wl">
+    <div class="container">
+      <div class="informatives">
+        <h2>{{ $t('about.cta.title') }}</h2>
+        <p>{{ $t('about.cta.description') }}</p>
+      </div>
+      <div class="action">
+        <label
+          for="aboutCta"
+          class="subscribe"
+        >
+          <input
+            type="email"
+            name="aboutCta"
+            id="aboutCta"
+            :placeholder="$t('global.email')"
+          >
+          <PrimaryButton
+            @click="addSubscriber"
+            :is-loading="loader"
+          >{{
+            subButtonText
+          }}</PrimaryButton>
+        </label>
+        <sub>{{ $t('about.cta.privacy-policy-agreament') }}</sub>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>

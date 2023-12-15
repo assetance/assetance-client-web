@@ -1,0 +1,82 @@
+[
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 120,
+        "category" : "category 5",
+        "image": "https://img.freepik.com/free-vector/electronic-document-electronic-paper-paperless-office-internet-article-online-documentation-organization-typing-text-file-computer-vector-isolated-concept-metaphor-illustration_335657-2745.jpg?w=2000"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 10,
+        "category" : "category 1",
+        "image": "https://www.shutterstock.com/image-vector/article-writing-vector-icon-260nw-537933487.jpg"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 70,
+        "category" : "category 2",
+        "image": "https://img.freepik.com/free-vector/electronic-document-electronic-paper-paperless-office-internet-article-online-documentation-organization-typing-text-file-computer-vector-isolated-concept-metaphor-illustration_335657-2745.jpg?w=2000"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 640,
+        "category" : "category 3",
+        "image": "https://www.shutterstock.com/image-vector/article-writing-vector-icon-260nw-537933487.jpg"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 30,
+        "category" : "category 4",
+        "image": "https://img.freepik.com/free-vector/electronic-document-electronic-paper-paperless-office-internet-article-online-documentation-organization-typing-text-file-computer-vector-isolated-concept-metaphor-illustration_335657-2745.jpg?w=2000"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 270,
+        "category" : "category 8",
+        "image": "https://www.shutterstock.com/image-vector/article-writing-vector-icon-260nw-537933487.jpg"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 800,
+        "category" : "category 7",
+        "image": "https://img.freepik.com/free-vector/electronic-document-electronic-paper-paperless-office-internet-article-online-documentation-organization-typing-text-file-computer-vector-isolated-concept-metaphor-illustration_335657-2745.jpg?w=2000"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 630,
+        "category" : "category 6",
+        "image": "https://www.shutterstock.com/image-vector/article-writing-vector-icon-260nw-537933487.jpg"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 780,
+        "category" : "category 2",
+        "image": "https://img.freepik.com/free-vector/electronic-document-electronic-paper-paperless-office-internet-article-online-documentation-organization-typing-text-file-computer-vector-isolated-concept-metaphor-illustration_335657-2745.jpg?w=2000"
+    },
+    {
+        "id": "AB01D",
+        "title": "article 1",
+        "summary": "article 1 summary",
+        "readingTime": 1300,
+        "category" : "category 1",
+        "image": "https://www.shutterstock.com/image-vector/article-writing-vector-icon-260nw-537933487.jpg"
+    }
+]

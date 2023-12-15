@@ -1,30 +1,36 @@
 <template>
-    <section class="solutions wl">
-        <header>{{ $t('about.solutions.tagline') }}</header>
-        <div class="informatives">
-            <div class="solution">
-                <h2>{{ $t('about.solutions.solution1.title') }}</h2>
-                <p>{{ $t('about.solutions.solution1.description') }}</p>
-                <div class="cta">
-                    <PrimaryButton @click="relocate">{{ $t('global.start-investing') }}</PrimaryButton>
-                </div>
-            </div>
-            <div class="solution">
-                <h2>{{ $t('about.solutions.solution2.title') }}</h2>
-                <p>{{ $t('about.solutions.solution2.description') }}</p>
-                <div class="cta">
-                    <PrimaryButton @click="relocate">{{ $t('global.start-pro-account') }}</PrimaryButton>
-                </div>
-            </div>
-            <div class="solution">
-                <h2>{{ $t('about.solutions.solution3.title') }}</h2>
-                <p>{{ $t('about.solutions.solution3.description') }}</p>
-                <div class="cta">
-                    <PrimaryButton @click="relocate">{{ $t('global.contact-sales') }}</PrimaryButton>
-                </div>
-            </div>
+  <section class="solutions wl">
+    <header>{{ $t('about.solutions.tagline') }}</header>
+    <div class="informatives">
+      <div class="solution">
+        <h2>{{ $t('about.solutions.solution1.title') }}</h2>
+        <p>{{ $t('about.solutions.solution1.description') }}</p>
+        <div class="cta">
+          <PrimaryButton @click="relocate">
+            {{ $t('global.start-investing') }}
+          </PrimaryButton>
         </div>
-    </section>
+      </div>
+      <div class="solution">
+        <h2>{{ $t('about.solutions.solution2.title') }}</h2>
+        <p>{{ $t('about.solutions.solution2.description') }}</p>
+        <div class="cta">
+          <PrimaryButton @click="relocate">
+            {{ $t('global.start-pro-account') }}
+          </PrimaryButton>
+        </div>
+      </div>
+      <div class="solution">
+        <h2>{{ $t('about.solutions.solution3.title') }}</h2>
+        <p>{{ $t('about.solutions.solution3.description') }}</p>
+        <div class="cta">
+          <PrimaryButton @click="relocate">
+            {{ $t('global.contact-sales') }}
+          </PrimaryButton>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>

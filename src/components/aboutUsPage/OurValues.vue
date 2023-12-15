@@ -1,16 +1,24 @@
 <template>
-    <section class="values wl">
-        <header>{{ $t('about.values.tagline') }}</header>
-        <p>{{ $t('about.values.description') }}</p>
-        <swiper-container :space-between="30" slides-per-view="auto" :scrollbar-hide="false" :mousewheel="true"
-            :free-mode="true">
-            <swiper-slide v-for="n in 3" :key="n">
-                <span class="material-symbols-rounded iconLtr">verified</span>
-                <h3>{{ $t(`about.values.value${n}.title`) }}</h3>
-                <p>{{ $t(`about.values.value${n}.description`) }}</p>
-            </swiper-slide>
-        </swiper-container>
-    </section>
+  <section class="values wl">
+    <header>{{ $t('about.values.tagline') }}</header>
+    <p>{{ $t('about.values.description') }}</p>
+    <swiper-container
+      :space-between="30"
+      slides-per-view="auto"
+      :scrollbar-hide="false"
+      :mousewheel="true"
+      :free-mode="true"
+    >
+      <swiper-slide
+        v-for="n in 3"
+        :key="n"
+      >
+        <span class="material-symbols-rounded iconLtr">verified</span>
+        <h3>{{ $t(`about.values.value${n}.title`) }}</h3>
+        <p>{{ $t(`about.values.value${n}.description`) }}</p>
+      </swiper-slide>
+    </swiper-container>
+  </section>
 </template>
 
 <script setup></script>

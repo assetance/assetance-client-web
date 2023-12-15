@@ -1,56 +1,111 @@
 <template>
-  <section class="howItWorks wl" aria-label="how it works section">
-    <img aria-label="background visualizer" src='data:image/svg+xml,<svg
-      version="1.1"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 500 500"
-      width="100%"
-      id="blobSvg"
-      style="opacity: 1"
-      filter="blur(0px)"
-      transform="rotate(135)">
-      <path id="blob" fill="url(%23gradient)" style="opacity: 1">
+  <section
+    class="howItWorks wl"
+    aria-label="how it works section"
+  >
+    <img
+      aria-label="background visualizer"
+      src="data:image/svg+xml,<svg
+      version=&quot;1.1&quot;
+      xmlns=&quot;http://www.w3.org/2000/svg&quot;
+      viewBox=&quot;0 0 500 500&quot;
+      width=&quot;100%&quot;
+      id=&quot;blobSvg&quot;
+      style=&quot;opacity: 1&quot;
+      filter=&quot;blur(0px)&quot;
+      transform=&quot;rotate(135)&quot;>
+      <path id=&quot;blob&quot; fill=&quot;url(%23gradient)&quot; style=&quot;opacity: 1&quot;>
         <animate
-          attributeName="d"
-          dur="10000ms"
-          repeatCount="indefinite"
-          values="M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;"></animate>
+          attributeName=&quot;d&quot;
+          dur=&quot;10000ms&quot;
+          repeatCount=&quot;indefinite&quot;
+          values=&quot;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;M453.78747,319.98894Q416.97789,389.97789,353.96683,436.87838Q290.95577,483.77887,223.95577,447.43366Q156.95577,411.08845,105.64373,365.97789Q54.33169,320.86732,62.67444,252.61056Q71.01719,184.3538,113.01965,135.21007Q155.02211,86.06634,220.52211,66.46683Q286.02211,46.86732,335.5,91.94472Q384.97789,137.02211,437.78747,193.51106Q490.59704,250,453.78747,319.98894Z;M411.39826,313.90633Q402.59677,377.81265,342.92059,407.63957Q283.24442,437.46649,215.13648,432.5428Q147.02853,427.61911,82.23325,380.9572Q17.43796,334.29529,20.45223,250.83809Q23.46649,167.38089,82.5856,115.05707Q141.70471,62.73325,212.19045,63.73015Q282.67618,64.72705,352.67308,84.79839Q422.66998,104.86972,421.43486,177.43486Q420.19974,250,411.39826,313.90633Z;M440.5,320.5Q418,391,355.5,442.5Q293,494,226,450.5Q159,407,99,367Q39,327,31.5,247.5Q24,168,89,125.5Q154,83,219.5,68Q285,53,335.5,94.5Q386,136,424.5,193Q463,250,440.5,320.5Z;&quot;></animate>
       </path>
       <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color: rgb(0, 86, 224)"></stop>
-          <stop offset="100%" style="stop-color: rgb(71, 182, 254)"></stop>
+        <linearGradient id=&quot;gradient&quot; x1=&quot;0%&quot; y1=&quot;0%&quot; x2=&quot;0%&quot; y2=&quot;100%&quot;>
+          <stop offset=&quot;0%&quot; style=&quot;stop-color: rgb(0, 86, 224)&quot;></stop>
+          <stop offset=&quot;100%&quot; style=&quot;stop-color: rgb(71, 182, 254)&quot;></stop>
         </linearGradient>
       </defs></svg
-    >' alt="image" />
-    <header aria-label="tag line">{{ $t('home.how-it-works.tagline') }}</header>
+    >"
+      alt="image"
+    >
+    <header aria-label="tag line">
+      {{ $t('home.how-it-works.tagline') }}
+    </header>
     <h2>{{ $t('home.how-it-works.title') }}</h2>
-    <div class="slideShow" aria-label="steps slide show">
+    <div
+      class="slideShow"
+      aria-label="steps slide show"
+    >
       <div class="imagesContainer">
-        <swiper-container class="images" allow-touch-move="false" crossfade="false" effect="fade" ref="imagesEl">
-          <swiper-slide><img src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website" /></swiper-slide>
-          <swiper-slide><img src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website" /></swiper-slide>
-          <swiper-slide><img src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website" /></swiper-slide>
-          <swiper-slide><img src="https://placehold.co/250"
-              alt="a GIF to visualize the step using the website" /></swiper-slide>
+        <swiper-container
+          class="images"
+          allow-touch-move="false"
+          crossfade="false"
+          effect="fade"
+          ref="imagesEl"
+        >
+          <swiper-slide>
+            <img
+              src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website"
+            >
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website"
+            >
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website"
+            >
+          </swiper-slide>
+          <swiper-slide>
+            <img
+              src="https://placehold.co/250"
+              alt="a GIF to visualize the step using the website"
+            >
+          </swiper-slide>
         </swiper-container>
       </div>
-      <div class="infoMobile" aria-label="steps information">
-        <ol class="stages" aria-label="steps names">
-          <li v-for="(stage, index) in stages" :key="index">
-            <button @click="
-              autoplay.pause(10);
-            changeStep(index);
-            " ref="stagesEl" :class="[index == 0 ? 'active' : '']">
+      <div
+        class="infoMobile"
+        aria-label="steps information"
+      >
+        <ol
+          class="stages"
+          aria-label="steps names"
+        >
+          <li
+            v-for="(stage, index) in stages"
+            :key="index"
+          >
+            <button
+              @click="
+                autoplay.pause(10);
+                changeStep(index);
+              "
+              ref="stagesEl"
+              :class="[index == 0 ? 'active' : '']"
+            >
               <span>{{ index + 1 }}</span> {{ stage }}
             </button>
           </li>
         </ol>
-        <ol class="steps" aria-label="steps explanation">
-          <li v-for="(step, index) in steps" :key="step.title" ref="stepsEl" :class="[index == 0 ? 'active' : '']">
+        <ol
+          class="steps"
+          aria-label="steps explanation"
+        >
+          <li
+            v-for="(step, index) in steps"
+            :key="step.title"
+            ref="stepsEl"
+            :class="[index == 0 ? 'active' : '']"
+          >
             <h3>{{ step.title }}</h3>
             <p>
               {{ step.description }}

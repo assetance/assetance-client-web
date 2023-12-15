@@ -1,8 +1,8 @@
 <template>
-    <section class="vision wl">
-        <header>{{ $t('about.vision.tagline') }}</header>
-        <p>{{ $t('about.vision.description') }}</p>
-    </section>
+  <section class="vision wl">
+    <header>{{ $t('about.vision.tagline') }}</header>
+    <p>{{ $t('about.vision.description') }}</p>
+  </section>
 </template>
 
 <script setup></script>

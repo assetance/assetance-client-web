@@ -1,32 +1,56 @@
 <template>
-  <section class="hero wl" aria-label="Hero Section">
+  <section
+    class="hero wl"
+    aria-label="Hero Section"
+  >
     <div class="banner">
-      <div class="info fade-in-left" aria-label="Hero Info">
-        <h1 class="fade-in-300">{{ $t('home.hero.title') }}</h1>
+      <div
+        class="info fade-in-left"
+        aria-label="Hero Info"
+      >
+        <h1 class="fade-in-300">
+          {{ $t('home.hero.title') }}
+        </h1>
         <p class="fade-in-up">
           {{ $t('home.hero.description') }}
         </p>
         <div class="ctaButtons fade-in-up-300">
-          <PrimaryButton icon="start">{{ $t('global.start-investing') }}</PrimaryButton>
-          <SecondaryButton icon="explore">{{ $t('global.browes-properties') }}</SecondaryButton>
+          <PrimaryButton icon="start">
+            {{ $t('global.start-investing') }}
+          </PrimaryButton>
+          <SecondaryButton icon="explore">
+            {{ $t('global.browes-properties') }}
+          </SecondaryButton>
         </div>
         <div class="mobileAppCta fade-in-up-500">
-          <a href="#"><img :src="GooglePlayBadge" alt="get it on Google Play" /></a>
-          <a href="#"><img :src="AppStoreBadge" alt="download on App Store" /></a>
+          <a href="#"><img
+            :src="GooglePlayBadge"
+            alt="get it on Google Play"
+          ></a>
+          <a href="#"><img
+            :src="AppStoreBadge"
+            alt="download on App Store"
+          ></a>
         </div>
       </div>
       <Transition>
         <Suspense>
-          <div class="visualizer" aria-label="Hero Image">
-            <BannerVisualizer></BannerVisualizer>
+          <div
+            class="visualizer"
+            aria-label="Hero Image"
+          >
+            <BannerVisualizer />
           </div>
           <template #fallback>
-            <div class="visualizerFallbackSkeleton" aria-label="Hero Image Loading">
-              <div class="loadingShader fade-in-right"></div>
-              <div class="loadingShader fade-in-right"></div>
-              <div class="loadingShader fade-in-500"></div>
-              <div class="loadingShader fade-in-right-500"></div>
-              <div class="loadingShader fade-in-right-500"></div>
+            <div
+              class="visualizerFallbackSkeleton"
+              aria-label="Hero Image Loading"
+            >
+              <div class="loadingShader fade-in-right" />
+              <div class="loadingShader fade-in-right" />
+              <div class="loadingShader fade-in-500" />
+              <div class="loadingShader fade-in-right-500" />
+              <div class="loadingShader fade-in-right-500" />
             </div>
           </template>
         </Suspense>

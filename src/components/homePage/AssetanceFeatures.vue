@@ -1,17 +1,23 @@
 <template>
-  <section class="wl" aria-label="assetance featuers">
+  <section
+    class="wl"
+    aria-label="assetance featuers"
+  >
     <div class="visualBoxes">
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
-      <div class="emptyBox"></div>
+      <div class="emptyBox" />
+      <div class="emptyBox" />
+      <div class="emptyBox" />
+      <div class="emptyBox" />
+      <div class="emptyBox" />
     </div>
     <header>{{ $t('home.assetance-features.tagline') }}</header>
     <h2>{{ $t('home.assetance-features.title') }}</h2>
     <ul class="features">
       <li>
-        <div class="icon" aria-label="check mark">
+        <div
+          class="icon"
+          aria-label="check mark"
+        >
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
@@ -20,7 +26,10 @@
         </div>
       </li>
       <li>
-        <div class="icon" aria-label="check mark">
+        <div
+          class="icon"
+          aria-label="check mark"
+        >
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
@@ -29,7 +38,10 @@
         </div>
       </li>
       <li>
-        <div class="icon" aria-label="check mark">
+        <div
+          class="icon"
+          aria-label="check mark"
+        >
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">
@@ -38,7 +50,10 @@
         </div>
       </li>
       <li>
-        <div class="icon" aria-label="check mark">
+        <div
+          class="icon"
+          aria-label="check mark"
+        >
           <span class="material-symbols-rounded iconLtr"> check </span>
         </div>
         <div class="info">

@@ -3,7 +3,10 @@
     <header>{{ $t('home.why-real-estate.tagline') }}</header>
     <h2>{{ $t('home.why-real-estate.title') }}</h2>
     <div class="informatives">
-      <img src="@/assets/theme/realEstateInvesting.jpg" alt="image" />
+      <img
+        src="@/assets/theme/realEstateInvesting.jpg"
+        alt="image"
+      >
       <div class="col">
         <div class="reasonCard">
           <div class="icon">

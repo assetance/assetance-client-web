@@ -1,119 +1,189 @@
 <template>
   <div :class="['navContainer', isExpanded || localizer || burgerOn ? 'navContainer__expand' : '']">
     <nav class="wl">
-      <div :class="[
-        'topBar',
-        isExpanded ? 'topBar__expand' : '',
-        localizer ? 'topBar__expand' : '',
-        burgerOn ? 'topBar__burgerOn' : '',
-      ]">
+      <div
+        :class="[
+          'topBar',
+          isExpanded ? 'topBar__expand' : '',
+          localizer ? 'topBar__expand' : '',
+          burgerOn ? 'topBar__burgerOn' : '',
+        ]"
+      >
         <div class="brand">
-          <router-link to="/"><img src="@/assets/brand/DarkBlue.png" alt="Welcome to Assetance" /></router-link>
+          <router-link to="/">
+            <img
+              src="@/assets/brand/DarkBlue.png"
+              alt="Welcome to Assetance"
+            >
+          </router-link>
           <h1>ASSETANCE</h1>
           <!-- mobile burger menu -->
-          <label class="bar" for="burgerCheck" @clickout="burgerOn = false">
-            <input type="checkbox" id="burgerCheck" v-model="burgerOn" />
+          <label
+            class="bar"
+            for="burgerCheck"
+            @clickout="burgerOn = false"
+          >
+            <input
+              type="checkbox"
+              id="burgerCheck"
+              v-model="burgerOn"
+            >
 
-            <span class="top"></span>
-            <span class="middle"></span>
-            <span class="bottom"></span>
+            <span class="top" />
+            <span class="middle" />
+            <span class="bottom" />
           </label>
         </div>
 
         <menu :class="[burgerOn ? 'burgerOn' : '']">
-          <li><router-link to="#">{{ $t('global.nav.properties') }}</router-link></li>
-          <li><router-link to="/about">{{ $t('global.nav.about') }}</router-link></li>
           <li>
-            <button class="expandMoreOption" @click="
-              isExpanded = !isExpanded;
-            localizer = false;
-            ">
+            <router-link to="#">
+              {{ $t('global.nav.properties') }}
+            </router-link>
+          </li>
+          <li>
+            <router-link to="/about">
+              {{ $t('global.nav.about') }}
+            </router-link>
+          </li>
+          <li>
+            <button
+              class="expandMoreOption"
+              @click="
+                isExpanded = !isExpanded;
+                localizer = false;
+              "
+            >
               {{ $t('global.nav.more') }}
             </button>
           </li>
         </menu>
 
         <div :class="['buttons', burgerOn ? 'buttons__burgerOn' : '']">
-          <button :class="['localizerButton', localizer ? 'localizerOn' : '']" @click="
-            localizer = !localizer;
-          isExpanded = false;
-          ">
+          <button
+            :class="['localizerButton', localizer ? 'localizerOn' : '']"
+            @click="
+              localizer = !localizer;
+              isExpanded = false;
+            "
+          >
             <span class="material-symbols-rounded"> language </span>
           </button>
-          <secondary-button icon="login" class="button" v-if="!userData">{{ $t('global.login') }}</secondary-button>
-          <primary-button icon="person_add" class="button" v-if="!userData">{{ $t('global.sign-up') }}</primary-button>
-          <primary-button icon="dashboard" class="button" v-if="userData">{{ $t('global.dashboard') }}</primary-button>
+          <secondary-button
+            icon="login"
+            class="button"
+            v-if="!userData"
+          >
+            {{ $t('global.login') }}
+          </secondary-button>
+          <primary-button
+            icon="person_add"
+            class="button"
+            v-if="!userData"
+          >
+            {{ $t('global.sign-up') }}
+          </primary-button>
+          <primary-button
+            icon="dashboard"
+            class="button"
+            v-if="userData"
+          >
+            {{ $t('global.dashboard') }}
+          </primary-button>
         </div>
       </div>
       <!-- More Links dropdown-->
-      <div :class="['expandedView', isExpanded ? 'expandedView__expand' : '']" @clickout="isExpanded = false">
+      <div
+        :class="['expandedView', isExpanded ? 'expandedView__expand' : '']"
+        @clickout="isExpanded = false"
+      >
         <button @click="isExpanded = false">
           <span class="material-symbols-rounded"> close </span>
         </button>
         <div class="links">
           <div class="linksGroup">
-            <router-link to="#">{{ $t('global.nav.knowledge-center') }}
-              <span class="material-symbols-rounded"> open_in_new </span></router-link>
+            <router-link to="#">
+              {{ $t('global.nav.knowledge-center') }}
+              <span class="material-symbols-rounded"> open_in_new </span>
+            </router-link>
             <menu>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.how-it-works') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.how-it-works') }}
+                  </router-link>
                   <p>{{ $t('global.nav.how-it-works-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.investments-options') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.investments-options') }}
+                  </router-link>
                   <p>{{ $t('global.nav.investments-options-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.risk-management') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.risk-management') }}
+                  </router-link>
                   <p>{{ $t('global.nav.risk-management-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.referral-program') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.referral-program') }}
+                  </router-link>
                   <p>{{ $t('global.nav.referral-program-description') }}</p>
                 </div>
               </li>
             </menu>
           </div>
           <div class="linksGroup">
-            <router-link to="#">{{ $t('global.nav.help-center') }}
-              <span class="material-symbols-rounded"> open_in_new </span></router-link>
+            <router-link to="/help">
+              {{ $t('global.nav.help-center') }}
+              <span class="material-symbols-rounded"> open_in_new </span>
+            </router-link>
             <menu>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.faq') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.faq') }}
+                  </router-link>
                   <p>{{ $t('global.nav.faq-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.feedback') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.feedback') }}
+                  </router-link>
                   <p>{{ $t('global.nav.feedback-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.partnerships') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.partnerships') }}
+                  </router-link>
                   <p>{{ $t('global.nav.partnerships-description') }}</p>
                 </div>
               </li>
               <li>
                 <span class="material-symbols-rounded"> radio_button_checked </span>
                 <div>
-                  <router-link to="#">{{ $t('global.nav.support') }}</router-link>
+                  <router-link to="#">
+                    {{ $t('global.nav.support') }}
+                  </router-link>
                   <p>{{ $t('global.nav.support-description') }}</p>
                 </div>
               </li>
@@ -123,39 +193,64 @@
         <div class="featuredArticles">
           <p>{{ $t('global.nav.knowledge-center-plugin') }}</p>
           <ul>
-            <li class="article" v-for="(article, index) in articles" :key="article.id">
-              <img :src="article.image" :alt="'article ' + index + 'image'" />
+            <li
+              class="article"
+              v-for="(article, index) in articles"
+              :key="article.id"
+            >
+              <img
+                :src="article.image"
+                :alt="'article ' + index + 'image'"
+              >
               <article class="articleInfo">
-                <p class="articleTitle">{{ article.title }}</p>
+                <p class="articleTitle">
+                  {{ article.title }}
+                </p>
                 <p class="artivleText">
                   {{ article.summary }}
                 </p>
                 <!-- <router-link :to="'article/' + article.id">{{ $t('global.read-more') }}</router-link> -->
-                <router-link to="#">{{ $t('global.read-more') }}</router-link>
+                <router-link to="#">
+                  {{ $t('global.read-more') }}
+                </router-link>
               </article>
             </li>
           </ul>
-          <router-link to="#">{{ $t('global.view-all') }}
+          <router-link to="#">
+            {{ $t('global.view-all') }}
             <span class="material-symbols-rounded"> chevron_right </span>
           </router-link>
         </div>
       </div>
       <!-- locales preferences dropdown-->
-      <div :class="['localizer', localizer ? 'localizer__expand' : '']" @clickout="localizer = false">
+      <div
+        :class="['localizer', localizer ? 'localizer__expand' : '']"
+        @clickout="localizer = false"
+      >
         <button @click="localizer = false">
           <span class="material-symbols-rounded"> close </span>
         </button>
-        <select-element :defaultSelection="selectedLanguage" notice="Language" :list="supportedLanguages.slugs"
+        <select-element
+          :default-selection="selectedLanguage"
+          notice="Language"
+          :list="supportedLanguages.slugs"
           @selection="(pref) => {
             updatePrefLang(pref);
           }
-            ">{{ $t('global.nav.selection-language')
-  }}</select-element>
-        <select-element :defaultSelection="selectedCurrency" notice="Currency" :list="supportedCurrenciesFormatted"
+          "
+        >
+          {{ $t('global.nav.selection-language')
+          }}
+        </select-element>
+        <select-element
+          :default-selection="selectedCurrency"
+          notice="Currency"
+          :list="supportedCurrenciesFormatted"
           @selection="(pref) => {
             updatePrefCurr(pref);
           }
-            ">
+          "
+        >
           {{ $t('global.nav.selection-currency') }}
         </select-element>
       </div>

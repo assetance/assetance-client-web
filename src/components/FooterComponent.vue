@@ -5,14 +5,28 @@
         <div class="col">
           <div class="brand">
             <router-link to="/">
-              <img src="@/assets/brand/LightBlue.png" alt="assetance brand" />
+              <img
+                src="@/assets/brand/LightBlue.png"
+                alt="assetance brand"
+              >
             </router-link>
             <h1>assetance</h1>
           </div>
           <p>{{ $t('global.footer.join-newsletter') }}</p>
-          <label for="subscribe" class="subscribe">
-            <input type="email" name="subscribe" id="subscribe" :placeholder="$t('global.email')" />
-            <PrimaryButton @click="addSubscriber" :is-loading="loader">{{
+          <label
+            for="subscribe"
+            class="subscribe"
+          >
+            <input
+              type="email"
+              name="subscribe"
+              id="subscribe"
+              :placeholder="$t('global.email')"
+            >
+            <PrimaryButton
+              @click="addSubscriber"
+              :is-loading="loader"
+            >{{
               subButtonText
             }}</PrimaryButton>
           </label>
@@ -23,17 +37,29 @@
           <h2>{{ $t('global.footer.quick-links') }}</h2>
           <ul>
             <li>
-              <router-link to="/">{{ $t('global.footer.properties') }}</router-link>
-            </li>
-            <li><router-link to="/">{{ $t('global.footer.knowledge-base') }}</router-link></li>
-            <li>
-              <router-link to="/">{{ $t('global.footer.help-center') }}</router-link>
+              <router-link to="/">
+                {{ $t('global.footer.properties') }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/">{{ $t('global.footer.about-us') }}</router-link>
+              <router-link to="/">
+                {{ $t('global.footer.knowledge-base') }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/">{{ $t('global.footer.sing-up-or-login') }}</router-link>
+              <router-link to="/">
+                {{ $t('global.footer.help-center') }}
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/">
+                {{ $t('global.footer.about-us') }}
+              </router-link>
+            </li>
+            <li>
+              <router-link to="/">
+                {{ $t('global.footer.sing-up-or-login') }}
+              </router-link>
             </li>
           </ul>
         </div>
@@ -41,33 +67,64 @@
           <h2><span class="material-symbols-rounded"> share </span>{{ $t('global.footer.follow-us') }}</h2>
           <ul>
             <li>
-              <router-link to="/"><img src="@/assets/social/facebook-white.png" alt="facebook" />
-                {{ $t('global.footer.facebook') }}</router-link>
+              <router-link to="/">
+                <img
+                  src="@/assets/social/facebook-white.png"
+                  alt="facebook"
+                >
+                {{ $t('global.footer.facebook') }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/twitterx-holow-white.png" alt="x" /> {{ $t('global.footer.x')
-              }}</router-link>
+              <router-link to="/">
+                <img
+                  src="@/assets/social/twitterx-holow-white.png"
+                  alt="x"
+                > {{ $t('global.footer.x')
+                }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/instagram-white.png" alt="instagram" />
-                {{ $t('global.footer.instagram') }}</router-link>
+              <router-link to="/">
+                <img
+                  src="@/assets/social/instagram-white.png"
+                  alt="instagram"
+                >
+                {{ $t('global.footer.instagram') }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/linkedin-white.png" alt="linkedin" />
-                {{ $t('global.footer.linkedin') }}</router-link>
+              <router-link to="/">
+                <img
+                  src="@/assets/social/linkedin-white.png"
+                  alt="linkedin"
+                >
+                {{ $t('global.footer.linkedin') }}
+              </router-link>
             </li>
             <li>
-              <router-link to="/"><img src="@/assets/social/tiktok-white.png" alt="tiktok" /> {{
-                $t('global.footer.tiktok') }}</router-link>
+              <router-link to="/">
+                <img
+                  src="@/assets/social/tiktok-white.png"
+                  alt="tiktok"
+                > {{
+                  $t('global.footer.tiktok') }}
+              </router-link>
             </li>
           </ul>
         </div>
       </div>
       <div class="row">
         <span>&copy; {{ $t('global.footer.assetance-rights-reserved') }}</span>
-        <router-link to="/policies/privacy">{{ $t('global.footer.privacy-policy') }}</router-link>
-        <router-link to="/policies/terms-and-conditions">{{ $t('global.footer.terms-of-service') }}</router-link>
-        <router-link to="/policies/cookies">{{ $t('global.footer.cookies-policy') }}</router-link>
+        <router-link to="/policies/privacy">
+          {{ $t('global.footer.privacy-policy') }}
+        </router-link>
+        <router-link to="/policies/terms-and-conditions">
+          {{ $t('global.footer.terms-of-service') }}
+        </router-link>
+        <router-link to="/policies/cookies">
+          {{ $t('global.footer.cookies-policy') }}
+        </router-link>
       </div>
     </div>
   </footer>

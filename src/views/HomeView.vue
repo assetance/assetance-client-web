@@ -1,15 +1,15 @@
 <template>
   <div class="home">
     <main id="main">
-      <HeroSection></HeroSection>
-      <FractionalBenefitsSection></FractionalBenefitsSection>
-      <HowItWorks></HowItWorks>
-      <IncomeSources></IncomeSources>
-      <AssetanceFeatures></AssetanceFeatures>
-      <ReturnsSnippet></ReturnsSnippet>
-      <WhyRealEstate></WhyRealEstate>
-      <HomeCTA></HomeCTA>
-      <KnowledgeArticles></KnowledgeArticles>
+      <HeroSection />
+      <FractionalBenefitsSection />
+      <HowItWorks />
+      <IncomeSources />
+      <AssetanceFeatures />
+      <ReturnsSnippet />
+      <WhyRealEstate />
+      <HomeCTA />
+      <KnowledgeArticles />
     </main>
   </div>
 </template>

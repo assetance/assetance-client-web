@@ -1,21 +1,21 @@
 <template>
   <div class="about">
     <main>
-      <MissionStatement></MissionStatement>
-      <OurVision></OurVision>
-      <AboutCTA></AboutCTA>
-      <OurValues></OurValues>
-      <OurSolutions></OurSolutions>
+      <MissionStatement />
+      <OurVision />
+      <AboutCTA />
+      <OurValues />
+      <OurSolutions />
     </main>
   </div>
 </template>
 
 <script setup>
-import AboutCTA from '../components/aboutUs/AboutCTA.vue';
-import MissionStatement from '../components/aboutUs/MissionStatement.vue';
-import OurSolutions from '../components/aboutUs/OurSolutions.vue';
-import OurValues from '../components/aboutUs/OurValues.vue';
-import OurVision from '../components/aboutUs/OurVision.vue';
+import AboutCTA from '../components/aboutUsPage/AboutCTA.vue';
+import MissionStatement from '../components/aboutUsPage/MissionStatement.vue';
+import OurSolutions from '../components/aboutUsPage/OurSolutions.vue';
+import OurValues from '../components/aboutUsPage/OurValues.vue';
+import OurVision from '../components/aboutUsPage/OurVision.vue';
 </script>
 
 <style lang="scss">

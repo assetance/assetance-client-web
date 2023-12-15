@@ -4,16 +4,35 @@
     <h2>{{ $t('home.projected-returns.title') }}</h2>
     <p>{{ $t('home.projected-returns.description') }}</p>
     <div class="snippet">
-      <div class="propertiesSelector" v-if="properties">
-        <swiper-container :space-between="10" :mousewheel="true" :keyboard="true" :centered-slides="true"
-          :navigation="true" :pagination="{
+      <div
+        class="propertiesSelector"
+        v-if="properties"
+      >
+        <swiper-container
+          :space-between="10"
+          :mousewheel="true"
+          :keyboard="true"
+          :centered-slides="true"
+          :navigation="true"
+          :pagination="{
             clickable: true,
-          }" slides-per-view="auto" :autoplay="{
-  delay: 5000,
-}" ref="selectorSwiper" events-prefix="selector-swiper-">
-          <swiper-slide v-for="property in properties" :key="property.propertyId">
+          }"
+          slides-per-view="auto"
+          :autoplay="{
+            delay: 5000,
+          }"
+          ref="selectorSwiper"
+          events-prefix="selector-swiper-"
+        >
+          <swiper-slide
+            v-for="property in properties"
+            :key="property.propertyId"
+          >
             <div class="propertyProfiler">
-              <img :src="property.images[0].url" alt="property image" />
+              <img
+                :src="property.images[0].url"
+                alt="property image"
+              >
               <div class="idens">
                 <div class="tags">
                   <TackTag>{{ property.propertyCategory }}</TackTag>
@@ -24,7 +43,7 @@
                 <p class="rooms">
                   {{ $t('global.bedrooms', property.blueprint.rooms, { n: property.blueprint.rooms }) + ' | ' +
                     $t('global.bathrooms',
-                      property.blueprint.baths, { n: property.blueprint.baths }) }}
+                       property.blueprint.baths, { n: property.blueprint.baths }) }}
                 </p>
                 <div class="RFNX">
                   # <span>{{ property.RFNX }}</span>
@@ -35,12 +54,12 @@
               <div class="metric">
                 <span class="metricName">{{ $t('metrics.aroi') }}</span>
                 <span class="metricValue">{{ $n(property.metrics.AROI / 100, 'percent',
-                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
+                                                store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
               <div class="metric">
                 <span class="metricName">{{ $t('metrics.nry') }}</span>
                 <span class="metricValue">{{ $n(property.metrics.NRY / 100, 'percent',
-                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
+                                                store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
             </div>
             <button>{{ $t('global.view-property') }}</button>
@@ -50,7 +69,11 @@
       <div class="calculator">
         <div class="informatives">
           <div class="displayers">
-            <apexchart type="bar" :options="options" :series="series"></apexchart>
+            <apexchart
+              type="bar"
+              :options="options"
+              :series="series"
+            />
           </div>
           <div class="selectors">
             <div class="investmentMetrics">
@@ -58,49 +81,85 @@
                 <span class="metricName">{{ $t('home.projected-returns.yearly-income') }}</span>
                 <!-- <span class="metricValue">$ {{ yearlyIncome }}</span> -->
                 <span class="metricValue">{{ $n(yearlyIncome * store.getters.getExchangeRate(), "currency",
-                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
+                                                store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
               <div class="metric">
                 <span class="metricName">{{ $t('home.projected-returns.total-returns') }}</span>
                 <!-- <span class="metricValue">$ {{ totalReturns }}</span> -->
                 <span class="metricValue">{{ $n(totalReturns * store.getters.getExchangeRate(), "currency",
-                  store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
+                                                store.getters.getUserLocaleCurrency(), { minimumFractionDigits: 0 }) }}</span>
               </div>
             </div>
             <div class="selector">
               <div class="selectorInformatives">
-                <label for="investment" class="selectorMetric">
+                <label
+                  for="investment"
+                  class="selectorMetric"
+                >
                   {{ $t('home.projected-returns.investment-amount') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">{{ $n(investmentAmount, 'currency', store.getters.getUserLocaleCurrency(),
-                  { minimumFractionDigits: 0 }) }}</p>
+                <p class="selectorValue">
+                  {{ $n(investmentAmount, 'currency', store.getters.getUserLocaleCurrency(),
+                        { minimumFractionDigits: 0 }) }}
+                </p>
               </div>
-              <input type="range" name="investment" id="investment" min="10" max="10000" step="10"
-                v-model.number="investmentAmount" ref="investmentInput" />
+              <input
+                type="range"
+                name="investment"
+                id="investment"
+                min="10"
+                max="10000"
+                step="10"
+                v-model.number="investmentAmount"
+                ref="investmentInput"
+              >
             </div>
             <div class="selector">
               <div class="selectorInformatives">
-                <label for="appreciation" class="selectorMetric">
+                <label
+                  for="appreciation"
+                  class="selectorMetric"
+                >
                   {{ $t('home.projected-returns.annual-appreciation-rate') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">{{ $n(appreciationRate / 100, 'percent', store.getters.getUserLocaleCurrency())
-                }}
+                <p class="selectorValue">
+                  {{ $n(appreciationRate / 100, 'percent', store.getters.getUserLocaleCurrency())
+                  }}
                 </p>
               </div>
-              <input type="range" name="appreciation" id="appreciation" min="0" max="50" v-model.number="appreciationRate"
-                ref="appreciationRateInput" />
+              <input
+                type="range"
+                name="appreciation"
+                id="appreciation"
+                min="0"
+                max="50"
+                v-model.number="appreciationRate"
+                ref="appreciationRateInput"
+              >
             </div>
             <div class="selector">
               <div class="selectorInformatives">
-                <label for="holding" class="selectorMetric">
+                <label
+                  for="holding"
+                  class="selectorMetric"
+                >
                   {{ $t('home.projected-returns.hold-period') }}
                   <span class="material-symbols-rounded"> info </span>
                 </label>
-                <p class="selectorValue">{{ holdPeriod }}<span> {{ $t('home.projected-returns.years') }}</span></p>
+                <p class="selectorValue">
+                  {{ holdPeriod }}<span> {{ $t('home.projected-returns.years') }}</span>
+                </p>
               </div>
-              <input type="range" name="holding" id="holding" min="3" max="15" v-model.number="holdPeriod" />
+              <input
+                type="range"
+                name="holding"
+                id="holding"
+                min="3"
+                max="15"
+                v-model.number="holdPeriod"
+              >
             </div>
           </div>
         </div>

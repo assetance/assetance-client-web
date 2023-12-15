@@ -1,5 +1,5 @@
 <template>
-  <sub><slot></slot></sub>
+  <sub class="tackTag"><slot /></sub>
 </template>
 
 <style lang="scss" scoped>

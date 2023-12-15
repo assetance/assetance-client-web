@@ -1,17 +1,26 @@
 <template>
   <button>
-    <div class="loader" v-if="isLoading">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    <div
+      class="loader"
+      v-if="isLoading"
+    >
+      <div />
+      <div />
+      <div />
+      <div />
     </div>
-    <span class="material-symbols-rounded" v-if="icon && !isLoading">{{ icon }}</span>
-    <p v-if="$slots.default && !isLoading" :class="[
-      icon ? 'text' : 'text_only',
-      dir === 'rtl' ? 'text__right_padding' : 'text__left_padding',
-    ]">
-      <slot></slot>
+    <span
+      class="material-symbols-rounded"
+      v-if="icon && !isLoading"
+    >{{ icon }}</span>
+    <p
+      v-if="$slots.default && !isLoading"
+      :class="[
+        icon ? 'text' : 'text_only',
+        dir === 'rtl' ? 'text__right_padding' : 'text__left_padding',
+      ]"
+    >
+      <slot />
     </p>
   </button>
 </template>

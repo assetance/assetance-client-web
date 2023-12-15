@@ -1,12 +1,19 @@
 <template>
   <div class="selectElement">
     <p>
-      <slot></slot>
+      <slot />
     </p>
-    <button :class="['selectView', isExpanded ? 'selectView__expand' : '']" @click="isExpanded = !isExpanded"
-      @clickout="isExpanded = false">
-      <p v-if="defaultSelection">{{ defaultSelection }}</p>
-      <p v-else>select</p>
+    <button
+      :class="['selectView', isExpanded ? 'selectView__expand' : '']"
+      @click="isExpanded = !isExpanded"
+      @clickout="isExpanded = false"
+    >
+      <p v-if="defaultSelection">
+        {{ defaultSelection }}
+      </p>
+      <p v-else>
+        select
+      </p>
       <div class="expandIcon">
         <span class="material-symbols-rounded">
           {{ isExpanded ? 'expand_less' : 'expand_more' }}
@@ -14,12 +21,22 @@
       </div>
     </button>
     <div :class="['selectMenu', isExpanded ? 'selectMenu__expand' : '']">
-      <p v-if="notice">{{ notice }}</p>
-      <button class="selectOption" v-for="listElement in list" :key="listElement" @click="
-        emit('selection', listElement);
-      selection = listElement;
-      ">
-        <div class="icon" v-if="listElement.symbol">
+      <p v-if="notice">
+        {{ notice }}
+      </p>
+      <button
+        class="selectOption"
+        v-for="listElement in list"
+        :key="listElement"
+        @click="
+          emit('selection', listElement);
+          selection = listElement;
+        "
+      >
+        <div
+          class="icon"
+          v-if="listElement.symbol"
+        >
           <span> {{ listElement.symbol }} </span>
         </div>
         <p>{{ listElement }}</p>
@@ -51,6 +68,7 @@ const props = defineProps({
   notice: {
     type: String,
     required: false,
+    default: '',
   },
   list: {
     type: Array,
@@ -59,6 +77,7 @@ const props = defineProps({
   defaultSelection: {
     type: String,
     required: false,
+    default: '',
   },
 });
 

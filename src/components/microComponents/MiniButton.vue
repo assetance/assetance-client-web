@@ -1,6 +1,9 @@
 <template>
   <button>
-    <span :class="['material-symbols-rounded', dir == 'rtl' ? 'rtl' : '']" v-if="icon">{{
+    <span
+      :class="['material-symbols-rounded', dir == 'rtl' ? 'rtl' : '']"
+      v-if="icon"
+    >{{
       icon
     }}</span>
   </button>

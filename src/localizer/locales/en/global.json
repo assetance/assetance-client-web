@@ -1,6 +1,7 @@
 {
     "login": "Login",
     "sign-up": "Sign Up",
+    "submit": "submit",
     "dashboard": "Dashboard",
     "subscribe": "subscribe",
     "read-more": "Read More",
@@ -15,6 +16,19 @@
     "bedrooms": "No Bedrooms | { n } Bedroom | { n } Bedrooms",
     "bathrooms": "No Bathrooms | { n } Bathroom | { n } Bathrooms",
     "email": "email",
+    "form": {
+        "name": "name",
+        "name-err-msg": "please enter your name",
+        "email": "email",
+        "email-err-msg": "please enter a vaild email",
+        "subject": "subject",
+        "subject-err-msg": "please enter a subject",
+        "message": "message",
+        "message-err-msg": "please write your message",
+        "no-options-found": "no options found",
+        "select": "select",
+        "search": "search"
+    },
     "nav": {
         "properties": "Properties",
         "about": "About Us",
@@ -60,5 +74,8 @@
         "privacy-policy": "Privacy Policy",
         "terms-of-service": "Terms of Service",
         "cookies-policy": "Cookies Policy"
+    },
+    "pages": {
+        "knowledge-base": "Knowledge Base"
     }
 }

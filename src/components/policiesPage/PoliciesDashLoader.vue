@@ -1,18 +1,21 @@
 <template>
-    <section class="policiesDash">
-        <aside>
-            <h2 class="loadingShader"></h2>
-            <hr>
-            <menu>
-                <li v-for="n in 5" :key="n" class="loadingShader"></li>
-            </menu>
-        </aside>
-        <article>
-            <header class="loadingShader">
-            </header>
-            <p class="loadingShader"></p>
-        </article>
-    </section>
+  <section class="policiesDash">
+    <aside>
+      <h2 class="loadingShader" />
+      <hr>
+      <menu>
+        <li
+          v-for="n in 5"
+          :key="n"
+          class="loadingShader"
+        />
+      </menu>
+    </aside>
+    <article>
+      <header class="loadingShader" />
+      <p class="loadingShader" />
+    </article>
+  </section>
 </template>
 
 <script setup></script>
