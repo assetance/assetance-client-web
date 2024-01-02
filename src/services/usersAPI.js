@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const apiClient = axios.create({
-  baseURL: '../demoData/userData.json',
+  baseURL: import.meta.env.VITE_BASE_URL + '/demoData/userData.json',
   // withCredentials: true,
   // headers: {
   //   Accept: 'application/json',

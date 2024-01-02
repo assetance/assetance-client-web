@@ -27,7 +27,15 @@
         "message-err-msg": "please write your message",
         "no-options-found": "no options found",
         "select": "select",
-        "search": "search"
+        "search": "search",
+        "category": "category",
+        "order-by": "order-by",
+        "order-by-options": {
+            "latest": "latest",
+            "oldest": "oldest",
+            "shortest": "shortest",
+            "longest": "longest"
+        }
     },
     "nav": {
         "properties": "Properties",
@@ -77,5 +85,11 @@
     },
     "pages": {
         "knowledge-base": "Knowledge Base"
+    },
+    "articles": {
+        "read-time": "few moments read | { n } minute read | { n } minutes read"
+    },
+    "pagination": {
+        "page-location": "page { n } out of { x }"
     }
 }

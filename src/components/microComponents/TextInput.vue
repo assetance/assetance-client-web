@@ -7,7 +7,7 @@
       <input
         ref="inputField"
         :id="props.id"
-        :class="['input', statusStyling]"
+        :class="['input', statusStyling, isCustomPlaceholder? 'input__customPlaceholder' : '']"
         :type="props.type"
         :value="modelValue"
         :placeholder="props.placeholder"
@@ -15,7 +15,10 @@
         :disabled="props.disabled"
         @input="emit('update:modelValue', $event.target.value)"
       >
-      <label :for="props.id">{{ props.label }}</label>
+      <label
+        :for="props.id"
+        :class="[isCustomPlaceholder? 'customPlaceholder' : '']"
+      >{{ props.label }}</label>
       <sub>{{ errorMsg }}</sub>
     </div>
     <div
@@ -92,7 +95,7 @@ const emit = defineEmits(['update:modelValue']);
 const inputField = ref(null);
 defineExpose({inputField});
 
-// status logic
+// styling logic
 const statusStyling = computed(() => {
     switch (props.status) {
         case 'valid':
@@ -102,6 +105,9 @@ const statusStyling = computed(() => {
         default:
             return '';
     }
+});
+const isCustomPlaceholder = computed(() => {
+    return props.label != props.placeholder ? true : false;
 });
 </script>
 
@@ -125,6 +131,10 @@ div.inputContainer {
         backdrop-filter: blur(0px);
         transition-duration: 0.2s;
 
+        &.customPlaceholder {
+            color: transparent;
+        }
+
         html[dir="rtl"] & {
             top: 11px;
             left: unset;
@@ -144,6 +154,11 @@ div.inputContainer {
             font-size: 1rem;
             color: transparent;
             text-transform: capitalize;
+        }
+        &__customPlaceholder {
+            &::placeholder {
+                color: var(--dark-40);
+            }
         }
 
         &:focus,

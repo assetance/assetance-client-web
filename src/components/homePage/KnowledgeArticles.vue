@@ -76,17 +76,18 @@
 </template>
 
 <script setup>
+import router from '../../router';
 import LinkButton from '../microComponents/LinkButton.vue';
 import SecondaryButton from '../microComponents/SecondaryButton.vue';
 import TackTag from '../microComponents/TackTag.vue';
 
 // try to make the links work as a link
 function viewAll() {
-  // push to knowledge center
+  router.push({name: 'knowledge'});
 }
 // eslint-disable-next-line no-unused-vars
 function viewArticle(id) {
-  // push to article page
+  router.push({name: 'knowledge', params: {article: id}});
 }
 </script>
 

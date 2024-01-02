@@ -2,7 +2,7 @@ import axios from 'axios';
 import axiosRetry from 'axios-retry';
 
 const apiClient = axios.create({
-    baseURL: '../demoData/exchangeRates.json',
+    baseURL: import.meta.env.VITE_BASE_URL + '/demoData/exchangeRates.json',
     withCredentials: false,
 });
 

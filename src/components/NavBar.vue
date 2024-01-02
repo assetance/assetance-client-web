@@ -102,7 +102,7 @@
         </button>
         <div class="links">
           <div class="linksGroup">
-            <router-link to="#">
+            <router-link to="/knowledge">
               {{ $t('global.nav.knowledge-center') }}
               <span class="material-symbols-rounded"> open_in_new </span>
             </router-link>
@@ -195,28 +195,18 @@
           <ul>
             <li
               class="article"
-              v-for="(article, index) in articles"
+              v-for="article in articles.slice(0, 2)"
               :key="article.id"
             >
-              <img
-                :src="article.image"
-                :alt="'article ' + index + 'image'"
-              >
-              <article class="articleInfo">
-                <p class="articleTitle">
-                  {{ article.title }}
-                </p>
-                <p class="artivleText">
-                  {{ article.summary }}
-                </p>
-                <!-- <router-link :to="'article/' + article.id">{{ $t('global.read-more') }}</router-link> -->
-                <router-link to="#">
-                  {{ $t('global.read-more') }}
-                </router-link>
-              </article>
+              <ArticleCard 
+                orientation="horizontal"
+              />
             </li>
           </ul>
-          <router-link to="#">
+          <router-link
+            to="#"
+            class="cta"
+          >
             {{ $t('global.view-all') }}
             <span class="material-symbols-rounded"> chevron_right </span>
           </router-link>
@@ -263,10 +253,11 @@ import { computed, ref } from 'vue';
 import PrimaryButton from './microComponents/PrimaryButton.vue';
 import SecondaryButton from './microComponents/SecondaryButton.vue';
 import SelectElement from './microComponents/SelectElement.vue';
-import articlesAPI from '@/services/articlesAPI.js';
+import knowledgeAPI from '@/services/knowledgeAPI.js';
 import { useStore } from 'vuex';
 import Tr from '@/localizer/helper.js';
 import { useI18n } from 'vue-i18n';
+import ArticleCard from './macroComponents/articles/ArticleCard.vue'
 
 const { locale } = useI18n();
 const store = useStore();
@@ -281,7 +272,7 @@ const supportedCurrenciesFormatted = computed(() => {
     return element + ' - ' + supportedCurrencies.value.slugs[index];
   });
 });
-const articles = ref(await articlesAPI.getRand());
+const articles = ref(await knowledgeAPI.getRandArticles(2));
 const userData = ref(false); // TODO:: connecting SSO functionality
 const burgerOn = ref(false);
 
@@ -654,10 +645,16 @@ async function updatePrefCurr(currency) {
       .featuredArticles {
         flex-grow: 1;
         flex-shrink: 0;
+        width: 33%;
         padding: 1rem;
         background-color: var(--dark);
         color: var(--light);
+        overflow-y: scroll;
 
+        @media #{$mq-820-down} {
+          width: 100%;
+          overflow-y: unset;;
+        }
         ul {
           padding: 0;
 
@@ -666,64 +663,25 @@ async function updatePrefCurr(currency) {
             flex-flow: row nowrap;
             justify-content: flex-start;
             align-content: center;
-            margin: 0.5rem 0rem;
-            padding: 0.5rem;
-            background-color: var(--light-20);
-            border-radius: 10px;
+            margin: 0rem;
 
             @media #{$mq-365-down} {
               flex-flow: column nowrap;
             }
-
-            img {
-              width: 100px;
-              height: 100px;
-              border-radius: 10px;
-
-              @media #{$mq-365-down} {
-                width: auto;
-                height: auto;
-              }
-            }
-
-            .articleInfo {
-              margin: 0rem 0.5rem;
-              width: 100%;
-
-              @media #{$mq-365-down} {
-                margin: 0.5rem 0rem;
-              }
-
-              p.articleTitle {
-                margin: 0rem;
-                margin-bottom: 0.5rem;
-              }
-
-              p.artivleText {
-                margin: 0rem;
-                margin-bottom: 0.5rem;
-                font-size: 0.8rem;
-              }
-
-              a {
-                font-size: 0.8rem;
-                text-decoration: underline;
-              }
+            
+            a {
+              margin: 0.3rem 0;
             }
           }
         }
 
-        a {
+        a.cta{
           display: flex;
           flex-flow: row nowrap;
           align-items: center;
-          color: var(--light);
           text-decoration: none;
+          color: var(--light);
           transition-duration: 0.1s;
-
-          &:hover {
-            color: var(--accent);
-          }
         }
       }
     }

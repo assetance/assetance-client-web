@@ -25,6 +25,21 @@ const router = createRouter({
       name: 'help',
       component: () => import('../views/HelpCenterView.vue'),
     },
+    {
+      path: '/knowledge',
+      children: [
+        {
+          path: '',
+          name: 'knowledge',
+          component: () => import('../views/KnowledgeBaseView.vue'),
+        },
+        {
+          path: 'articles/:id?',
+          name: 'knowledge-article',
+          component: () => import('../views/ArticleView.vue'),
+        }
+      ]
+    },
   ],
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {

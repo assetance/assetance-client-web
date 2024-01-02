@@ -1,7 +1,7 @@
 @forward 'colors';
 @forward 'typography';
 @import 'variables';
-@import '../../node_modules/nprogress/nprogress.css';
+@import 'nprogress';
 
 html {
     box-sizing: border-box;
@@ -56,6 +56,7 @@ body {
         word-wrap: normal;
         white-space: nowrap;
         direction: ltr;
+        user-select: none;
     }
 
     // nprogress bar styling

@@ -27,7 +27,15 @@
     "message-err-msg": "الرجاء كتابة رسالتك",
     "no-options-found": "لا يوجد خيار مطابق",
     "select": "اختر",
-    "search": "ابحث"
+    "search": "ابحث",
+    "category": "الفئة",
+    "order-by": "ترتيب حسب",
+    "order-by-options": {
+      "latest": "الاجدد",
+      "oldest": "الاقدم",
+      "shortest": "الاقصر",
+      "longest": "الاطول"
+    }
   },
   "nav": {
     "properties": "العقارات",
@@ -77,5 +85,11 @@
   },
   "pages": {
       "knowledge-base": "قاعدة المعرفة"
+  },
+  "articles": {
+    "read-time": "قرائة خلال لحظات | قرائه خلال دقيقة | قرائة خلال { n } دقائق"
+  },
+  "pagination": {
+      "page-location": "صفحة رقم { n } من { x }"
   }
 }

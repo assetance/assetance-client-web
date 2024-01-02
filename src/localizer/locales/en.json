@@ -80,7 +80,15 @@
       "message-err-msg": "please write your message",
       "no-options-found": "no options found",
       "select": "select",
-      "search": "search"
+      "search": "search",
+      "category": "category",
+      "order-by": "order-by",
+      "order-by-options": {
+        "latest": "latest",
+        "oldest": "oldest",
+        "shortest": "shortest",
+        "longest": "longest"
+      }
     },
     "nav": {
       "properties": "Properties",
@@ -130,9 +138,16 @@
     },
     "pages": {
       "knowledge-base": "Knowledge Base"
+    },
+    "articles": {
+      "read-time": "few moments read | { n } minute read | { n } minutes read"
+    },
+    "pagination": {
+      "page-location": "page { n } out of { x }"
     }
   },
   "help": {
+    "header": "Guidance at Your Fingertips",
     "help-center": "help center",
     "contact": {
       "live-chat": "live chat",
@@ -298,6 +313,24 @@
       "title": "Learn More From Our Knowledge Center",
       "description": "Take a look at our step by step guides on how to start with Assetance, also learn more about how this process works, what is fractional real estate investing and more.",
       "read-time": "few moments read | { n } minute read | { n } minutes read"
+    }
+  },
+  "knowledge": {
+    "content": {
+      "articles": "articles",
+      "videos": "videos",
+      "trending": "trending",
+      "new": "new"
+    },
+    "new-user": {
+      "new-user-path": "New Users Path",
+      "starter-level-articles": "starter level articles",
+      "description": "Dive into essential articles crafted for beginners. Master the basics of investing with our short, insightful reads. Start your journey with confidence!"
+    },
+    "hero": {
+      "knowledge-is-key": "knowledge is key",
+      "knowledge-base": "knowledge base",
+      "description": "Explore articles, videos and courses to learn more about real estate investing, how to use Assetance platform to its full potential, and much more."
     }
   },
   "metrics": {

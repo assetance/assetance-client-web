@@ -38,7 +38,7 @@
         v-if="isSearchable"
         type="text"
         name="search"
-        id="search"
+        :id="'search_' + Math.floor(Math.random() * 100)"
         :placeholder="$t('global.form.search')"
         :value="searchInput"
         @input="searchInput = $event.target.value;"
@@ -52,7 +52,7 @@
           :key="option.option"
           @click="emit('update:selection', option); isExpanded = false;"
         >
-          {{ option.option }}
+          <!-- {{ option.option }} -->
           <template #option>
             <slot
               name="option"
@@ -162,7 +162,7 @@ const filteredOptions = computed(() => {
   display: flex;
   flex-flow: column nowrap;
   width: 100%;
-  padding-top: 0.7rem;
+  padding-top: 0.4rem;
 
   .buttonsContainer {
     display: flex;
@@ -250,6 +250,7 @@ const filteredOptions = computed(() => {
 
       &__active {
         padding: 0.3rem 0.5rem;
+        padding-inline-start: 0;
         max-width: fit-content;
       }
     }
@@ -278,7 +279,7 @@ const filteredOptions = computed(() => {
     z-index: 1;
     transition-duration: 0.2s;
 
-    input#search {
+    input {
       outline: none;
       border: 1px solid var(--dark-5);
       border-radius: 7px;

@@ -2,6 +2,7 @@
   <div class="helpCenter">
     <main class="wl">
       <div class="container">
+        <header>{{ $t('help.header') }}</header>
         <h1>{{ $t('help.help-center') }}</h1>
         <Transition name="fade">
           <Suspense>
@@ -61,16 +62,40 @@ div.helpCenter {
         }
 
         &>.container {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
           width: 65%;
 
           @media #{$mq-820-down} {
             width: 100%;
           }
 
-          h1 {
-            width: 100%;
+          &>header {
+            border-radius: 10px;
+            padding: 0.5rem 1rem;
+            color: var(--primary);
+            font-size: 1rem;
+            text-transform: capitalize;
+            backdrop-filter: blur(5px);
+            background-color: var(--light-70);
+          }
+
+          &>h1 {
+            border-radius: 10px;
+            margin-top: 0.5rem;
+            padding: 1rem 1.5rem;
             text-transform: capitalize;
             text-align: center;
+            font-size: 2rem;
+            font-weight: 700;
+            backdrop-filter: blur(5px);
+            box-shadow: var(--primary-larg-shadow);
+            background-color: var(--light-70);
+
+            @media #{$mq-820-down} {
+              font-size: 1.5rem;
+            }
           }
         }
     }

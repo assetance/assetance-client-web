@@ -1,0 +1,18 @@
+{
+    "content": {
+        "articles": "articles",
+        "videos": "videos",
+        "trending": "trending",
+        "new": "new"
+    },
+    "new-user": {
+        "new-user-path": "New Users Path",
+        "starter-level-articles": "starter level articles",
+        "description": "Dive into essential articles crafted for beginners. Master the basics of investing with our short, insightful reads. Start your journey with confidence!"
+    },
+    "hero": {
+        "knowledge-is-key": "knowledge is key",
+        "knowledge-base": "knowledge base",
+        "description": "Explore articles, videos and courses to learn more about real estate investing, how to use Assetance platform to its full potential, and much more."
+    }
+}

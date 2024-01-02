@@ -108,12 +108,12 @@ import SecondaryButton from '../microComponents/SecondaryButton.vue';
 import SelectInput from '../microComponents/SelectInput.vue';
 import TackTag from '../microComponents/TackTag.vue';
 import LinkButton from '../microComponents/LinkButton.vue';
-import articlesAPI from '../../services/articlesAPI.js';
+import knowledgeAPI from '../../services/knowledgeAPI.js';
 import { watch } from 'vue';
 
 /* optionObjects is an array of available options formated for the SelectInput componenet*/
 const optionObjects = ref([]);
-articlesAPI.getCategories().then(response => {
+knowledgeAPI.getCategories().then(response => {
   /* forming the object as required by SelectInput component from the array (assuming an array from server)*/
   optionObjects.value = response.categories.map(category => ({ option: category }));
 });
@@ -128,7 +128,7 @@ const dropdownStatus = ref({
 /* artilces logic start */
 const isArticlesLoading = ref(true); // for skeleton loaders activation
 const articles = ref('');
-articlesAPI.getSupportRand().then(response => {
+knowledgeAPI.getSupportRandArticles().then(response => {
   // calling the api and assigning the response
   articles.value = response;
   isArticlesLoading.value = false;
@@ -139,7 +139,7 @@ watch(selectedObject, async () => {
   if (selectedObject.value != '') {
     // api call for that category 
     isArticlesLoading.value = true;
-    articlesAPI.getByCategory(selectedObject.value.option).then(response => {
+    knowledgeAPI.getArticlesByCategory(selectedObject.value.option).then(response => {
       articles.value = response;
       isArticlesLoading.value = false;
     });
@@ -149,7 +149,7 @@ watch(selectedObject, async () => {
      */
     // reset artilces viewd to random
     isArticlesLoading.value = true;
-    articles.value = await articlesAPI.getSupportRand();
+    articles.value = await knowledgeAPI.getSupportRandArticles();
     isArticlesLoading.value = false;
   }
   
