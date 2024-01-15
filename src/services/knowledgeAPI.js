@@ -17,7 +17,8 @@ export default {
       }, 1000);
     });
   },
-  /* artilces */
+  /* -- artilces -- */
+  // artilce getters
   getRandArticles(count = 10) {
     // using promise for setTimeout to simulate api call waiting time
     return new Promise((resolve) => {
@@ -48,6 +49,16 @@ export default {
       }, 1000);
     });
   },
+  getArticleById(id) { // only using one file for development untill connected with the backend
+    // using promise for setTimeout to simulate api call waiting time
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        apiClient.get('/articles/article_ab01d.json').then((res) => {
+          resolve(res.data);
+        });
+      }, 1000);
+    });
+  },
   getArticlesByQuery(query) { // only using one file for development untill connected with the backend
     // using promise for setTimeout to simulate api call waiting time
     return new Promise((resolve) => {
@@ -58,7 +69,16 @@ export default {
       }, 1000);
     });
   },
-  /* videos */
+  // artilce setters
+  setArticleRating(id) { // only using one file for development untill connected with the backend
+    // using promise for setTimeout to simulate api call waiting time
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(200);
+      }, 1000);
+    });
+  },
+  /* -- videos -- */
   getRandVideos(count = 10) {
     // using promise for setTimeout to simulate api call waiting time
     return new Promise((resolve) => {

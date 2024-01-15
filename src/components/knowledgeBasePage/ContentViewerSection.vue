@@ -61,7 +61,11 @@
     </form>
 
     <!-- articles content -->
-    <section :class="['contentType', isArticlesMinimized ? 'contentType__minimized' : '']">
+    <!-- id scheme '<id>_hash' to prevent default browser scroll behavior -->
+    <section
+      :class="['contentType', isArticlesMinimized ? 'contentType__minimized' : '']"
+      id="articles_hash"
+    >
       <button
         @click="isArticlesMinimized = !isArticlesMinimized"
       >
@@ -193,7 +197,10 @@
     </section>
 
     <!-- videos content -->
-    <section :class="['contentType', isVideosMinimized ? 'contentType__minimized' : '']">
+    <section
+      :class="['contentType', isVideosMinimized ? 'contentType__minimized' : '']"
+      id="videos_hash"
+    >
       <button
         @click="isVideosMinimized = !isVideosMinimized"
       >

@@ -28,6 +28,12 @@
 import NavBar from './components/NavBar.vue';
 import FooterComponent from './components/FooterComponent.vue';
 import LoadingSlide from './components/LoadingSlide.vue';
+import { useHead } from '@unhead/vue';
+
+// global head tags
+useHead({
+  titleTemplate: (title) => title ? `${title} | Assetance` : 'Assetance' 
+});
 </script>
 
 <style lang="scss" scoped>

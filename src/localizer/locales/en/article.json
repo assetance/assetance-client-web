@@ -1,0 +1,19 @@
+{
+    "hero": {
+        "knowledge-base":"knowledge base",
+        "articles" : "articles",
+        "by": "by",
+        "share-this-article": "share this article",
+        "share-on-x": "share on x platform",
+        "share-on-instagram": "share on instagram platform",
+        "share-on-facebok": "share on facebok platform",
+        "share-on-linkedin": "share on linkedin platform",
+        "share-on-tiktok": "share on tiktok platform",
+        "copied": "copied to clipboard",
+        "check-out-this-article": "Check out this great article!"
+    },
+    "feedback": {
+        "was-this-helpful": "was this helpful?"
+    },
+    "recommended-articles": "similar articles"
+}

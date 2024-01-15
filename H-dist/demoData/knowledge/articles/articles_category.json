@@ -1,0 +1,24 @@
+[
+    {
+        "id": "AT01D",
+        "img": "https://us.123rf.com/450wm/shushanto/shushanto2209/shushanto220900703/191842443-destruction-of-planets-concept-art-illustration-background-image.jpg?ver=6",
+        "category": "category 8",
+        "readTime": "PT1M23S",
+        "title": "article title",
+        "summary": "article body Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptate aspernatur pariatur culpa eaque dolor. Totam, cumque. Deserunt, at sed!",
+        "authorImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+        "authorName": "author name",
+        "publishedAt": "2024-01-01T12:25:22Z"
+    },
+    {
+        "id": "AO01D",
+        "img": "https://us.123rf.com/450wm/shushanto/shushanto2209/shushanto220900703/191842443-destruction-of-planets-concept-art-illustration-background-image.jpg?ver=6",
+        "category": "category 8",
+        "readTime": "PT3M23S",
+        "title": "article title",
+        "summary": "article body Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, voluptate aspernatur pariatur culpa eaque dolor. Totam, cumque. Deserunt, at sed!",
+        "authorImg": "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png",
+        "authorName": "author name",
+        "publishedAt": "2024-01-01T12:25:22Z"
+    }
+]

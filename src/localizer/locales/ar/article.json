@@ -1,0 +1,20 @@
+{
+    "hero": {
+        "knowledge-base":"مقر المعرفة",
+        "articles" : "المقالات",
+        "by": "من",
+        "share-this-article": "انشر هذا المقال",
+        "share-on-x": "انشر على منصة اكس",
+        "share-on-instagram": "انشر على منصة انستقرام",
+        "share-on-facebok": "انشر على منصة فيسبوك",
+        "share-on-linkedin": "انشر على منصة لينكد ان",
+        "share-on-tiktok": "انشر على منصة تيكتوك",
+        "copied": "تم النسخ",
+        "check-out-this-article": "القي نظرة على هذا المقال!"
+    },
+    "feedback": {
+        "was-this-helpful": "هل كان المقال مفيدا؟"
+    },
+    "recommended-articles": "المزيد من المقالات المشابهة"
+
+}
