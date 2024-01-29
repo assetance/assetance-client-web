@@ -19,6 +19,19 @@ const router = createRouter({
       }
     },
     {
+      path: '/properties',
+      name: 'properties',
+      component: () => import('../views/PropertiesView.vue'),
+      meta: {
+        /* page meta tags */
+        // TODO:: rewrite a solid SEO description of the page
+        title: 'Properties',
+        description: 'Browse our list of carefully selected properties for you to invest in.',
+
+        /* page meta data */
+      }
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),

@@ -3,10 +3,11 @@
 </template>
 
 <style lang="scss" scoped>
-sub {
+sub.tackTag {
   background-color: var(--dark);
   color: var(--light);
   padding: 0.2rem 0.3rem;
   border-radius: 5px;
+  text-transform: capitalize;
 }
 </style>

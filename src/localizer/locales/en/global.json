@@ -30,6 +30,7 @@
         "search": "search",
         "category": "category",
         "order-by": "order-by",
+        "apply": "apply",
         "order-by-options": {
             "latest": "latest",
             "oldest": "oldest",

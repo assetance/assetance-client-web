@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="textInput">
     <div
       v-if="props.type != 'textarea'"
       class="inputContainer"
@@ -58,7 +58,7 @@ const props = defineProps({
     type: {
         type: String,
         default: 'text',
-        required: true,
+        required: false,
     },
     id: {
         type: String,
@@ -112,6 +112,7 @@ const isCustomPlaceholder = computed(() => {
 </script>
 
 <style lang="scss" scoped>
+// TODO:: refactor components code to follow the same rules of css
 div.inputContainer {
     position: relative;
     display: flex;
@@ -130,6 +131,7 @@ div.inputContainer {
         text-transform: capitalize;
         backdrop-filter: blur(0px);
         transition-duration: 0.2s;
+        cursor: text;
 
         &.customPlaceholder {
             color: transparent;
@@ -145,7 +147,7 @@ div.inputContainer {
     input.input {
         outline: none;
         border-radius: 7px;
-        border: 1px solid var(--dark-5);
+        border: 1px solid var(--dark-20);
         width: 100%;
         padding: 0.5rem;
         transition-duration: 0.2s;
@@ -153,7 +155,6 @@ div.inputContainer {
         &::placeholder {
             font-size: 1rem;
             color: transparent;
-            text-transform: capitalize;
         }
         &__customPlaceholder {
             &::placeholder {

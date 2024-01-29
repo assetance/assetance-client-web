@@ -1,0 +1,190 @@
+{
+    "data": [
+        {
+            "id": "AB01D1",
+            "REFNAQS": "AB01CD1",
+            "img": "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/home-improvement/wp-content/uploads/2022/07/download-23.jpg",
+            "name": "property name",
+            "location": "location string",
+            "fundingPrice": 14000000,
+            "sharePrice": 1000,
+            "fundingProgress": 47, 
+            "category": "category 1",
+            "isTrending": true,
+            "isNew": true,
+            "isTrade": true,
+            "status": "funding",
+            "originCurrency": "USD",
+            "metrics": [
+                {
+                    "lable": "NRY",
+                    "description": "Net Rent Yield is the total annual rent profits",
+                    "value": 12,
+                    "type": "%"
+                },
+                {
+                    "lable": "ZIP10YAR",
+                    "description": "the historical yearly appreciation rate for the bast 10 years of the properties\" ZIP code",
+                    "value": 16,
+                    "type": "%"
+                },
+                {
+                    "lable": "AROI",
+                    "description": "the anticipated Annual Return On Investment for the investment",
+                    "value": 12,
+                    "type": "%"
+                }
+            ]
+        },
+        {
+            "id": "AB03D3",
+            "REFNAQS": "AB03CD3",
+            "img": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/453246681.jpg?k=74f2b34103e457116cd627055b73b90e677898ac34b7292336edd6f96149efa7&o=&hp=1",
+            "name": "property name",
+            "location": "location string",
+            "fundingPrice": 49000000,
+            "sharePrice": 1000,
+            "fundingProgress": 32, 
+            "category": "category 3",
+            "isTrending": true,
+            "isNew": true,
+            "isTrade": false,
+            "status": "funding",
+            "originCurrency": "USD",
+            "metrics": [
+                {
+                    "lable": "NRY",
+                    "description": "Net Rent Yield is the total annual rent profits",
+                    "value": 11,
+                    "type": "%"
+                },
+                {
+                    "lable": "ZIP10YAR",
+                    "description": "the historical yearly appreciation rate for the bast 10 years of the properties\" ZIP code",
+                    "value": 14,
+                    "type": "%"
+                },
+                {
+                    "lable": "AROI",
+                    "description": "the anticipated Annual Return On Investment for the investment",
+                    "value": 9,
+                    "type": "%"
+                }
+            ]
+        },
+        {
+            "id": "AB05D5",
+            "REFNAQS": "AB05CD5",
+            "img": "https://www.bankrate.com/2022/08/04093343/Buying-a-house-with-an-LLC.jpg?auto=webp&optimize=high&crop=16:9",
+            "name": "property name five",
+            "location": "location string five",
+            "fundingPrice": 36500000,
+            "sharePrice": 1000,
+            "fundingProgress": 97, 
+            "category": "category 5",
+            "isTrending": true,
+            "isNew": true,
+            "isTrade": false,
+            "status": "funding",
+            "originCurrency": "USD",
+            "metrics": [
+                {
+                    "lable": "NRY",
+                    "description": "Net Rent Yield is the total annual rent profits",
+                    "value": 10,
+                    "type": "%"
+                },
+                {
+                    "lable": "ZIP10YAR",
+                    "description": "the historical yearly appreciation rate for the bast 10 years of the properties\" ZIP code",
+                    "value": 15,
+                    "type": "%"
+                },
+                {
+                    "lable": "AROI",
+                    "description": "the anticipated Annual Return On Investment for the investment",
+                    "value": 14,
+                    "type": "%"
+                }
+            ]
+        },
+        {
+            "id": "AB06D6",
+            "REFNAQS": "AB06CD6",
+            "img": "https://www.karmod.com/media/projects/261/prefab-homes-turkey-istanbul-89197.jpg",
+            "name": "property name",
+            "location": "location string",
+            "fundingPrice": 68080000,
+            "sharePrice": 2167,
+            "fundingProgress": 100, 
+            "category": "category 6",
+            "isTrending": false,
+            "isNew": false,
+            "isTrade": false,
+            "status": "done",
+            "originCurrency": "USD",
+            "metrics": [
+                {
+                    "lable": "NRY",
+                    "description": "Net Rent Yield is the total annual rent profits",
+                    "value": 9,
+                    "type": "%"
+                },
+                {
+                    "lable": "ZIP10YAR",
+                    "description": "the historical yearly appreciation rate for the bast 10 years of the properties\" ZIP code",
+                    "value": 10,
+                    "type": "%"
+                },
+                {
+                    "lable": "AROI",
+                    "description": "the anticipated Annual Return On Investment for the investment",
+                    "value": 8,
+                    "type": "%"
+                }
+            ]
+        },
+        {
+            "id": "AB08D8",
+            "REFNAQS": "AB08CD8",
+            "img": "https://i0.wp.com/pediaa.com/wp-content/uploads/2018/10/Difference-Between-Home-and-House_Figure-1.jpg?fit=640%2C480&ssl=1",
+            "name": "property name eight",
+            "location": "location string eight",
+            "fundingPrice": 43650000,
+            "sharePrice": 1716,
+            "fundingProgress": 100, 
+            "category": "category 8",
+            "isTrending": false,
+            "isNew": false,
+            "isTrade": false,
+            "status": "exited",
+            "originCurrency": "USD",
+            "metrics": [
+                {
+                    "lable": "NRY",
+                    "description": "Net Rent Yield is the total annual rent profits",
+                    "value": 12,
+                    "type": "%"
+                },
+                {
+                    "lable": "ZIP10YAR",
+                    "description": "the historical yearly appreciation rate for the bast 10 years of the properties\" ZIP code",
+                    "value": 16,
+                    "type": "%"
+                },
+                {
+                    "lable": "AROI",
+                    "description": "the anticipated Annual Return On Investment for the investment",
+                    "value": 12,
+                    "type": "%"
+                }
+            ]
+        }
+    ],
+    "meta" : {
+        "total" : 19,
+        "per_page": 9,
+        "current_page": 1,
+        "last_page": 3
+    }
+}

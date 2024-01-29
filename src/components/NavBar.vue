@@ -37,7 +37,7 @@
 
         <menu :class="[burgerOn ? 'burgerOn' : '']">
           <li>
-            <router-link to="#">
+            <router-link to="/properties">
               {{ $t('global.nav.properties') }}
             </router-link>
           </li>

@@ -8,7 +8,7 @@
       <AssetanceFeatures />
       <ReturnsSnippet />
       <WhyRealEstate />
-      <HomeCTA />
+      <StartInvestingCTA />
       <KnowledgeArticles />
     </main>
   </div>
@@ -22,8 +22,8 @@ import AssetanceFeatures from '@/components/homePage/AssetanceFeatures.vue';
 import IncomeSources from '@/components/homePage/IncomeSources.vue';
 import ReturnsSnippet from '@/components/homePage/ReturnsSnippet.vue';
 import WhyRealEstate from '@/components/homePage/WhyRealEstate.vue';
-import HomeCTA from '@/components/homePage/HomeCTA.vue';
 import KnowledgeArticles from '@/components/homePage/KnowledgeArticles.vue';
+import StartInvestingCTA from '../components/CTAs/StartInvestingCTA.vue';
 </script>
 
 <style lang="scss">

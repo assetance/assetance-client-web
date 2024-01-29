@@ -102,6 +102,7 @@
       "search": "ابحث",
       "category": "الفئة",
       "order-by": "ترتيب حسب",
+      "apply": "اضف",
       "order-by-options": {
         "latest": "الاجدد",
         "oldest": "الاقدم",
@@ -359,5 +360,13 @@
   "policies": {
     "policies": "السياسات",
     "last-updated": "آخر تحديث"
+  },
+  "properties": {
+    "properties": "العقارات",
+    "explore-out-properties": "استكشف قائمتنا للعقارات المختارة بعناية لتستثمر فيها.",
+    "inputs": {
+      "filter-options": "خيارات التصفية",
+      "name-or-REFNAQS-id": "ابحث بالاسم او رقم ريفناكس للعقار"
+    }
   }
 }

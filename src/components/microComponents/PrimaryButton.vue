@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button class="primaryButton">
     <div
       class="loader"
       v-if="isLoading"
@@ -87,6 +87,7 @@ button {
     white-space: nowrap;
     font-weight: var(--meduim-text);
     color: whitesmoke;
+    text-transform: capitalize;
     transition-duration: 0.2s;
 
     &__left_padding {
@@ -113,6 +114,7 @@ button {
     white-space: nowrap;
     font-weight: var(--meduim-text);
     color: whitesmoke;
+    text-transform: capitalize;
     transition-duration: 0.2s;
   }
 

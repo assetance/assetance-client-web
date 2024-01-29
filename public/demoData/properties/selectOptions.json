@@ -1,0 +1,37 @@
+[
+    {
+        "label": "type",
+        "options": [
+            "single family",
+            "apartment",
+            "retail",
+            "industrial"
+        ],
+        "type": "select"
+    },
+    {
+        "label": "status",
+        "options": [
+            "coming soon",
+            "funding",
+            "trading",
+            "done",
+            "exited"
+        ],
+        "type": "select"
+    },
+    {
+        "label": "sort",
+        "options": [
+            "newest",
+            "oldest",
+            "highest price per share",
+            "lowest price per share"
+        ],
+        "type": "select"
+    },
+    {
+        "label": "search",
+        "type": "text"
+    }
+]

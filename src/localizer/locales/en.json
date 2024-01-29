@@ -102,6 +102,7 @@
       "search": "search",
       "category": "category",
       "order-by": "order-by",
+      "apply": "apply",
       "order-by-options": {
         "latest": "latest",
         "oldest": "oldest",
@@ -359,5 +360,13 @@
   "policies": {
     "policies": "policies",
     "last-updated": "last updated"
+  },
+  "properties": {
+    "properties": "properties",
+    "explore-out-properties": "explore our list of carefully selected properties for you to invest in.",
+    "inputs": {
+      "filter-options": "filter options",
+      "name-or-REFNAQS-id": "look up a property by name or REFNAQS id"
+    }
   }
 }

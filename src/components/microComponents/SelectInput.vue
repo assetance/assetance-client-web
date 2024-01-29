@@ -309,14 +309,14 @@ const filteredOptions = computed(() => {
   
         .label {
           top: -8px;
-          left: 1px;
+          left: 3px;
           height: unset;
           font-size: 0.7rem;
           backdrop-filter: blur(5px);
   
           html[dir="rtl"] & {
             left: unset;
-            right: 1px;
+            right: 3px;
           }
         }
         p {
@@ -335,7 +335,7 @@ const filteredOptions = computed(() => {
   
         .label {
           top: -8px;
-          left: 1px;
+          left: 7px;
           height: unset;
           font-size: 0.7rem;
           backdrop-filter: blur(5px);
@@ -343,7 +343,7 @@ const filteredOptions = computed(() => {
   
           html[dir="rtl"] & {
             left: unset;
-            right: 1px;
+            right: 10px;
           }
         }
         p {

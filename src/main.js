@@ -8,10 +8,14 @@ import store from './store';
 import VueApexCharts from 'vue3-apexcharts';
 import 'clickout-event';
 import { createHead } from '@unhead/vue';
+import PrimeVue from 'primevue/config';
+import 'primevue/resources/themes/aura-light-blue/theme.css';
+import VueTippy from 'vue-tippy';
+import 'tippy.js/dist/tippy.css';
 
 /**
  * Swiper install
- */
+*/
 // import function to register Swiper custom elements
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
@@ -31,5 +35,17 @@ app.use(store);
 app.use(VueApexCharts);
 app.use(localizer);
 app.use(head);
+app.use(PrimeVue);
+app.use(
+    VueTippy,
+    // optional
+    {
+      directive: 'tippy', // => v-tippy
+      defaultProps: {
+        placement: 'auto-end',
+        allowHTML: true,
+      }, // => Global default options * see all props
+    }
+  )
 
 app.mount('#app');

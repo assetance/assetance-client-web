@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button class="secondaryButton">
     <div
       class="loader"
       v-if="isLoading"
