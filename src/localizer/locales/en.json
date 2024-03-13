@@ -62,7 +62,6 @@
       "share-on-facebok": "share on facebok platform",
       "share-on-linkedin": "share on linkedin platform",
       "share-on-tiktok": "share on tiktok platform",
-      "copied": "copied to clipboard",
       "check-out-this-article": "Check out this great article!"
     },
     "feedback": {
@@ -80,6 +79,8 @@
     "view-all": "View All",
     "view-property": "view property",
     "start-investing": "Start Investing",
+    "invest": "Invest",
+    "shares": "Share | Shares",
     "start-pro-account": "Start PRO Account",
     "get-started": "Get Started",
     "contact-sales": "Contact Sales",
@@ -87,7 +88,19 @@
     "browes-properties": "Browes Properties",
     "bedrooms": "No Bedrooms | { n } Bedroom | { n } Bedrooms",
     "bathrooms": "No Bathrooms | { n } Bathroom | { n } Bathrooms",
+    "copied": "copied to clipboard",
     "email": "email",
+    "durations": {
+      "days": "days",
+      "hours": "hours",
+      "months": "months",
+      "minutes": "minutes",
+      "years": "years"
+    },
+    "share": {
+      "x": "share on x",
+      "link": "copy link"
+    },
     "form": {
       "name": "name",
       "name-err-msg": "please enter your name",
@@ -103,6 +116,7 @@
       "category": "category",
       "order-by": "order-by",
       "apply": "apply",
+      "sort": "sort",
       "order-by-options": {
         "latest": "latest",
         "oldest": "oldest",
@@ -368,5 +382,116 @@
       "filter-options": "filter options",
       "name-or-REFNAQS-id": "look up a property by name or REFNAQS id"
     }
+  },
+  "property": {
+    "hero": {
+      "available-of": "available of",
+      "timer": {
+        "days-left": "{ n } day left | { n } days left",
+        "hours-left": "{ n } hour left | { n } hours left",
+        "minutes-left": "{ n } minute left | { n } minutes left",
+        "closed-on": "closed on"
+      }
+    },
+    "info-section": {
+      "financials": {
+        "financials": "financials",
+        "historicals": {
+          "historicals": "historicals",
+          "historical-valuation": "historical valuation",
+          "exportable-historical-valuation": "historical valuation data of property",
+          "historical-annual-rental-returns": "historical annual rental returns",
+          "exportable-historical-annual-rental-returns": "historical annual rental returns data of property",
+          "property": "property",
+          "zip-avg": "ZIP average",
+          "avg": "average"
+        },
+        "metrics": "metrics",
+        "offering-details": {
+          "offering-details": "offering details",
+          "closing-at": "closing at",
+          "exit-estimation": "exit estimation in years ",
+          "investors": " investor | investors",
+          "total-funding-amount": "total funding amount",
+          "expenses": "expenses",
+          "amount": "amount"
+        },
+        "rental-returns": {
+          "rental-returns": "rental returns",
+          "rental-guarantee": "rental guarantee",
+          "anticipated-rent-start-date": "anticipated rent start date on",
+          "rent-start-date": "rent start date on",
+          "net-rental-returns": "net rentals returns",
+          "origin": "origin",
+          "amount": "amount"
+        },
+        "returns-calculator": {
+          "returns-calculator": "returns calculator",
+          "collective-returns": "collective returns",
+          "investment": "investment",
+          "investment-description": "investment amount",
+          "appreciation-rate": "appreciation rate",
+          "appreciation-rate-description": "annual rate of change of the property value",
+          "rent-yield": "rent yield",
+          "rent-yield-description": "annual net rent (after expenses) to funding price rate",
+          "hold-period": "hold period (years)",
+          "hold-period-description": "ownership period in years",
+          "yearly-income": "yearly income",
+          "yearly-income-description": "net rent income (after expenses)",
+          "total-profits": "total profits",
+          "total-profits-description": "collective profits over the total holding period, includes net rent income and appreciation through out the holding period",
+          "income": "income",
+          "appreciation": "appreciation",
+          "3yrs": "3yrs",
+          "6yrs": "6yrs",
+          "9yrs": "9yrs",
+          "12yrs": "12yrs"
+        }
+      },
+      "timeline": {
+        "timeline": "timeline",
+        "investment-timeline": "investment timeline"
+      },
+      "documents": {
+        "documents": "documents",
+        "investment-documents": "investment documents"
+      },
+      "specifications": {
+        "specifications": "specifications",
+        "general-specifications": "general specifications",
+        "layout": {
+          "layout": "layout",
+          "beds": "bedrooms",
+          "baths": "bathrooms",
+          "living-area": "living area",
+          "land-area": "land area",
+          "floors": "floors",
+          "level": "level"
+        },
+        "details": {
+          "details": "details",
+          "type": "type",
+          "date-built": "date built",
+          "address": "address",
+          "identifier": "identifier",
+          "developer": "developer",
+          "agent": "agent"
+        },
+        "features": "features"
+      },
+      "trading-shares": {
+        "trading-shares": "trading shares",
+        "price": "price",
+        "shares": "shares",
+        "listing-date": "listing date",
+        "last-30-days": "last 30 days",
+        "today": "today",
+        "days-ago": "{ n } day ago | { n } days ago",
+        "sub-total": "sub total",
+        "notice": "notice",
+        "notice-body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Et voluptatibus unde necessitatibus quibusdam minima dolore dignissimos nisi culpa incidunt optio!"
+      }
+    },
+    "faq": "faq"
   }
 }

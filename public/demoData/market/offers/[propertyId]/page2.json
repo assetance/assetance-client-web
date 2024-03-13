@@ -1,0 +1,48 @@
+{
+    "meta": {
+        "total": 10,
+        "currentPage": 2
+    },
+    "data": [
+        {
+            "offerId": "6AB01CD23EF45GH",
+            "offerPrice": 1045,
+            "availableShares": 14,
+            "listDate": "2024-01-01",
+            "pastMonthPriceActivity": -300,
+            "pastMonthSharesActivity": -35
+        },
+        {
+            "offerId": "7AB01CD23EF45GH",
+            "offerPrice": 1645,
+            "availableShares": 75,
+            "listDate": "2024-01-01",
+            "pastMonthPriceActivity": -65,
+            "pastMonthSharesActivity": -75
+        },
+        {
+            "offerId": "8AB01CD23EF45GH",
+            "offerPrice": 1445,
+            "availableShares": 45,
+            "listDate": "2024-01-01",
+            "pastMonthPriceActivity": -124,
+            "pastMonthSharesActivity": -36
+        },
+        {
+            "offerId": "9AB01CD23EF45GH",
+            "offerPrice": 1645,
+            "availableShares": 754,
+            "listDate": "2024-01-01",
+            "pastMonthPriceActivity": -45,
+            "pastMonthSharesActivity": -57
+        },
+        {
+            "offerId": "0AB01CD23EF45GH",
+            "offerPrice": 1545,
+            "availableShares": 65,
+            "listDate": "2024-01-01",
+            "pastMonthPriceActivity": 80,
+            "pastMonthSharesActivity": -53
+        }
+    ]
+  }

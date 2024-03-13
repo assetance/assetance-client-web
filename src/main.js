@@ -10,6 +10,7 @@ import 'clickout-event';
 import { createHead } from '@unhead/vue';
 import PrimeVue from 'primevue/config';
 import 'primevue/resources/themes/aura-light-blue/theme.css';
+import Ripple from 'primevue/ripple';
 import VueTippy from 'vue-tippy';
 import 'tippy.js/dist/tippy.css';
 
@@ -35,7 +36,7 @@ app.use(store);
 app.use(VueApexCharts);
 app.use(localizer);
 app.use(head);
-app.use(PrimeVue);
+app.use(PrimeVue, { ripple: true });
 app.use(
     VueTippy,
     // optional
@@ -47,5 +48,7 @@ app.use(
       }, // => Global default options * see all props
     }
   )
+
+app.directive('ripple', Ripple);
 
 app.mount('#app');

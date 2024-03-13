@@ -162,9 +162,8 @@ function getFundingProgress() {
 }
 
 function navigateToProperty() {
-    // testing value untill property page is made 
     router.push({
-        name: 'knowledge-article', 
+        name: 'property', 
         params: {
             id: props.propertyData.id
         }

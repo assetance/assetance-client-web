@@ -13,7 +13,7 @@ export default {
         apiClient.get('propertiesSnippets.json').then((res) => {
           resolve(res.data);
         });
-      }, 1000);
+      }, 400);
     });
   },
   getSnippetsByQuery(query) {
@@ -23,7 +23,7 @@ export default {
         apiClient.get('propertiesSnippetsQueried.json').then((res) => {
           resolve(res.data);
         });
-      }, 1000);
+      }, 400);
     });
   },
   getSelectOptions() {
@@ -33,7 +33,7 @@ export default {
         apiClient.get('selectOptions.json').then((res) => {
           resolve(res.data);
         });
-      }, 1000);
+      }, 400);
     });
   },
 };

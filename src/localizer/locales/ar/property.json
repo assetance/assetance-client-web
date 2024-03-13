@@ -1,0 +1,111 @@
+{
+  "hero": {
+    "available-of": "متوفر من اصل",
+    "timer": {
+      "days-left": " يوم متبقي | { n } يوم متبقي",
+      "hours-left": " ساعة متبقية | { n } ساعة متبقية",
+      "minutes-left": " دقيقة متبقية | { n } دقيقة متبقية",
+      "closed-on": "تم الاغلاق في"
+    }
+  },
+  "info-section": {
+    "financials": {
+      "financials": "المعلومات الاستثمارية",
+      "historicals": {
+        "historicals": "البيانات التاريخية",
+        "historical-valuation": "القيمة السوقية التاريخية",
+        "exportable-historical-valuation": "القيمة السوقية التاريخية للأصل رقم ",
+        "historical-annual-rental-returns": "المدخلات السنوية التاريخية",
+        "exportable-historical-annual-rental-returns": "المدخلات السنوية التاريخية للأصل رقم ",
+        "property": "الاصل",
+        "zip-avg": "متوسط المنطقة البريدية",
+        "avg": "متوسط الدولة"
+      },
+      "metrics": "المقاييس",
+      "offering-details": {
+        "offering-details": "تفاصيل العرض",
+        "closing-at": "تاريخ الاغلاق",
+        "exit-estimation": "تقدير وقت الخروج بالسنين",
+        "investors": "مستثمر واحد | مستثمر",
+        "total-funding-amount": "اجمالي مبلغ التمويل",
+        "expenses": "النفقات",
+        "amount": "المبلغ"
+      },
+      "rental-returns": {
+        "rental-returns": "عوائد الايجارات",
+        "rental-guarantee": "عوائد ايجار مضمونة لمدة",
+        "anticipated-rent-start-date": "الوقت المقدر لبدأ الايجار",
+        "rent-start-date": "وقت بدأ الايجار",
+        "net-rental-returns": "صافي المدخلات من الايجار",
+        "origin": "المنبع",
+        "amount": "المبلغ"
+      },
+      "returns-calculator": {
+        "returns-calculator": "حاسبة العوائد",
+        "collective-returns": "العائد الكلي",
+        "investment": "الاستثمار",
+        "investment-description": "قيمة الاستثمار",
+        "appreciation-rate": "معدل النمو لقيمة العقار",
+        "appreciation-rate-description": "معدل التغيير السنوي لقيمة العقار",
+        "rent-yield": "عائد الإيجار",
+        "rent-yield-description": "صافي الإيجار السنوي (بعد المصروفات) على سعر تمويل العقار",
+        "hold-period": "فترة الاستحواذ (بالسنوات)",
+        "hold-period-description": "فترة الملكية المتوقعة بالسنوات",
+        "yearly-income": "الدخل السنوي",
+        "yearly-income-description": "صافي دخل الإيجار (بعد المصروفات)",
+        "total-profits": "الارباح الكلية",
+        "total-profits-description": " مجموع الارباح خلال فترة الاستحواذ، تشمل صافي دخل الإيجار والنمو لقيمة العقار خلال فترة الاستحواذ",
+        "income": "الدخل",
+        "appreciation": "القيمة",
+        "3yrs": "٣ سنوات",
+        "6yrs": "٦ سنوات",
+        "9yrs": "٩ سنوات",
+        "12yrs": "١٢ سنة"
+      }
+    },
+    "timeline": {
+      "timeline": "الخطة الزمنية",
+      "investment-timeline": "الخطة الزمنية"
+    },
+    "documents": {
+      "documents": "الملفات",
+      "investment-documents": "الملفات"
+    },
+    "specifications": {
+      "specifications": "المواصفات",
+      "general-specifications": "المواصفات العامة",
+      "layout": {
+        "layout": "التخطيط",
+        "beds": "غرف النوم",
+        "baths": "الحمامات",
+        "living-area": "مساحة المعيشة",
+        "land-area": "مساحة الأرض",
+        "floors": "عدد الطوابق",
+        "level": "المستوى"
+      },
+      "details": {
+        "details": "تفاصيل اخرى",
+        "type": "النوع",
+        "date-built": "تاريخ البناء",
+        "address": "العنوان",
+        "identifier": "المعرف",
+        "developer": "المطور",
+        "agent": "الوكيل"
+      },
+      "features": "الخصائص"
+    },
+    "trading-shares": {
+      "trading-shares": "تداول الأسهم",
+      "price": "السعر",
+      "shares": "الأسهم",
+      "listing-date": "تاريخ الإدراج",
+      "last-30-days": "آخر 30 يومًا",
+      "today": "اليوم",
+      "days-ago": "منذ { n } يوم",
+      "sub-total": "المجموع الفرعي",
+      "notice": "!ملاحظة هامة",
+      "notice-body": "نص الملاحظة هنا!!"
+    }
+  },
+  "faq": "الاسئلة الشائعة"
+}

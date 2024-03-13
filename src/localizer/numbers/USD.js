@@ -5,17 +5,20 @@ export default {
         notation: "standard",
         useGrouping: true,
         currencyDisplay: 'code',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
     },
     decimal: {
         style: "decimal",
-        minimumFractionDigits: 2,
+        useGrouping: true,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 2
     },
     percent: {
         style: "percent",
         useGrouping: false,
-        minimumFractionDigits: 1,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 2
-    }
+    },
 
 }

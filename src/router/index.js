@@ -32,6 +32,19 @@ const router = createRouter({
       }
     },
     {
+      path: '/property/:id?', // optional for dev only 
+      name: 'property',
+      component: () => import('../views/PropertyView.vue'),
+      meta: {
+        /* page meta tags */
+        // TODO:: rewrite a solid SEO description of the page
+        title: 'Property',
+        description: 'Check out this lucrative investment opportunity.',
+
+        /* page meta data */
+      }
+    },
+    {
       path: '/about',
       name: 'about',
       component: () => import('../views/AboutView.vue'),
@@ -87,7 +100,7 @@ const router = createRouter({
           }
         },
         {
-          path: 'articles/:id?',
+          path: 'articles/:id?', // optional id for dev only
           name: 'knowledge-article',
           component: () => import('../views/ArticleView.vue'),
           meta: {

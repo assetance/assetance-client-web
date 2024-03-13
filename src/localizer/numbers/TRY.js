@@ -4,11 +4,14 @@ export default {
         currency: "TRY",
         notation: "standard",
         currencyDisplay: 'code',
-        useGrouping: true
+        useGrouping: true,
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
     },
     decimal: {
         style: "decimal",
-        minimumFractionDigits: 2,
+        useGrouping: true,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 2
     },
     percent: {

@@ -8,7 +8,8 @@ export default {
     },
     decimal: {
         style: "decimal",
-        minimumFractionDigits: 2,
+        useGrouping: true,
+        minimumFractionDigits: 0,
         maximumFractionDigits: 2
     },
     percent: {

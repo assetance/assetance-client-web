@@ -59,6 +59,15 @@ body {
         user-select: none;
     }
 
+    // v-tippy tooltip styling
+    .tooltip {
+        text-decoration: underline 1px dashed var(--dark-40);
+
+        &:hover {
+            cursor: help;
+        }
+    }
+
     // nprogress bar styling
     /* Change the color of the progress bar */
     #nprogress .bar {

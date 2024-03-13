@@ -91,7 +91,7 @@
       >
     </div>
     <toast-element v-if="showToast">
-      {{ $t('article.hero.copied') }}
+      {{ $t('global.copied') }}
     </toast-element>
   </section>
 </template>

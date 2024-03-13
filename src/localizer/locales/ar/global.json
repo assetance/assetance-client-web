@@ -8,6 +8,8 @@
   "view-all": "عرض الكل",
   "view-property": "عرض العقار",
   "start-investing": "ابدأ الاستثمار",
+  "invest": "استثمر",
+  "shares": "سهم واحد | اسهم",
   "get-started": "إبدأ",
   "start-pro-account": "ابدا حساب للمحترفين",
   "contact-sales": "تواصل معنا",
@@ -16,6 +18,18 @@
   "bedrooms": "غرف نوم {n}",
   "bathrooms": " حمام {n}",
   "email": "ايميل",
+  "copied": "تم النسخ",
+  "durations": {
+    "days": "يوم",
+    "hours": "ساعة",
+    "months": "شهر",
+    "minutes": "دقيقة",
+    "years": "سنة"
+  },
+  "share": {
+    "x": "شارك على منصة اكس",
+    "link": "انسخ الرابط"
+  },
   "form": {
     "name": "الاسم",
     "name-err-msg": "الرجاء كتابة الاسم",
@@ -31,6 +45,7 @@
     "category": "الفئة",
     "order-by": "ترتيب حسب",
     "apply": "اضف",
+    "sort": "رتِّب",
     "order-by-options": {
       "latest": "الاجدد",
       "oldest": "الاقدم",
@@ -85,12 +100,12 @@
     "cookies-policy": "(كوكيز) اتفاقية ملفات تعريف الارتباط"
   },
   "pages": {
-      "knowledge-base": "قاعدة المعرفة"
+    "knowledge-base": "قاعدة المعرفة"
   },
   "articles": {
     "read-time": "قرائة خلال لحظات | قرائه خلال دقيقة | قرائة خلال { n } دقائق"
   },
   "pagination": {
-      "page-location": "صفحة رقم { n } من { x }"
+    "page-location": "صفحة رقم { n } من { x }"
   }
 }

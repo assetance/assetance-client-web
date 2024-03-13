@@ -21,7 +21,7 @@ export default {
                 apiClient.get().then((res) => {
                     resolve(res.data.data);
                 });
-            }, 1000);
+            }, 400);
         });
     },
     // fallback data to be manually updated every week from public/demoData/exchangeRates.json
@@ -32,7 +32,7 @@ export default {
                 apiClient.get().then((res) => {
                     resolve(res.data.data);
                 });
-            }, 1000);
+            }, 400);
         });
     },
 };

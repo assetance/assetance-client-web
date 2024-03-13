@@ -1,0 +1,13 @@
+[
+    {
+        "name": "sort",
+        "options": [
+            "newest",
+            "oldest",
+            "highest price",
+            "lowest price"
+        ],
+        "type": "select",
+        "required": false
+    }
+]
